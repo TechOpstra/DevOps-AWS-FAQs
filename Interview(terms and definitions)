@@ -1,0 +1,467 @@
+Interview related terms and definitions:
+
+ITIL: .
+
+* ITIL, which stands for Information Technology Infrastructure Library, is a set of best practices for IT service management
+* ITIL has evolved into a globally recognized framework used by organizations worldwide to improve the quality and efficiency of IT service delivery.
+* ITIL provides a comprehensive framework of processes, procedures, tasks, and checklists that organizations can adapt to their specific needs
+* Aligning IT services with business goals and customer needs.
+*  Designing IT services and processes to meet agreed-upon service levels.
+* Delivering and managing IT services on a day-to-day basis to meet agreed-upon service levels.
+* Continuously reviewing and improving IT service delivery to enhance efficiency and effectiveness.
+
+
+What is incident:
+
+* An incident is a unplanned event which occurs unexpectedly and dissurupts the normal operations of IT services from minor to severity which needs immediate resolution.
+* Incidents impacts the end users by preventing them from accessing the IT services as as search,login checkout and payment ect.
+* Incidents dissurupts IT operations and eventually causes the downtime delay and slowness in the system 
+* Incidents requires immediate actions to restore the services into the normal operations
+* some of the examples are hardware faillure and softwarefailure
+
+What is change:
+
+*  a change refers to the addition, modification, or removal of anything that could have an effect on IT services. Changes can include alterations to IT systems, applications, infrastructure, processes,  
+
+* Changes are typically planned in advance and undergo a formal change management process to assess potential risks, impacts, and benefits before implementation.
+* Changes are subject to strict controls and procedures to ensure that they are properly authorized, tested, documented, and implemented in a controlled manner.
+* Changes have the potential to impact IT services, either positively by improving service quality or functionality, or negatively by introducing risks or causing disruptions.
+* Changes often require approval from a designated change authority or change management board to ensure that they align with business objectives, comply with policies and standards, and do not introduce unacceptable risks
+
+
+what is Problem:
+
+* In IT service management, a problem refers to the underlying cause of one or more incidents.
+* Problems often manifest as multiple incidents with similar or related symptoms, indicating a common underlying issue that needs to be addressed to prevent future occurrences.
+* Problem management involves a proactive approach to identifying, analyzing, and resolving underlying issues to prevent incidents from recurring and minimize their impact on IT services and users.
+* Problem management involves thorough investigation and analysis to identify the root cause(s) of recurring incidents, often requiring collaboration across IT teams and departments.
+
+
+what is the SLA:
+
+SLA stands for Service Level Agreement. It's a formal agreement between a service provider and its customers that outlines the level of service expected from the provider. SLAs define the specific metrics, responsibilities, and performance targets that the service provider is obligated to meet to ensure customer satisfaction.
+
+
+
+
+
+
+
+
+
+MyIntroduction for DevOps role and production support engineer roles:
+
+
+"Hello, my name is Hari,  Over the past 4.2 years, I've gained valuable experience in the IT industry, focusing on production support and DevOps Engieer roles. since 2021 i have been working as a devops engineer with infibeam avenues ltd. my exprience with the range of technologies are linux administration, docker, kubernetes, git, jenkins, aws , terraform and i have also hands-on experience with monitoring tools such as prometheus, grafana, elk stack dynatrace ans sensu and slack...
+
+In my current role, as a devops engineer i am responsible for Efficiently managing weekly production code releases, resolve build errors, and maintain formal release records to ensure accurate tracking of release contents and changes.  And also responsible for coordinating with cross-functional teams to ensure smooth deployments  Additionally, post deployment i also perform health checks such monitoring infrastructure through grafana and app logs through kibana for any code related erros such 500s with specific actions related to aps apart from these on a regular basis 
+
+1. I monitor the production servers health and application traffic throuh grafana and kibana visualization tools and if any icidents arises i will address them and resovle them
+2. I monitor the API services throughputs, failure rates and resposetimes through dynatrace and if i address  incedents related to other microservcie stakeholders i will join on the bridge and  coordinate with them to identify the rootcause and do a follow up with them.
+3. i monitor the sensu for system alerts like high cpu.memory, like app pod restarts and node health issues
+4. troubleshooting production server related issues by verifying the syslogs
+4. apart from that i am responsible for writing any dockerfiles according to dev needs and building images taging and pushing them to remote repo.
+5. i am also responsible for creating k8s clusters and upgrading them, taking backups, creating pods throug deployments,daemonsets and replicasest and exposing them to loadbalancers
+6. responsible for creating aws infra through terraform in a small projects according to dev needs like provision ec2,s3,vpc subnets etc
+6. i will participate in quarterly os patching activities with the team to validate the vms
+7. responsible for productions servers capacity planing based on traffic trends like adding more vms into cluster or vertically scaling the resources. etc
+8. Responsible for writing the formal RCA documents for production related incidents to prvent them in the  future
+9. performing the password expiry related tasks on uat and preprod envronments
+
+these are the roles and responsibles currently which i am doing here right now.
+
+
+
+
+
+1. what is ELK stack?
+
+The ELK stack is a powerful combination of three open-source tools: Elasticsearch, Logstash, and Kibana. Each component plays a unique role in the process of collecting, analyzing, and visualizing data:
+
+Elasticsearch: Elasticsearch is a distributed search and analytics engine. It is designed to store, search, and analyze large volumes of data quickly and in near real-time. Elasticsearch uses a distributed architecture, allowing it to scale horizontally across multiple nodes for high availability and performance. It supports full-text search, structured and unstructured data, and provides advanced search capabilities, including aggregations, filtering, and scoring.
+
+Logstash: Logstash is a data processing pipeline that ingests, transforms, and enriches data from various sources before sending it to Elasticsearch for indexing. It supports a wide range of input plugins for collecting data from sources such as log files, databases, message queues, and network streams. Logstash also provides powerful filtering capabilities to parse, manipulate, and transform data before it is indexed in Elasticsearch. Additionally, Logstash can enrich data by adding metadata or performing lookups against external data sources.
+
+Kibana: Kibana is a data visualization and exploration tool that works seamlessly with Elasticsearch. It provides a web-based interface for creating interactive dashboards, visualizations, and reports based on data stored in Elasticsearch. Kibana allows users to search and analyze data using various visualization types, including line charts, bar charts, pie charts, maps, and tables. It also offers features like data discovery, alerting, and reporting, making it easy to gain insights from data and monitor the health and performance of systems.
+Together, Elasticsearch, Logstash, and Kibana form a comprehensive stack for centralized logging, monitoring, and analytics, commonly used for use cases such as log management, application performance monitoring, security analytics, and business intelligence. The ELK stack is highly 
+
+User
+2.Explain the concepts of index, document, and shard in Elasticsearch.
+
+Index:
+
+An index in Elasticsearch is a collection of documents that share similar characteristics or belong to the same data category. It is analogous to a database in traditional relational databases.
+Each index is identified by a unique name, typically lowercase and cannot contain special characters (except for "_").
+
+document:
+
+A document is the basic unit of information stored in Elasticsearch. It represents a single data record or entity, typically in JSON format.
+Documents are stored within indices and are uniquely identified by a document ID.
+Each document consists of one or more fields, where each field has a name and a value. Fields can be of different data types, such as text, keyword, numeric, date, and more.
+
+shard:
+
+A shard is a low-level data partition in Elasticsearch. It is a subset of an index's data and serves as the unit of scalability and parallelism.
+When an index is created, Elasticsearch automatically divides it into multiple shards, which are distributed across the cluster's nodes.
+Sharding allows Elasticsearch to distribute data and workload evenly across the cluster, improving performance and scalability.
+There are two types of shards in Elasticsearch: primary shards and replica shards. Each index has a configurable number of primary shards, which are responsible for indexing and storing data. Replica shards are copies of primary shards used for redundancy and high availability.
+
+3. what is mapping in elasticsearch?
+
+In Elasticsearch, a mapping defines how documents and their fields are stored and indexed in an index. It specifies the data types for each field, along with various options and settings that control how the field is analyzed, indexed, and searched. Mapping is crucial for Elasticsearch because it:
+
+4. What are the primary use cases for the ELK stack?
+
+Logmanagement and analysis
+infrstructure monitoring and alerting
+application performance monitoring
+Datavisualization
+
+Ports for elkstack
+
+Elasticsearch listens on the port 9200
+logstash listens on the port 5044
+kibana listens on port 5601
+prometheus default port 9090 and prometheus node-exporter port 9100
+
+
+
+Important points about elkstack:
+
+kibana offers below sections for visualize and monitor the data:
+
+Analytics
+Enterprise search
+Observability
+security
+management
+
+indices and indexes both are same
+
+We used have indexes like site,admin.rating,bid and under documents the fields are like: 
+
+
+
+
+
+{
+  "_index": "logstash-ifa-2022.09.21",
+  "_type": "logs",
+  "_id": "HSGoX4MB9G4PnNJW3Ofl",
+  "_version": 1,
+  "_score": 1,
+  "_source": {
+    "tags": [
+      "json",
+      "ifa",
+      "beats_input_raw_event",
+      "ts_updated",
+      "geoip_update_failed",
+      "arx_not_matched"
+    ],
+    "duration": 0.010164,
+    "agent": {
+      "name": "GCC-PROD-VM2014",
+      "type": "filebeat",
+      "version": "7.15.0",
+      "id": "d21204f0-fb8d-49b6-806c-e47dbe4be44f",
+      "hostname": "GCC-PROD-VM2014",
+      "ephemeral_id": "ef6ee2f8-52c9-4fcb-ad3f-4e3063e79b97"
+    },
+    "ip": "100.65.232.197",
+    "method": "POST",
+    "hostname": "gem-ifa-deployment-7764b5589b-5v7vc",
+    "host": {
+      "name": "GCC-PROD-VM2014"
+    },
+    "@timestamp": "2022-09-21T10:47:24.000Z",
+    "headers": {
+      "Server": "JBoss-EAP/7",
+      "Pragma": "no-cache",
+      "Cache-Control": "no-cache, must-revalidate, max_age=0, no-store",
+      "X-Frame-Options": "SAMEORIGIN",
+      "Content-Type": "application/json",
+      "http_code": "HTTP/1.1 200 OK",
+      "Date": "Wed, 21 Sep 2022 10:47:24 GMT",
+      "Expires": "Thu, 01 Jan 1970 00:00:00 GMT",
+      "Content-Length": "124",
+      "X-Powered-By": "Undertow/1",
+      "Connection": "keep-alive"
+    },
+    "response": {
+      "responseAttributes": {},
+      "responseCode": 0,
+      "responseMsg": "Call Success"
+    },
+    "log": {
+      "offset": 886523480,
+      "file": {
+        "path": "/runtime/ifa_logs/outbound.gem-ifa-deployment-7764b5589b-5v7vc.log"
+      }
+    },
+    "status": 200,
+    "redirect_url": "",
+    "url": "http://ssoapi.gem.gov.in:8080/ARXAL/rest/ArmorSOAServices/ValidateUserTicket",
+    "input": {
+      "type": "log"
+    },
+    "@version": "1",
+    "fields": {
+      "env": "prod",
+      "app": "gem",
+      "type": "ifa"
+    },
+    "sess": "",
+    "ecs": {
+      "version": "1.11.0"
+    }
+  },
+  "fields": {
+    "agent.version.keyword": [
+      "7.15.0"
+    ],
+    "headers.Date": [
+      "Wed, 21 Sep 2022 10:47:24 GMT"
+    ],
+    "headers.X-Frame-Options": [
+      "SAMEORIGIN"
+    ],
+    "sess.keyword": [
+      ""
+    ],
+    "host.name.keyword": [
+      "GCC-PROD-VM2014"
+    ],
+    "sess": [
+      ""
+    ],
+    "fields.type.keyword": [
+      "ifa"
+    ],
+    "redirect_url.keyword": [
+      ""
+    ],
+    "headers.Connection.keyword": [
+      "keep-alive"
+    ],
+    "agent.hostname.keyword": [
+      "GCC-PROD-VM2014"
+    ],
+    "hostname": [
+      "gem-ifa-deployment-7764b5589b-5v7vc"
+    ],
+    "ecs.version.keyword": [
+      "1.11.0"
+    ],
+    "agent.name": [
+      "GCC-PROD-VM2014"
+    ],
+    "host.name": [
+      "GCC-PROD-VM2014"
+    ],
+    "headers.Server": [
+      "JBoss-EAP/7"
+    ],
+    "headers.http_code": [
+      "HTTP/1.1 200 OK"
+    ],
+    "fields.app.keyword": [
+      "gem"
+    ],
+    "fields.env.keyword": [
+      "prod"
+    ],
+    "headers.Date.keyword": [
+      "Wed, 21 Sep 2022 10:47:24 GMT"
+    ],
+    "headers.X-Frame-Options.keyword": [
+      "SAMEORIGIN"
+    ],
+    "method": [
+      "POST"
+    ],
+    "headers.Pragma": [
+      "no-cache"
+    ],
+    "ip": [
+      "100.65.232.197"
+    ],
+    "agent.id.keyword": [
+      "d21204f0-fb8d-49b6-806c-e47dbe4be44f"
+    ],
+    "input.type": [
+      "log"
+    ],
+    "headers.Expires.keyword": [
+      "Thu, 01 Jan 1970 00:00:00 GMT"
+    ],
+    "log.offset": [
+      886523480
+    ],
+    "agent.hostname": [
+      "GCC-PROD-VM2014"
+    ],
+    "headers.Content-Type": [
+      "application/json"
+    ],
+    "tags": [
+      "json",
+      "ifa",
+      "beats_input_raw_event",
+      "ts_updated",
+      "geoip_update_failed",
+      "arx_not_matched"
+    ],
+    "headers.X-Powered-By": [
+
+
+
+
+
+tomorrow interview preperation
+about project write how to explain
+linux
+git basics
+ansible basics
+jenkins/groovy
+monitoring tool dynatrace and elk,grafana prometheus
+sql
+ITIL,incidents etc
+shell scripting 2 or 3 scripts
+recent productions issues
+introduction
+
+About project:
+
+
+We have git repository where we have our source code called java, as soon as developer pushes the code changes to repository. we have configured webhooks for the same repo, using the webhooks we triggere the jenkins pipelines. We used declarative jenkins pipeline becoz declarative are easy to write and collaborate with team, as a part of this declarative jenkins pipeline we have multiple stages. out of that the
+first stage would be the build stage using this stage and using maven software we will build the application and if the build stage successfull and we also execute some unit test cases. In the next stage we would perform some static code analysis( using sonarqube we verify that applicatio code is not exposed to static) and after that we also have some SAST/DAST tools where we verify the application security vulnerabilities if the developer write some new change then we would send some slack notification that we have configured. If all these stages are successful then we build a docker image by using docker file in the repo with some simple shell scripts and using some shell scripts we push the docker image to the dockerhub/ECR/quay.io  this is our CI process
+ 
+
+cd processes for cd process we are using argocd which we deployed in our k8s cluster in the ui of argocd we have configured github yaml repo so whenever the repo updated with new tag the argocd will automatically deploys the application with new image tag in that way our cd process also complete that's how we complete our deployment once this is done we monitor our app,DB and app servers for 20 - 30 min meanwhile qa team will perform the sanity once they are done with their sanity we will wind the call.. 
+
+
+
+
+
+thing need to improve for interview:f
+
+recent production issues
+
+1. The recent production issue which i faced is, in our orgaization we do use sensu tool for system alerts, while mointoring i got an alarm which was stating that hte queue got piled up on so and so background job which we confgiured to push some transactional related data to update the database, we have deployed all these pods in our k8s cluster i ran kubectl get pods -n namespace_of_that_job_pod
+it has listed all jobs running in that pod i have access that pod using kubectl exec -it podname /bin/bash and there i have listed all the jobs running and i saw the that few of the jobs were in pending neither pushing nor terminating i have then i have restarted all jobs i thought it will release all processes and start pushing freshly but the queue got piled again due to high load on the jobs pod then we increased a one more job thread which eventually reduced the burden on the jobs and queue started releasing and alert has gone away.
+
+2. in our production k8s cluster we have around 20 vms where we deployed our microsevices each vm is having memory of 156Gi and 56 core cpu so as a part of regular monitoring course we identified that one our app vm graphs were started going down like cpu,load, memory usages then also we observed that on our kibana dashboad we observed traffic dips which indicates that unhealthy of vms and the same time we got an alarm from slack and sensu stating that our gcc-prod-vm2003 is unresponsive then we immediately tried to login through arcon pam which we use for login purpose and loged in to the server and i ran uptime command it was showing the uptime 1 min and from the last 1 min it was being up and we obereved our graphs and kibana dashboard everything came back to original state, then we started investigation by checking the  /var/log/syslogs for any kernel related issues or system issues we observed that BUG- Softlockup -aw cpu 12,13,12  stuck for 49 sec it was showing like that and also we noticed that k8s pods got restated we informed to cloud team which is reponsible for provision all these vms after some we notice same issue then we jump on to the bridge call cloud team also joined then they confirmed that due to esxi host which hosting this vms is causing these issue so they have migrated that vm into another esxi host after that we monitored that one vm continuosly then we did't notice anything due to this incident our apps went down for 70 sec which we had to write an detailed rca DOCUMENT to submit to the clinet
+
+3. we got disk usage alert 82% acroos 5 vms..clearing logs but growing instatly so.. did a debug to find out where the disk space is going..ran have written a shell script for that to find the disk spce  of directories for the path /var/lib/docker was consuming high disk usage around 108 GB out of 144 root disk volume and we came across that inside container /var/log/nginx/error.logs were taking 40 Gigs of space due to we have't done deployment for such a long time..so we redployed apps so the unwated files rotated inside container and the disk space was cleared up
+
+
+
+#logrotation structure:
+
+
+# shell script to find disk space
+
+#!/bin/bash
+
+# Set threshold percentage (e.g., 80%)
+THRESHOLD=10
+
+# Get disk usage for all mounted partitions
+df -h | awk 'NR>1 {print $5 " " $1}' | while read output
+do
+    # Extract the percentage and the partition
+    usage=$(echo $output | awk '{print $1}' | sed 's/%//')
+    partition=$(echo $output | awk '{print $2}')
+
+    # Check if usage exceeds the threshold
+    if [ "$usage" -ge "$THRESHOLD" ]; then
+        echo "Warning: Partition $partition is $usage% full!" 
+    fi
+done
+
+
+
+
+
+
+what is sdlc?
+
+SDLC (Software Development Life Cycle) is a systematic process for planning, creating, testing, deploying, and maintaining software applications. It provides a framework to ensure that the software meets the customer requirements, is delivered on time, and is of high quality.
+
+there 2 main types os SDLCs
+
+waterfall model:
+
+Requirements → Design → Develop → Testing → Deployment → Maintenance
+
+Agile model:
+
+Plan → Design → Develop → Test → Release → Feedback → Repeat
+
+
+
+
+
+
+Logrotation tool?
+recent production issues
+Tell me SDLC
+write jenkins pipeline code
+write shell scripts for to give a warning when the disk file system usage is more than 85%
+disk file system and disk partitions 
+what is build trigger
+where all logs will store and how do you rotate logs and how do you manage logs
+write a docker-compose  file
+explain about k8s pod
+tell me about route53 
+what are the types of servers in ec2 instances and what is the difference between t servers and others
+what is hardlink and softlink?
+what is the process that happens behind hardlink process after creation?
+if and fi condition shell script
+what are the fields in crontab?
+If i write @Delhi in crontab file what does it mean?
+what is taints and tolerations in k8s
+how do you rate yourself out of 5 in linux, k8s
+what is the diff between mv and copy major difference
+how do you upgrade k8s cluster
+what are the troubleshoot steps that you do follow when you are trying to connect a remote machine but it says connection timed out
+how to check whether particular port is listening or not on remote machine --telnet ip or hostname port
+how to find the files which are greater than 500mb 
+k8s controlplane components
+what is the diff between replicasets and replication controllers
+how to rollback a deployment quickly in k8s
+what is IAM role
+what is s3 bucket what are the best practices that you follow do create a s3 bucket? how do you ensure security to s3 bucket?
+i have an ec2 instance when i tried to connect that unable to connect what are the steps that you follow for troubleshooting?
+what is ingress and ingress controller what kind of ingress you are using?
+i have 100 windows, 100 linux and 100 centos servers how to patch OS using ansible? what are the steps or structure that you follow?
+tell me dockerfile any one for java program or explain me about docker multistage file?
+what is the version that you are using jenkins and what is the current version?
+how to fetch the memory details of a particular pod in k8s?
+what is liveness and what is readyness?
+how to write terraform scripts?lets say i want to write a terraform script to spin up 5 instances how do you write?
+what is terraform tfstate file?where do you store state of terraform?why do we need to store in s3?how do you make tfstae storage in s3?
+how to lock tfstate file in s3?how to lock dynamodb?
+how do you test your code using jenkins?
+what is the kube.config file?
+diff b/n kill 9 & kill 15
+
+
+
+
+
+
+
+linux,shell scripts, jenkins, git, terraform, anssible, docker, k8s, elk, grafana, promethues, dynatrace, mysql, aws, self introa, previous prod issues, jenkins deployment process  -- bigbasket interview
+
+
+
+Doubts to ask jagadeesh
+
+branch strategy in our company
+devops or dev who will take care of code handling like push pull merge
+conflicts any
+how do you manage credentials in the jenkins pipeline while you are pulling credentials like for sonarqube and image repo and
+how do you scan docker image and what kind of vulnerabilities you found
+

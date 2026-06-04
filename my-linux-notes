@@ -1,0 +1,5134 @@
+﻿Linux:
+  It is an Operating system.
+
+Program/user(java) --   ---      Hardware( HW can understand only machine language-- ie 0 and 1)
+
+user java  --- OS ---convert to 0 and 1--> hardware
+    result       <---convert it to human understandable language <---- 0 and 1
+
+What is OS?
+
+Os is an interface between user and hardware. hardware can't understand human language.It can understand only machine language that is 0 and 1.
+
+When hardware give the result back user,user can't understand machine language. Os will take machine language an convert it to human understandable
+language.
+
+
+zzzzzzZZ
+         
+
+English men  --- Transaltor --  Telugu men
+        Input ----  convert--- output
+              <----      convert<---
+
+
+
+HW is combination of CPU,RAM,Memory,NETwork drivers and Audio devices.
+
+
+
+If you install os on top of hardware that sever is called baremetal server.
+
+When you write program that will stored into storage in harddisk.
+
+When you run the program that will run on RAM When program is running on RAM that will be having 1 proccess id.
+
+===================
+
+OS -- Kernel
+
+Kernel is heart of OS.
+
+program executing ---- OS(kernel) -- hardware
+
+
+machine -- mulitple OS --- windows nd linux --- windows ---- 
+
+
+===================
+
+We have differnt OS's"
+
+Dos Os
+Windows
+Linux
+
+DoS:
+      Single user and single task at a time.
+
+Windows:
+     Single user and Multi tasking at same time.
+
+      scurity -- You need to buy Anti virus
+
+Linux:
+      Unix os
+
+      Linus torvalds
+
+Linux is an open source -- 
+
+     multi user and multi tasking --- 
+     Security will be verify ( In linux verything will be file)
+     Performance --- is awesome
+     Portable -- shell scripting or command
+
+Reddhatlinux   ---     Oracle linux
+
+myscriptsh   --       myscript.sh 
+
+JIo sim -- port -- airtel
+721940528  port -- 7219405268
+
+shell:
+
+Shelll is an command line interpreter which is an interface between User and Kernel.
+
+Shell will provide an environment where we can execute our commands
+
+==============
+
+Filesystem:
+
+Inlinux everything is in the form file.
+
+File  -- file
+Directory  --- Group of files
+
+==============
+
+File system:
+
+             /
+etc root home  bin sbin usr dev var proc mnt lib opt boot
+
+
+/   --  It is parent directory for all other directories
+        In windows we  have C:/ and We can call it as ROOT directory
+
+/bin -- It is having all the commands which user going to execute.
+        When we execute any command shell will check in PATH. If it is existing in PATH it will give the result.Otherwise it will give result as command not found.
+
+/sbin  --- It contains all the commands used by super user(root)
+
+Normal access -- Normal user --- YOu can't execute all the commands and YOu can only execute the specified commands.
+
+root: If the use has root access then he can execute any command from the root(/)
+
+/etc ---  It has all the configuration files.
+
+          passwd
+          DNS related info
+          DHCP server info
+          
+       in Windows C:\Windows\System32\drivers
+
+/home  ---  it is home directory for other users(normal users)
+
+[root@ip-10-100-1-235 etc]# useradd ramesh
+[root@ip-10-100-1-235 etc]# cd /home
+[root@ip-10-100-1-235 home]# ls
+ec2-user  ramesh
+
+/usr  ---- It is default software installation location.
+
+           In windows we have C:/programfiles
+/opt --- It is optional directory and YOu can install third party softwares in this directory.
+
+/proc --- It contains all the process files.
+
+           contents are not parmanent it is keep on changing.
+
+           Virtual directory
+           It  has some files which are used by OS.
+
+           /proc/cpuinfo
+           /proc/meminfo  
+
+/var -- It is stored variable data like logfile,mails
+
+/mnt -- mount -- 
+
+10GB  -- 10GB ---  mkdir ramesh
+
+      It is default mount point for any partition.
+      by default it will be empty.
+/dev:
+     It contains all device files
+       harddisk -- /dev/sda
+                   /dev/cd rom
+/lib -- It contains library files which are used by OS.
+        It is similar dll files in windows
+================================
+
+pwd: It is used to find the current work location.
+(present working directory)
+
+ls: list
+
+It is used to list the files from current directory.
+
+-l  -- long list
+
+[root@ip-10-100-1-22 /]# ls -l
+total 16
+lrwxrwxrwx   1 root root    7 Jun 17 01:49 bin -> usr/bin
+dr-xr-xr-x   4 root root 4096 Jun 17 01:50 boot
+drwxr-xr-x  15 root root 2820 Jul  6 02:13 dev
+drwxr-xr-x  80 root root 8192 Jul  6 02:14 etc
+drwxr-xr-x   3 root root   22 Jul  6 02:13 home
+
+-t timestamp
+
+It will display the files at top of the list based on timestamp.
+
+[root@ip-10-100-1-22 /]# ls -lt
+total 16
+-rw-r--r--  1 root root    0 Jul  6 02:23 file1.txt
+-rw-r--r--  1 root root    0 Jul  6 02:20 file.txt
+dr-xr-xr-x 13 root root    0 Jul  6 02:18 sys
+drwxrwxrwt  8 root root  172 Jul  6 02:14 tmp
+drwxr-xr-x 28 root root  960 Jul  6 02:14 run
+drwxr-xr-x 80 root root 8192 Jul  6 02:14 etc
+dr-xr-x---  3 root root  103 Jul  6 02:13 root
+drwxr-xr-x  3 root root   22 Jul  6 02:13 home
+drwxr-xr-x 15 root root 2820 Jul  6 02:13 dev
+
+-r -- reverse order
+
+drwxrwxrwt  8 root root  172 Jul  6 02:14 tmp
+dr-xr-xr-x 13 root root    0 Jul  6 02:18 sys
+-rw-r--r--  1 root root    0 Jul  6 02:20 file.txt
+-rw-r--r--  1 root root    0 Jul  6 02:23 file1.txt
+-rw-r--r--  1 root root    0 Jul  6 02:28 file2.txt
+
+
+ ls -ltr ---- It will display all the files with long list based in timestamp in reverse order.
+
+How to find hidden files?
+
+ls -la  -- It will display all the files and directories including hidden files.
+
+
+Directory --- files and directories -- files and also display sub directories files as well/
+
+ramesh -- file.txt and ramdir--- file1txt and directory
+
+[root@ip-10-100-1-22 /]# mkdir ramesh
+[root@ip-10-100-1-22 /]# cd ramesh
+[root@ip-10-100-1-22 ramesh]# touch file.txt
+[root@ip-10-100-1-22 ramesh]# mkdir ram
+[root@ip-10-100-1-22 ramesh]# cd ram
+[root@ip-10-100-1-22 ram]# touch class.txt
+[root@ip-10-100-1-22 ram]# cd /
+[root@ip-10-100-1-22 /]# ls
+bin   classtxt  etc        file2.txt  home  lib64  media  opt   ramesh  run   srv  tmp  var
+boot  dev       file1.txt  file.txt   lib   local  mnt    proc  root    sbin  sys  usr
+[root@ip-10-100-1-22 /]# cd ramesh
+[root@ip-10-100-1-22 ramesh]# ls
+file.txt  ram
+[root@ip-10-100-1-22 ramesh]# ls -R
+.:
+file.txt  ram
+
+./ram:
+class.txt
+[root@ip-10-100-1-22 ramesh]#
+
+ls -R  -- Recursive --- If dirctory has files and directories without going inside directories it will display contents of all the directories in recursive manner.
+
+-i  -- inode number -- 
+
+Inode number is an address of the file/directory which is existin on server. If file has created on server then one unique number will be generated that number we can call it as inode number.
+
+Inode number will be unique.
+
+[root@ip-10-100-1-22 ramesh]# ls -iltr
+total 0
+12991906 -rw-r--r-- 1 root root  0 Jul  6 14:18 file.txt
+  806782 drwxr-xr-x 2 root root 23 Jul  6 14:18 ram
+[root@ip-10-100-1-22 ramesh]# touch file1.txt
+[root@ip-10-100-1-22 ramesh]# ls -li
+total 0
+12991907 -rw-r--r-- 1 root root  0 Jul  6 14:31 file1.txt
+12991906 -rw-r--r-- 1 root root  0 Jul  6 14:18 file.txt
+  806782 drwxr-xr-x 2 root root 23 Jul  6 14:18 ram
+[root@ip-10-100-1-22 ramesh]#
+
+
+[root@ip-10-100-1-22 /]# ls -lh   # It will list the files along with size which human can understand..
+total 16K
+lrwxrwxrwx   1 root root    7 Jun 17 01:49 bin -> usr/bin
+dr-xr-xr-x   4 root root 4.0K Jun 17 01:50 boot
+-rw-r--r--   1 root root    0 Jul  6 14:10 classtxt
+drwxr-xr-x  15 root root 2.8K Jul  6 02:13 dev
+drwxr-xr-x  80 root root 8.0K Jul  6 02:14 etc
+-rw-r--r--   1 root root    0 Jul  6 02:23 file1.txt
+
+
+What are all the fields will b displayed when we execute ls -ltr?
+
+
+drwxr-xr-x   2 root root    6 Apr  9  2019 srv
+lrwxrwxrwx   1 root root    8 Jun 17 01:49 sbin -> usr/sbin
+-rw-r--r--   1 root root    0 Jul  6 02:20 file.txt
+
+Filetype          FilePermissions                                     Number of links    userid    groupid   size of the file   date and time     filename
+d/l/-             rwx  -- user or owner r-x --- Group  r-x -- Others   1                  root      root       6                  Apr  9  2019      srv        
+
+d- directory
+l- linked file
+- -- normal file
+lrwxrwxrwx   1 root root    8 Jun 17 01:49 sbin -> usr/sbin
+Filetype
+Fileermissions
+Number of links
+userid
+groupid
+size
+date and time
+filename
+
+user    
+group
+others -- individual users
+
+r -- read
+w -- write
+x -- execute
+======================
+
+[root@ip-10-100-1-22 opt]# cat > file.txt
+Welcome Linux
+^C
+[root@ip-10-100-1-22 opt]# ls -ltr
+total 4
+drwxr-xr-x 2 root root  6 Aug 16  2018 rh
+drwxr-xr-x 4 root root 33 Jun 17 01:50 aws
+drwxr-xr-x 2 root root  6 Jul  6 14:55 ramesh
+-rw-r--r-- 1 root root  0 Jul  6 14:57 ramesh.txt
+-rw-r--r-- 1 root root 14 Jul  6 15:06 file.txt
+[root@ip-10-100-1-22 opt]# cat file.txt
+Welcome Linux
+[root@ip-10-100-1-22 opt]# cat < file.txt
+Welcome Linux
+[root@ip-10-100-1-22 opt]#
+
+>  -- It will redirect the ouput to file
+< -- It will display the file content
+
+[root@ip-10-100-1-22 opt]# cat file.txt
+Welcome Linux
+[root@ip-10-100-1-22 opt]# cat < file.txt
+Welcome Linux
+[root@ip-10-100-1-22 opt]# ^C
+[root@ip-10-100-1-22 opt]# cat file.txt
+Welcome Linux
+[root@ip-10-100-1-22 opt]# cat > file.txt  # If file.txt has already somedata then if you add new data into the same file then old data will be overwrite with new data.Old data will be deleted and new data will be there.
+
+>> -- appending -- It will not overwrite the data.It means old data and new data both will be there.
+
+[root@ip-10-100-1-22 opt]# cat file.txt
+Welcome to India
+[root@ip-10-100-1-22 opt]# cat >> file.txt
+Welcome to linux
+^C
+[root@ip-10-100-1-22 opt]# cat file.txt
+Welcome to India
+Welcome to linux
+[root@ip-10-100-1-22 opt]# cat file.txt > file5.txt
+[root@ip-10-100-1-22 opt]# ls -lrt
+total 8
+drwxr-xr-x 2 root root  6 Aug 16  2018 rh
+drwxr-xr-x 4 root root 33 Jun 17 01:50 aws
+drwxr-xr-x 2 root root  6 Jul  6 14:55 ramesh
+-rw-r--r-- 1 root root  0 Jul  6 14:57 ramesh.txt
+-rw-r--r-- 1 root root 34 Jul  6 15:15 file.txt
+-rw-r--r-- 1 root root 34 Jul  6 15:17 file5.txt
+[root@ip-10-100-1-22 opt]# cat file.txt
+Welcome to India
+Welcome to linux
+[root@ip-10-100-1-22 opt]# cat file5.txt
+Welcome to India
+Welcome to linux
+
+
+clear: It is used to clear the screen
+exit: It is used to exit from current shell.
+history: It will display the history of the commands which u entered.
+
+* -- 0 or more characters.
+? -- SIngle character it can be number or character.
+. -- Current directory
+
+[root@ip-10-100-1-22 ~]# ls -ltr f*
+-rw-r--r-- 1 root root 0 Jul  6 14:53 file
+[root@ip-10-100-1-22 ~]#
+
+[root@ip-10-100-1-22 ~]# ls -ltr fil?
+-rw-r--r-- 1 root root 0 Jul  6 14:53 file
+[root@ip-10-100-1-22 ~]#
+
+[root@ip-10-100-1-22 ~]# ls -ltr [fc]*
+-rw-r--r-- 1 root root 0 Jul  6 14:53 file
+-rw-r--r-- 1 root root 0 Jul  7 02:19 class.txt
+[root@ip-10-100-1-22 
+
+=======================
+
+head:
+       It is usedd to get first n number of lines from the file.
+
+[root@ip-10-100-1-22 ~]# cat class.txt
+welcome to linux
+Hello
+
+kadapa
+hyderabad
+btp
+linux
+oracle
+aws
+devops
+docker
+k8s
+[root@ip-10-100-1-22 ~]# head -2 class.txt
+welcome to linux
+Hello
+[root@ip-10-100-1-22 ~]# head -3 class.txt
+welcome to linux
+Hello
+
+
+By default head will display first 10 lines from the file.
+
+[root@ip-10-100-1-22 ~]# head class.txt
+welcome to linux
+Hello
+
+kadapa
+hyderabad
+btp
+linux
+oracle
+aws
+devops
+
+
+===========================
+
+tail:
+     It is used to get last n lines from the file.
+
+[root@ip-10-100-1-22 ~]# tail -2 class.txt
+docker
+k8s
+[root@ip-10-100-1-22 ~]# tail -5 class.txt
+oracle
+aws
+devops
+docker
+k8s
+[root@ip-10-100-1-22 ~]# tail class.txt
+
+kadapa
+hyderabad
+btp
+linux
+oracle
+aws
+devops
+docker
+k8s
+
+Imp: How to see dynamic data which is adding to the file?
+
+dyanmic --- keep on addinfg th data to the file
+
+FB -- log files --- 
+
+tail -f filename
+
+[root@ip-10-100-1-22 ~]# tail -f class.txt
+
+kadapa
+hyderabad
+btp
+linux
+oracle
+aws
+devops
+docker
+=========================================
+
+cd: change directory
+
+
+It is used to move from one directory to another directory.
+
+[root@ip-10-100-1-22 ~]# ls
+class.txt  file  ramesh
+[root@ip-10-100-1-22 ~]# cd ramesh
+[root@ip-10-100-1-22 ramesh]#
+
+[root@ip-10-100-1-22 ramesh]# cd ..  -- It will take you to the previous directory.
+[root@ip-10-100-1-22 ~]# pwd
+/root
+[root@ip-10-100-1-22 ~]#
+
+[root@ip-10-100-1-22 ~]# cd  ramesh
+[root@ip-10-100-1-22 ramesh]# mkdir ram
+[root@ip-10-100-1-22 ramesh]# ls
+ram
+[root@ip-10-100-1-22 ramesh]# cd ram
+[root@ip-10-100-1-22 ram]# ls
+[root@ip-10-100-1-22 ram]# pd
+-bash: pd: command not found
+[root@ip-10-100-1-22 ram]# pwd
+/root/ramesh/ram
+[root@ip-10-100-1-22 ram]# cd ../..
+[root@ip-10-100-1-22 ~]# pwd
+/root
+
+[ec2-user@ip-10-100-1-22 ~]$ sudo -i
+[root@ip-10-100-1-22 ~]# ls
+class.txt  file  ramesh
+[root@ip-10-100-1-22 ~]# cd ramesh
+[root@ip-10-100-1-22 ramesh]# ls
+ram
+[root@ip-10-100-1-22 ramesh]# ls
+ram
+[root@ip-10-100-1-22 ramesh]# pwd
+/root/ramesh
+[root@ip-10-100-1-22 ramesh]# cd ram
+[root@ip-10-100-1-22 ram]# pwd
+/root/ramesh/ram
+[root@ip-10-100-1-22 ram]# cd ..
+[root@ip-10-100-1-22 ramesh]# cd ..
+[root@ip-10-100-1-22 ~]# pwd
+/root
+[root@ip-10-100-1-22 ~]# cd ramesh
+[root@ip-10-100-1-22 ramesh]# cd ram
+[root@ip-10-100-1-22 ram]# pwd
+/root/ramesh/ram
+[root@ip-10-100-1-22 ram]# cd ../..
+[root@ip-10-100-1-22 ~]# pwd
+/root
+[root@ip-10-100-1-22 ~]#
+
+
+[root@ip-10-100-1-22 ~]# cd -    # this command will take you nack to where you came from.
+/root/ramesh/ram
+[root@ip-10-100-1-22 ram]# pwd
+/root/ramesh/ram
+[root@ip-10-100-1-22 ram]#
+
+
+[root@ip-10-100-1-22 ram]# cd ~
+[root@ip-10-100-1-22 ~]# pwd
+/root
+[root@ip-10-100-1-22 ~]# cd -
+/root/ramesh/ram
+[root@ip-10-100-1-22 ram]# cd $HOME
+[root@ip-10-100-1-22 ~]# pwd
+/root
+[root@ip-10-100-1-22 ~]#
+
+[root@ip-10-100-1-22 ~]# cd ramesh/ram
+[root@ip-10-100-1-22 ram]# ls
+[root@ip-10-100-1-22 ram]# cd
+[root@ip-10-100-1-22 ~]# pwd
+/root
+[root@ip-10-100-1-22 ~]#
+
+
+=====
+
+hostname: It is used to get the hostname and ip address of the server.
+
+[root@ip-10-100-1-22 ~]# hostname
+ip-10-100-1-22.ec2.internal
+[root@ip-10-100-1-22 ~]# hostname -i
+10.100.1.22
+[root@ip-10-100-1-22 ~]# vi /etc/hosts
+[root@ip-10-100-1-22 ~]# vi /etc/hostname
+[root@ip-10-100-1-22 ~]#
+======================
+uname: It will display all the information about your operating system.
+
+[root@ip-10-100-1-22 ~]# uname
+Linux
+[root@ip-10-100-1-22 ~]# uname -a
+Linux ip-10-100-1-22.ec2.internal 4.14.232-177.418.amzn2.x86_64 #1 SMP Tue Jun 15 20:57:50 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+[root@ip-10-100-1-22 ~]#
+[root@ip-10-100-1-22 ~]# uname -r  # It will display only kernel version
+4.14.232-177.418.amzn2.x86_64
+[root@ip-10-100-1-22 ~]#
+
+====================
+
+who: It will list the users who are connected to this server
+
+[root@ip-10-100-1-22 ~]# who
+ec2-user pts/0        2021-07-08 02:07 (27.59.206.233)
+ec2-user pts/1        2021-07-08 02:26 (27.59.206.233)
+ec2-user pts/2        2021-07-08 02:32 (223.187.18.86)
+[root@ip-10-100-1-22 ~]# whoami
+root
+[root@ip-10-100-1-22 ~]#
+
+[root@ip-10-100-1-22 ~]# who -b   # It will display the information about when the server was booted(started) --- Rebooting -- stop + start
+         system boot  2021-07-06 02:13
+[root@ip-10-100-1-22 ~]#
+
+
+restart = stop+start   == If anyboy ask you to reboot ur sever ask them about approval.
+
+[root@ip-10-100-1-22 ~]# who -r     # It will display runlevel
+         run-level 5  2021-07-06 02:14
+ What is your runlevel?
+
+runlevel-5
+=====================================
+mkdir: It is used to create directory or directories and sub directories.
+
+mkdri <dirName>
+
+mkdir ramesh
+
+[root@ip-10-100-1-22 ~]# mkdir class1 class2 class3
+[root@ip-10-100-1-22 ~]# l
+-bash: l: command not found
+[root@ip-10-100-1-22 ~]# ls
+class  class1  class2  class3  class.txt  file  ramesh
+[root@ip-10-100-1-22 ~]#
+
+[root@ip-10-100-1-22 ~]# mkdir -p class/ram1/ram2    # This will create subdirectories.Subdirectory means directory inside another another.
+[root@ip-10-100-1-22 ~]# cd class
+[root@ip-10-100-1-22 class]# ls
+ram1
+[root@ip-10-100-1-22 class]#
+
+[root@ip-10-100-1-22 class]# mkdir dir1/dir dir1/cls
+[root@ip-10-100-1-22 class]# ls
+dir1  dir2  ram1
+[root@ip-10-100-1-22 class]# cd dir1
+[root@ip-10-100-1-22 dir1]# ls
+cls  dir
+[root@ip-10-100-1-22 dir1]#
+
+[root@ip-10-100-1-240 ~]# mkdir ram ram1 ram2
+[root@ip-10-100-1-240 ~]# ls
+ram  ram1  ram2  ramesh
+[root@ip-10-100-1-240 ~]# directory inside anther dir^C
+[root@ip-10-100-1-240 ~]# mkdir -p ramesh/class/class1
+[root@ip-10-100-1-240 ~]# ls
+ram  ram1  ram2  ramesh
+[root@ip-10-100-1-240 ~]# cd ramesh
+[root@ip-10-100-1-240 ramesh]# ls
+class
+[root@ip-10-100-1-240 ramesh]#  cd class/
+[root@ip-10-100-1-240 class]# ls
+class1
+[root@ip-10-100-1-240 class]# mkdir ramesh/test ramesh/test1
+mkdir: cannot create directory ‘ramesh/test’: No such file or directory
+mkdir: cannot create directory ‘ramesh/test1’: No such file or directory
+[root@ip-10-100-1-240 class]# cd ..
+[root@ip-10-100-1-240 ramesh]# mkdir ramesh/test ramesh/test1
+mkdir: cannot create directory ‘ramesh/test’: No such file or directory
+mkdir: cannot create directory ‘ramesh/test1’: No such file or directory
+[root@ip-10-100-1-240 ramesh]# mkdir -p ramesh/test ramesh/test1
+[root@ip-10-100-1-240 ramesh]# ls
+class  ramesh
+[root@ip-10-100-1-240 ramesh]# cd ramesh
+[root@ip-10-100-1-240 ramesh]# ls
+test  test1
+[root@ip-10-100-1-240 ramesh]#
+
+---=====================
+
+touch:
+    It is used to create empty files and also we can change timestamp of the file.
+We can create an empty file at particular date and time.
+
+[root@ip-10-100-1-240 ramesh]# touch file.txt
+[root@ip-10-100-1-240 ramesh]# ls
+file.txt  test  test1
+[root@ip-10-100-1-240 ramesh]# touch file1.txt file2.txt file3.txt
+[root@ip-10-100-1-240 ramesh]# ls
+file1.txt  file2.txt  file3.txt  file.txt  test  test1
+[root@ip-10-100-1-240 ramesh]# cat > file4.txt
+Welcome to linux
+^C
+[root@ip-10-100-1-240 ramesh]# ls
+file1.txt  file2.txt  file3.txt  file4.txt  file.txt  test  test1
+[root@ip-10-100-1-240 ramesh]# >file5.txt  # It will also create an empty file.
+[root@ip-10-100-1-240 ramesh]#
+
+[root@ip-10-100-1-240 ramesh]# touch file{0..10}.txt
+[root@ip-10-100-1-240 ramesh]# ls
+file0.txt   file1.txt  file3.txt  file5.txt  file7.txt  file9.txt  test1
+file10.txt  file2.txt  file4.txt  file6.txt  file8.txt  test
+[root@ip-10-100-1-240 ramesh]#
+
+
+[root@ip-10-100-1-240 ramesh]# touch -t 2107060723.29 lin.txt
+[root@ip-10-100-1-240 ramesh]# ls -ltr
+total 0
+-rw-r--r-- 1 root root 0 Jul  6 07:23 lin.txt
+drwxr-xr-x 2 root root 6 Jul  8 14:16 test1
+drwxr-xr-x 2 root root 6 Jul  8 14:16 test
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file9.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file8.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file7.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file6.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file5.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file4.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file3.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file2.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file1.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file10.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file0.txt
+[root@ip-10-100-1-240 ramesh]#
+
+
+[root@ip-10-100-1-240 ramesh]# touch -r lin.txt myfile.txt
+[root@ip-10-100-1-240 ramesh]# ls -ltr
+total 0
+-rw-r--r-- 1 root root 0 Jul  6 07:23 myfile.txt
+-rw-r--r-- 1 root root 0 Jul  6 07:23 lin.txt
+drwxr-xr-x 2 root root 6 Jul  8 14:16 test1
+drwxr-xr-x 2 root root 6 Jul  8 14:16 test
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file9.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file8.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file7.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file6.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file5.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file4.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file3.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file2.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file1.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file10.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file0.txt
+
+[root@ip-10-100-1-240 ramesh]# touch -r lin.txt myfile.txt  # It will update the timestap of existing file against new file.
+[root@ip-10-100-1-240 ramesh]# ls -ltr
+total 0
+-rw-r--r-- 1 root root 0 Jul  6 07:23 myfile.txt
+-rw-r--r-- 1 root root 0 Jul  6 07:23 lin.txt
+drwxr-xr-x 2 root root 6 Jul  8 14:16 test1
+drwxr-xr-x 2 root root 6 Jul  8 14:16 test
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file9.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file8.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file7.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file6.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file5.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file4.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file3.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file2.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file1.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file10.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file0.txt
+[root@ip-10-100-1-240 ramesh]# ^C
+[root@ip-10-100-1-240 ramesh]# ^C
+[root@ip-10-100-1-240 ramesh]# touch  lin.txt myfile.txt
+[root@ip-10-100-1-240 ramesh]# ls -ltr
+total 0
+drwxr-xr-x 2 root root 6 Jul  8 14:16 test1
+drwxr-xr-x 2 root root 6 Jul  8 14:16 test
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file9.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file8.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file7.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file6.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file5.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file4.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file3.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file2.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file1.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file10.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:25 file0.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:35 myfile.txt
+-rw-r--r-- 1 root root 0 Jul  8 14:35 lin.txt
+[root@ip-10-100-1-240 ramesh]#
+
+NOte:
+
+If file has data and when you try recreate the file then date and time will be updated and data will not removed.
+
+[root@ip-10-100-1-240 ramesh]# echo "Hello world" > lin.txt
+[root@ip-10-100-1-240 ramesh]# cat lin.txt
+Hello world
+[root@ip-10-100-1-240 ramesh]# touch  lin.txt myfile.txt
+[root@ip-10-100-1-240 ramesh]# cat lin.txt
+Hello world
+[root@ip-10-100-1-240 ramesh]# ls -ltr
+total 4
+drwxr-xr-x 2 root root  6 Jul  8 14:16 test1
+drwxr-xr-x 2 root root  6 Jul  8 14:16 test
+-rw-r--r-- 1 root root  0 Jul  8 14:25 file9.txt
+-rw-r--r-- 1 root root  0 Jul  8 14:25 file8.txt
+-rw-r--r-- 1 root root  0 Jul  8 14:25 file7.txt
+-rw-r--r-- 1 root root  0 Jul  8 14:25 file6.txt
+-rw-r--r-- 1 root root  0 Jul  8 14:25 file5.txt
+-rw-r--r-- 1 root root  0 Jul  8 14:25 file4.txt
+-rw-r--r-- 1 root root  0 Jul  8 14:25 file3.txt
+-rw-r--r-- 1 root root  0 Jul  8 14:25 file2.txt
+-rw-r--r-- 1 root root  0 Jul  8 14:25 file1.txt
+-rw-r--r-- 1 root root  0 Jul  8 14:25 file10.txt
+-rw-r--r-- 1 root root  0 Jul  8 14:25 file0.txt
+-rw-r--r-- 1 root root  0 Jul  8 14:38 myfile.txt
+-rw-r--r-- 1 root root 12 Jul  8 14:38 lin.txt
+[root@ip-10-100-1-240 ramesh#
+
+head
+pwd
+cd
+mkdir
+tail
+clear
+hostname
+hostname -i
+uname
+who
+whoami
+touch
+ls
+who -r
+cat
+exit
+history
+=====================
+rm:
+  It is used to delete files or directories.
+
+  [root@ip-10-100-1-240 ~]# touch file.txt
+[root@ip-10-100-1-240 ~]#
+[root@ip-10-100-1-240 ~]# ls
+file.txt  ram  ram1  ram2
+[root@ip-10-100-1-240 ~]# rm file.txt
+rm: remove regular empty file ‘file.txt’? n
+[root@ip-10-100-1-240 ~]# ls
+file.txt  ram  ram1  ram2
+[root@ip-10-100-1-240 ~]# rm file.txt
+rm: remove regular empty file ‘file.txt’? y
+[root@ip-10-100-1-240 ~]# ls
+ram  ram1  ram2
+[root@ip-10-100-1-240 ~]# touch file.txt
+[root@ip-10-100-1-240 ~]# ls
+file.txt  ram  ram1  ram2
+[root@ip-10-100-1-240 ~]# rm -i file.txt
+rm: remove regular empty file ‘file.txt’? n
+[root@ip-10-100-1-240 ~]#
+[root@ip-10-100-1-240 ~]# rm ram
+rm: cannot remove ‘ram’: Is a directory
+[root@ip-10-100-1-240 ~]# rm -f ram
+rm: cannot remove ‘ram’: Is a directory
+[root@ip-10-100-1-240 ~]# rm -rf ram
+[root@ip-10-100-1-240 ~]# touch file.txt
+[root@ip-10-100-1-240 ~]# rm -rf file.txt
+[root@ip-10-100-1-240 ~]#
+
+-r recursive
+-f forcible
+-i interactive
+=================
+rmdir:
+        It is used to delete empty directory.
+[root@ip-10-100-1-240 ~]# ls
+ram1  ram2
+[root@ip-10-100-1-240 ~]# rmdir ram1
+[root@ip-10-100-1-240 ~]# ls
+ram2
+=================
+cp: copy
+
+ It is used to copy the files or directories from one location to another location. YOu can copy the data from one file to another file or directory.
+ When you do copy, On hard disk the same copy will be created with different name.
+
+cp source  destination
+
+[root@ip-10-100-1-240 ~]# cat > file.txt
+Welcome to linux class
+Hello world
+^C
+[root@ip-10-100-1-240 ~]# cat file.txt
+Welcome to linux class
+Hello world
+[root@ip-10-100-1-240 ~]#
+[root@ip-10-100-1-240 ~]# cp file.txt file1.txt
+[root@ip-10-100-1-240 ~]# ls
+file1.txt  file.txt  ram2
+[root@ip-10-100-1-240 ~]# ls
+file1.txt  file.txt  ram2
+[root@ip-10-100-1-240 ~]# cp fil.txt ram2
+cp: cannot stat ‘fil.txt’: No such file or directory
+[root@ip-10-100-1-240 ~]# cp file.txt ram2
+[root@ip-10-100-1-240 ~]# ls
+file1.txt  file.txt  ram2
+[root@ip-10-100-1-240 ~]#
+[root@ip-10-100-1-240 ~]# cd ram2
+[root@ip-10-100-1-240 ram2]#
+[root@ip-10-100-1-240 ram2]# ls
+file.txt
+[root@ip-10-100-1-240 ram2]# cd .......
+-bash: cd: .......: No such file or directory
+[root@ip-10-100-1-240 ram2]#
+[root@ip-10-100-1-240 ram2]#
+[root@ip-10-100-1-240 ram2]# cd ..
+[root@ip-10-100-1-240 ~]# ls
+file1.txt  file.txt  ram2
+[root@ip-10-100-1-240 ~]# cp fil* ram2/
+cp: overwrite ‘ram2/file.txt’? y
+[root@ip-10-100-1-240 ~]# cd ram2
+[root@ip-10-100-1-240 ram2]# ls
+file1.txt  file.txt
+[root@ip-10-100-1-240 ram2]# cd ..
+[root@ip-10-100-1-240 ~]# cp file.txt file1.txt ram2
+cp: overwrite ‘ram2/file.txt’? y
+cp: overwrite ‘ram2/file1.txt’? y
+[root@ip-10-100-1-240 ~]#
+
+[root@ip-10-100-1-240 ~]# mkdir ram
+[root@ip-10-100-1-240 ~]# cd ram
+[root@ip-10-100-1-240 ram]# touch class{1..4}.txt
+[root@ip-10-100-1-240 ram]# ls
+class1.txt  class2.txt  class3.txt  class4.txt
+[root@ip-10-100-1-240 ram]# cd ..
+[root@ip-10-100-1-240 ~]# ls
+file1.txt  file.txt  ram  ram2
+[root@ip-10-100-1-240 ~]# cp ram ram2/
+cp: omitting directory ‘ram’
+[root@ip-10-100-1-240 ~]# cp -R ram/* ram2/It will copy the data from ram to ram2 in recursive manner.
+[root@ip-10-100-1-240 ~]# cd ram2
+[root@ip-10-100-1-240 ram2]# ls
+class1.txt  class2.txt  class3.txt  class4.txt  file1.txt  file.txt
+[root@ip-10-100-1-240 ram2]#
+
+-R -- Recursive
+
+[root@ip-10-100-1-240 ram2]# cp file.txt class1.txt
+cp: overwrite ‘class1.txt’? y
+[root@ip-10-100-1-240 ram2]# cat class1.txt
+Welcome to linux class
+Hello world
+[root@ip-10-100-1-240 ram2]# echo "Welcome to Devops" >> class1.txt
+[root@ip-10-100-1-240 ram2]# cp class1.txt  file.txt
+cp: overwrite ‘file.txt’? y
+[root@ip-10-100-1-240 ram2]# cat file.txt
+Welcome to linux class
+Hello world
+Welcome to Devops
+[root@ip-10-100-1-240 ram2]# echo "Welcome to Devops" >> class2.txt
+[root@ip-10-100-1-240 ram2]# cp class2.txt  file.txt
+cp: overwrite ‘file.txt’? y
+[root@ip-10-100-1-240 ram2]# cat file.txt
+Welcome to Devops
+[root@ip-10-100-1-240 ram2]#
+
+=============================
+mv:
+   It is used to move the file from one location to another location.
+   using mv command we can rename the filename.
+
+[root@ip-10-100-1-240 ~]# ls
+file1.txt  file.txt  ram  ram2
+[root@ip-10-100-1-240 ~]# mv file.txt class.txt
+[root@ip-10-100-1-240 ~]# ls
+class.txt  file1.txt  ram  ram2
+[root@ip-10-100-1-240 ~]# mv file.txt class.txt
+mv: cannot stat ‘file.txt’: No such file or directory
+[root@ip-10-100-1-240 ~]# mv file1.txt class.txt
+mv: overwrite ‘class.txt’? y
+[root@ip-10-100-1-240 ~]# ls
+class.txt  ram  ram2
+[root@ip-10-100-1-240 ~]# cat file
+cat: file: No such file or directory
+[root@ip-10-100-1-240 ~]# cat class.txt
+Welcome to linux class
+Hello world
+[root@ip-10-100-1-240 ~]#
+
+[root@ip-10-100-1-240 ~]# ls
+file1.txt  file.txt  ram  ram2
+[root@ip-10-100-1-240 ~]# mv file.txt class.txt
+[root@ip-10-100-1-240 ~]# ls
+class.txt  file1.txt  ram  ram2
+[root@ip-10-100-1-240 ~]# mv file.txt class.txt
+mv: cannot stat ‘file.txt’: No such file or directory
+[root@ip-10-100-1-240 ~]# mv file1.txt class.txt
+mv: overwrite ‘class.txt’? y
+[root@ip-10-100-1-240 ~]# ls
+class.txt  ram  ram2
+[root@ip-10-100-1-240 ~]# cat file
+cat: file: No such file or directory
+[root@ip-10-100-1-240 ~]# cat class.txt
+Welcome to linux class
+Hello world
+[root@ip-10-100-1-240 ~]# ^C
+[root@ip-10-100-1-240 ~]#
+[root@ip-10-100-1-240 ~]#
+[root@ip-10-100-1-240 ~]# mv class.txt ram/
+[root@ip-10-100-1-240 ~]# ls
+ram  ram2
+[root@ip-10-100-1-240 ~]# cd ram
+[root@ip-10-100-1-240 ram]# ls
+class1.txt  class2.txt  class3.txt  class4.txt  class.txt
+[root@ip-10-100-1-240 ram]# cd ...
+-bash: cd: ...: No such file or directory
+[root@ip-10-100-1-240 ram]# cd ..
+[root@ip-10-100-1-240 ~]# ls
+ram  ram2
+[root@ip-10-100-1-240 ~]#
+[root@ip-10-100-1-240 ~]# mv ram ram2
+[root@ip-10-100-1-240 ~]# ls
+ram2
+[root@ip-10-100-1-240 ~]# mv ram ram3
+mv: cannot stat ‘ram’: No such file or directory
+[root@ip-10-100-1-240 ~]# mv ram2 ram3
+[root@ip-10-100-1-240 ~]# ls
+ram3
+
+[root@ip-10-100-1-240 ~]# ls
+ram3
+[root@ip-10-100-1-240 ~]# touch file{1..5}
+[root@ip-10-100-1-240 ~]# ls
+file1  file2  file3  file4  file5  ram3
+[root@ip-10-100-1-240 ~]# mv file* ram3/
+[root@ip-10-100-1-240 ~]# ls
+ram3
+[root@ip-10-100-1-240 ~]# touch file{1..5}
+[root@ip-10-100-1-240 ~]# mv -i file* ram3/
+mv: overwrite ‘ram3/file1’? y
+mv: overwrite ‘ram3/file2’? y
+mv: overwrite ‘ram3/file3’? y
+mv: overwrite ‘ram3/file4’? y
+mv: overwrite ‘ram3/file5’? y
+[root@ip-10-100-1-240 ~]# y
+-bash: y: command not found
+[root@ip-10-100-1-240 ~]#
+================
+How to rename the file?
+================
+
+=========
+wc: word count command
+file -- ramesh --- 6 --- size 6
+
+line count  --- How many lines are there in file?
+word cound  -- How many words are there in file?
+character count  -- how may characters are there?
+
+character count will become size of the file.
+
+How find the size of the file?
+how to find how many lines are there in file?
+
+[root@ip-10-1-0-9 ~]# cat > file.txt
+Welcome to linux class
+Hello World
+^C
+[root@ip-10-1-0-9 ~]# cat file.txt
+Welcome to linux class
+Hello World
+[root@ip-10-1-0-9 ~]# | wc -l file.txt
+2 file.txt
+[root@ip-10-1-0-9 ~]# wc -w file.txt
+6 file.txt
+[root@ip-10-1-0-9 ~]# wc -c file.txt
+35 file.txt
+[root@ip-10-1-0-9 ~]#
+
+[root@ip-10-1-0-9 ~]# ^C
+[root@ip-10-1-0-9 ~]# wc file.txt
+ 2  6 35 file.txt
+[root@ip-10-1-0-9 ~]# wc -lwc  file.txt
+ 2  6 35 file.txt
+[root@ip-10-1-0-9 ~]# ^C
+[root@ip-10-1-0-9 ~]#
+
+ -l --- Number of lines
+ -w -- number of words
+ -c -- Number of characters
+
+ How to find the size of the file?
+
+ wc -c filename
+
+ ==========
+ locate:
+     Using this command we can quickly search for file or group of files or command location.
+
+    [root@ip-10-1-0-9 ~]# locate file.txt
+/root/file.txt
+[root@ip-10-1-0-9 ~]# locate /etc/passwd
+/etc/passwd
+/etc/passwd-
+[root@ip-10-1-0-9 ~]#
+
+[root@ip-10-1-0-9 ~]# locate crontab
+===========
+| (Piping)
+command1 -- output ---output bcome input for this-- command2
+
+command1 | command2
+
+[root@ip-10-1-0-9 ~]# clear
+[root@ip-10-1-0-9 ~]# head -7 file.txt | tail -1  # This will rint 7th line
+Hello Welcome
+[root@ip-10-1-0-9 ~]#
+
+[root@ip-10-1-0-9 ~]# ps -eaf | grep -i ec2-user
+root     32178  3151  0 14:13 ?        00:00:00 sshd: ec2-user [priv]
+ec2-user 32196 32178  0 14:13 ?        00:00:00 sshd: ec2-user@pts/0
+ec2-user 32197 32196  0 14:13 pts/0    00:00:00 -bash
+root     32344 32223  0 14:35 pts/0    00:00:00  --color= -i ec2-user
+[root@ip-10-1-0-9 ~]#
+
+auto
+
+grep
+=======================
+cut:
+    It is used to pick th given expression and display on the screen.
+   welcome to linux  --- 1 to 5 -- characters
+                    ---- 1 to 5 -- fields
+[root@ip-10-1-0-9 ~]# clear
+[root@ip-10-1-0-9 ~]# cat file.txt
+Hello world
+[root@ip-10-1-0-9 ~]# cut -c1 file.txt # It will cut 1st character and it will print it
+H
+[root@ip-10-1-0-9 ~]# cut -c1,4 file.txt  # It will print 1st and 4th characters
+Hl
+[root@ip-10-1-0-9 ~]# cut -c1-4 file.txt # It will print 1st to 4th character
+Hell
+[root@ip-10-1-0-9 ~]# cut -c1- file.txt # It will print 1st to end of the line
+Hello world
+[root@ip-10-1-0-9 ~]# cut -c4- file.txt # It will print 4th character to end of the line
+lo world
+[root@ip-10-1-0-9 ~]# ^C
+[root@ip-10-1-0-9 ~]# cut -c1-7 file.txt # It will print 1st to 7th character including blank space
+Hello w
+[root@ip-10-1-0-9 ~]#
+
+[root@ip-10-1-0-9 ~]# cat file.txt
+Hello world
+[root@ip-10-1-0-9 ~]# cut -d " " -f2 file.txt
+world
+[root@ip-10-1-0-9 ~]# cut -f2 file.txt
+Hello world
+[root@ip-10-1-0-9 ~]# cut -d -f2 file.txt
+cut: the delimiter must be a single character
+Try 'cut --help' for more information.
+[root@ip-10-1-0-9 ~]# cut -d " " -f2 file.txt
+world
+[root@ip-10-1-0-9 ~]# cut -d " " -f1-2 file.txt
+Hello world
+[root@ip-10-1-0-9 ~]# echo " This is linux for production support jobs" >> file.txt
+[root@ip-10-1-0-9 ~]# cat file.txt
+Hello world
+ This is linux for production support jobs
+[root@ip-10-1-0-9 ~]# cut -d " " -f1-2 file.txt
+Hello world
+ This
+[root@ip-10-1-0-9 ~]# vi file.txt
+[root@ip-10-1-0-9 ~]# cut -d " " -f1-2 file.txt
+Hello world
+This is
+[root@ip-10-1-0-9 ~]# cut -d " " -f1- file.txt
+Hello world
+This is linux for production support jobs
+[root@ip-10-1-0-9 ~]# cut -d " " -f1,3 file.txt
+Hello
+This linux
+[root@ip-10-1-0-9 ~]#
+
+================
+
+sort:
+   It is used to sort the data in ascending order or descending order.
+
+   By default it will sort the data int ascending order.
+
+   ^C
+[root@ip-10-1-0-9 ~]# cat file.txt
+kadapa
+btp
+ap
+karnataka
+bangalore
+hyderabad
+chennai
+pune
+mumbai
+mh
+[root@ip-10-1-0-9 ~]# sort file.txt
+ap
+bangalore
+btp
+chennai
+hyderabad
+kadapa
+karnataka
+mh
+mumbai
+pune
+[root@ip-10-1-0-9 ~]# sort -r file.txt
+pune
+mumbai
+mh
+karnataka
+kadapa
+hyderabad
+chennai
+btp
+bangalore
+ap
+
+-r -- reverse
+
+[root@ip-10-1-0-9 ~]# echo "pune" >>file.txt
+[root@ip-10-1-0-9 ~]# cat file.txt
+kadapa
+btp
+ap
+karnataka
+bangalore
+hyderabad
+chennai
+pune
+mumbai
+mh
+pune
+[root@ip-10-1-0-9 ~]# sort -u file.txt
+ap
+bangalore
+btp
+chennai
+hyderabad
+kadapa
+karnataka
+mh
+mumbai
+pune
+
+-u -- unique
+
+[root@ip-10-1-0-9 ~]# cat file.txt
+welcome to production support jobs
+welcome to application support jobs
+welcome to DBA jobs
+hello DBA jobs
+[root@ip-10-1-0-9 ~]# sort -k3 file.txt
+welcome to application support jobs
+welcome to DBA jobs
+hello DBA jobs
+welcome to production support jobs
+[root@ip-10-1-0-9 ~]# sort -t " " -k3 file.txt
+welcome to application support jobs
+welcome to DBA jobs
+hello DBA jobs
+welcome to production support jobs
+[root@ip-10-1-0-9 ~]#
+
+
+How to sort the data based on particular field?
+
+sort -t "," -k5 filename  # It will sort the data based on 5th field
+
+-t -- delimeter
+-k -- field
+======================
+================
+Access Permissions:
+   file or directory level permissions
+   user level permissions
+
+File or directory permissions:
+
+rw-r--r--
+r -- read-- weightage-4
+w -- write-- weightage-2
+x -- execute -- weightage-1
+
+rwx -- readwriteexecute -- 4+2+1=7 = user has all the access
+
+rw-r--r--
+
+rw- --- user r--  -- group r-- -- other
+6             4            4 == 644
+
+file has 666 permissions
+directory has 777 permissions
+
+644 -- original --666 
+
+666
+644
+----
+022 -- default file permission -- umask
+umask -- the permissions which are not granted to the user,group and others
+What is the umask values:
+
+022 is umask which is default file permissions.
+
+644 -- whenever you create a file by default you will ge these permissions
+
+for Directory:
+
+    drwxr-xr-x 2 root root   6 Jul 10 15:23 ram
+
+rwx  -- user  r-x --- group  r-x --- others
+7              5              5  = 755
+
+777
+755
+---
+022
+============ 
+
+cut
+sort
+pipe
+locate
+wc
+permissions
+cat
+head
+tail
+who
+whoami
+mkdir
+cp
+uname
+hostname
+mv
+who -r
+rm
+rmdir
+touch
+echo
+pwd
+ls
+history
+exit
+clear
+cd 
+=============
+How to assign those permissions those files or directories?
+
+chmod: It is used to change the permissions of file or directory.
+
+0 -- it means No permissions
+1 -- Execute permissions
+2 -- Write permissions
+3 -- write and execute permissions
+4 -- read pemission
+5 -- read and execute
+6 -- read and write permission
+
+[root@ip-10-1-0-9 ~]# ls -ltr
+total 4
+-rw-r--r-- 1 root root 106 Jul 10 15:10 file.txt
+-rw-r--r-- 1 root root   0 Jul 10 15:17 file1.txt
+-rw-r--r-- 1 root root   0 Jul 10 15:19 file2.txt
+drwxr-xr-x 2 root root   6 Jul 10 15:23 ram
+[root@ip-10-1-0-9 ~]# chmod g+w file
+file1.txt  file2.txt  file.txt
+[root@ip-10-1-0-9 ~]# chmod g+w file.txt
+[root@ip-10-1-0-9 ~]# ls -ltr
+total 4
+-rw-rw-r-- 1 root root 106 Jul 10 15:10 file.txt
+-rw-r--r-- 1 root root   0 Jul 10 15:17 file1.txt
+-rw-r--r-- 1 root root   0 Jul 10 15:19 file2.txt
+drwxr-xr-x 2 root root   6 Jul 10 15:23 ram
+[root@ip-10-1-0-9 ~]# chmod g+x file.txt
+[root@ip-10-1-0-9 ~]# ls -ltr
+total 4
+-rw-rwxr-- 1 root root 106 Jul 10 15:10 file.txt
+-rw-r--r-- 1 root root   0 Jul 10 15:17 file1.txt
+-rw-r--r-- 1 root root   0 Jul 10 15:19 file2.txt
+drwxr-xr-x 2 root root   6 Jul 10 15:23 ram
+
+How to make file as readonly?
+
+[root@ip-10-1-0-9 ~]# chmod 400 file1.txt
+[root@ip-10-1-0-9 ~]# ls -ltr
+total 4
+-rw-rwxr-- 1 root root 106 Jul 10 15:10 file.txt
+-r-------- 1 root root   0 Jul 10 15:17 file1.txt
+-rw-r--r-- 1 root root   0 Jul 10 15:19 file2.txt
+drwxr-xr-x 2 root root   6 Jul 10 15:23 ram
+[root@ip-10-1-0-9 ~]#
+
+[root@ip-10-1-0-9 ~]# ls -ltr
+total 4
+-rw-rwxr-- 1 root root 106 Jul 10 15:10 file.txt
+-r-------- 1 root root   0 Jul 10 15:17 file1.txt
+-rw-r--r-- 1 root root   0 Jul 10 15:19 file2.txt
+drwxr-xr-x 2 root root   6 Jul 10 15:23 ram
+[root@ip-10-1-0-9 ~]# chmod g-wx file.txt
+[root@ip-10-1-0-9 ~]# ls -ltr
+total 4
+-rw-r--r-- 1 root root 106 Jul 10 15:10 file.txt
+-r-------- 1 root root   0 Jul 10 15:17 file1.txt
+-rw-r--r-- 1 root root   0 Jul 10 15:19 file2.txt
+drwxr-xr-x 2 root root   6 Jul 10 15:23 ram
+[root@ip-10-1-0-9 ~]#
+
+[root@ip-10-1-0-9 ~]# ls -ltr
+total 4
+-rw-r--r-- 1 root root 106 Jul 10 15:10 file.txt
+-r-------- 1 root root   0 Jul 10 15:17 file1.txt
+-rw-r--r-- 1 root root   0 Jul 10 15:19 file2.txt
+drwxr-xr-x 3 root root  20 Jul 12 02:13 ram
+[root@ip-10-1-0-9 ~]# chmod 777 ram
+[root@ip-10-1-0-9 ~]# ls -ltr
+total 4
+-rw-r--r-- 1 root root 106 Jul 10 15:10 file.txt
+-r-------- 1 root root   0 Jul 10 15:17 file1.txt
+-rw-r--r-- 1 root root   0 Jul 10 15:19 file2.txt
+drwxrwxrwx 3 root root  20 Jul 12 02:13 ram
+[root@ip-10-1-0-9 ~]# cd ram
+[root@ip-10-1-0-9 ram]# ls -ltr
+total 0
+drwxr-xr-x 2 root root 6 Jul 12 02:13 ramesh
+[root@ip-10-1-0-9 ram]# cd ..
+[root@ip-10-1-0-9 ~]# chmod -R 777 ram
+[root@ip-10-1-0-9 ~]# ls -ltr
+total 4
+-rw-r--r-- 1 root root 106 Jul 10 15:10 file.txt
+-r-------- 1 root root   0 Jul 10 15:17 file1.txt
+-rw-r--r-- 1 root root   0 Jul 10 15:19 file2.txt
+drwxrwxrwx 3 root root  20 Jul 12 02:13 ram
+[root@ip-10-1-0-9 ~]# cd ram
+[root@ip-10-1-0-9 ram]# ls -ltr
+total 0
+drwxrwxrwx 2 root root 6 Jul 12 02:13 ramesh
+[root@ip-10-1-0-9 ram]#
+[root@ip-10-1-0-9 ram]#
+
+-R -- It will give permissions recursive manner.
+
+[root@ip-10-1-0-9 ~]# ls -ltr
+total 4
+-rw-r--r-- 1 root root 106 Jul 10 15:10 file.txt
+-r-------- 1 root root   0 Jul 10 15:17 file1.txt
+-rw-r--r-- 1 root root   0 Jul 10 15:19 file2.txt
+drwxrwxrwx 3 root root  20 Jul 12 02:13 ram
+[root@ip-10-1-0-9 ~]# chmod u+wx,g+r,o+r file1.txt
+[root@ip-10-1-0-9 ~]# ls -ltr
+total 4
+-rw-r--r-- 1 root root 106 Jul 10 15:10 file.txt
+-rwxr--r-- 1 root root   0 Jul 10 15:17 file1.txt
+-rw-r--r-- 1 root root   0 Jul 10 15:19 file2.txt
+drwxrwxrwx 3 root root  20 Jul 12 02:13 ram
+[root@ip-10-1-0-9 ~]#
+====================================
+chown:
+     It is used to change owner of the file or directory.
+   root@ip-10-1-0-9 ~]# chown babu file.txt
+chown: invalid user: ‘babu’                # This error we got because of user not existed. If you want to change the user then user must be existed in linux server.
+[root@ip-10-1-0-9 ~]# chown babu file.txt
+[root@ip-10-1-0-9 ~]# ls -ltr
+total 4
+-rw-r--r-- 1 babu root 106 Jul 10 15:10 file.txt
+-rwxr--r-- 1 root root   0 Jul 10 15:17 file1.txt
+-rw-r--r-- 1 root root   0 Jul 10 15:19 file2.txt
+drwxrwxrwx 3 root root  20 Jul 12 02:13 ram
+[root@ip-10-1-0-9 ~]# chown babu ram
+[root@ip-10-1-0-9 ~]# ls -ltr
+total 4
+-rw-r--r-- 1 babu root 106 Jul 10 15:10 file.txt
+-rwxr--r-- 1 root root   0 Jul 10 15:17 file1.txt
+-rw-r--r-- 1 root root   0 Jul 10 15:19 file2.txt
+drwxrwxrwx 3 babu root  20 Jul 12 02:13 ram
+[root@ip-10-1-0-9 ~]# chown babu:babu file1.txt
+[root@ip-10-1-0-9 ~]# ls -ltr
+total 4
+-rw-r--r-- 1 babu root 106 Jul 10 15:10 file.txt
+-rwxr--r-- 1 babu babu   0 Jul 10 15:17 file1.txt
+-rw-r--r-- 1 root root   0 Jul 10 15:19 file2.txt
+drwxrwxrwx 3 babu root  20 Jul 12 02:13 ram
+[root@ip-10-1-0-9 ~]# cd ram
+[root@ip-10-1-0-9 ram]# ls -ltr
+total 0
+drwxrwxrwx 2 root root 6 Jul 12 02:13 ramesh
+[root@ip-10-1-0-9 ram]# cd ..
+[root@ip-10-1-0-9 ~]# chown -R babu:babu ram
+[root@ip-10-1-0-9 ~]# ls -ltr
+total 4
+-rw-r--r-- 1 babu root 106 Jul 10 15:10 file.txt
+-rwxr--r-- 1 babu babu   0 Jul 10 15:17 file1.txt
+-rw-r--r-- 1 root root   0 Jul 10 15:19 file2.txt
+drwxrwxrwx 3 babu babu  20 Jul 12 02:13 ram
+[root@ip-10-1-0-9 ~]# cd ram
+[root@ip-10-1-0-9 ram]# ls -ltr
+total 0
+drwxrwxrwx 2 babu babu 6 Jul 12 02:13 ramesh
+[root@ip-10-1-0-9 ram]#
+
+
+useradd:
+    It is used to create an user.
+
+ useradd -s /bin/bash -d /opt babu
+
+ When you create an user directory will be created in /home directory for the normal users.
+
+How to change the password of user?
+
+[root@ip-10-1-0-9 ~]# passwd babu
+Changing password for user babu.
+New password:
+BAD PASSWORD: The password is shorter than 8 characters
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[root@ip-10-1-0-9 ~]# ^C
+[root@ip-10-1-0-9 ~]# ls
+file1.txt  file2.txt  file.txt  ram
+[root@ip-10-1-0-9 ~]# cd /home
+[root@ip-10-1-0-9 home]# ls
+babu  ec2-user
+[root@ip-10-1-0-9 home]#
+=================================
+chgrp:
+   It is used to change th group of the file or directory.
+
+   [root@ip-10-1-0-9 ~]# ls -ltr
+total 4
+-rw-r--r-- 1 babu root 106 Jul 10 15:10 file.txt
+-rwxr--r-- 1 babu babu   0 Jul 10 15:17 file1.txt
+-rw-r--r-- 1 root root   0 Jul 10 15:19 file2.txt
+drwxrwxrwx 3 babu babu  20 Jul 12 02:13 ram
+[root@ip-10-1-0-9 ~]# chgrp ramesh file
+file1.txt  file2.txt  file.txt
+[root@ip-10-1-0-9 ~]# chgrp ramesh file.txt
+chgrp: invalid group: ‘ramesh’
+[root@ip-10-1-0-9 ~]# useradd ramesh
+[root@ip-10-1-0-9 ~]# chgrp ramesh file.txt
+[root@ip-10-1-0-9 ~]# ls -ltr
+total 4
+-rw-r--r-- 1 babu ramesh 106 Jul 10 15:10 file.txt
+-rwxr--r-- 1 babu babu     0 Jul 10 15:17 file1.txt
+-rw-r--r-- 1 root root     0 Jul 10 15:19 file2.txt
+drwxrwxrwx 3 babu babu    20 Jul 12 02:13 ram
+[root@ip-10-1-0-9 ~]#
+===================================
+uniq: It is used to display the uniq records.
+
+[root@ip-10-1-0-9 ~]# uniq file2.txt
+ap
+btp
+pune
+kadapa
+pune
+mumbai
+ngp
+mgp
+apple
+fruit
+[root@ip-10-1-0-9 ~]# sort -u file2.txt
+ap
+apple
+btp
+fruit
+kadapa
+mgp
+mumbai
+ngp
+pune
+[root@ip-10-1-0-9 ~]#
+
+[root@ip-10-1-0-9 ~]# sort  file2.txt | uniq -u
+apple
+btp
+fruit
+kadapa
+mgp
+mumbai
+ngp
+[root@ip-10-1-0-9 ~]#
+
+[root@ip-10-1-0-9 ~]# uniq -d file2.txt
+ap
+[root@ip-10-1-0-9 ~]# cat file2.txt
+ap
+ap
+btp
+pune
+kadapa
+pune
+mumbai
+ngp
+mgp
+apple
+fruit
+[root@ip-10-1-0-9 ~]# uniq -d file2.txt
+ap
+[root@ip-10-1-0-9 ~]# vi file2.txt
+[root@ip-10-1-0-9 ~]# cat file2.txt
+ap
+ap
+btp
+pune
+pune
+mumbai
+ngp
+mgp
+apple
+fruit
+[root@ip-10-1-0-9 ~]#
+
+[root@ip-10-1-0-9 ~]# uniq -d file2.txt
+ap
+pune
+[root@ip-10-1-0-9 ~]#
+
+Note: Uniq command will display duplicate records when they are in sequence it means one after the other.
+
+======================
+
+writing -- > file -- the command should write the data to file as well as on the screen. --
+
+welcome to linux --- file.txt  -- data should be displayed on the screen
+
+tee:
+    It reads the data from input file and write to thee file as well as on the screen(Standard output)
+
+  or
+
+  It will write the data to the file as well as on th screen
+
+[root@ip-10-1-0-9 ~]# ls -ltr
+total 8
+-rw-r--r-- 1 babu ramesh 106 Jul 10 15:10 file.txt
+-rwxr--r-- 1 babu babu     0 Jul 10 15:17 file1.txt
+drwxrwxrwx 3 babu babu    20 Jul 12 02:13 ram
+-rw-r--r-- 1 root root    47 Jul 12 02:45 file2.txt
+[root@ip-10-1-0-9 ~]# cat file
+file1.txt  file2.txt  file.txt
+[root@ip-10-1-0-9 ~]# cat file.txt
+welcome to production support jobs
+welcome to application support jobs
+welcome to DBA jobs
+hello DBA jobs
+[root@ip-10-1-0-9 ~]# cat file.txt | tee file4.txt
+welcome to production support jobs
+welcome to application support jobs
+welcome to DBA jobs
+hello DBA jobs
+[root@ip-10-1-0-9 ~]# cat file4.txt
+welcome to production support jobs
+welcome to application support jobs
+welcome to DBA jobs
+hello DBA jobs
+[root@ip-10-1-0-9 ~]#
+[root@ip-10-1-0-9 ~]#
+
+[root@ip-10-1-0-9 ~]# tee file.txt
+Welcome to india
+Welcome to india
+
+
+welcome to linux
+welcome to linux
+^C
+[root@ip-10-1-0-9 ~]# cat file.txt
+Welcome to india
+
+welcome to linux
+[root@ip-10-1-0-9 ~]#
+
+[root@ip-10-1-0-9 ~]# echo "Welcome to linux class" | tee fil5.txt
+Welcome to linux class
+[root@ip-10-1-0-9 ~]# cat file5
+cat: file5: No such file or directory
+[root@ip-10-1-0-9 ~]# cat fil5.txt
+Welcome to linux class
+[root@ip-10-1-0-9 ~]#
+
+[root@ip-10-1-0-9 ~]# echo "Welcome to linux" | tee -a fil5.txt # If fil5.txt has already somedata then this command will not overwrite the data.
+Welcome to linux
+[root@ip-10-1-0-9 ~]# cat file5
+cat: file5: No such file or directory
+[root@ip-10-1-0-9 ~]# cat fil5.txt
+Welcome to linux class
+Welcome to linux
+[root@ip-10-1-0-9 ~]#
+ 
+ -a -- appendig
+
+Note: If there is no file existed then tee command will create the file and write data to it.
+
+Realtime usecase:
+   For example, If you are executing any script and u want to see the output on the screen then we need to use tee.
+./scriptname | tee
+
+[root@ip-10-1-0-9 ~]# echo "Welcome to linux" | tee -a fil5.txt  file6.txt
+Welcome to linux
+[root@ip-10-1-0-9 ~]# echo "Welcome to linux" | tee -a fil5.txt  > file6.log
+[root@ip-10-1-0-9 ~]# echo "Welcome to linux" | tee -a fil5.txt  > file6.log
+[root@ip-10-1-0-9 ~]# cat file6.
+cat: file6.: No such file or directory
+[root@ip-10-1-0-9 ~]# cat file6.log
+Welcome to linux
+
+=================================
+
+10000 --- 100 records -- sleep 10 seconds -- 1000 records -- sleep 10 secons -- 100 -- sleep 10 seconds
+
+sleep:
+ It is used to keep calm or it doesn't do anything at given time.
+
+sleep 10
+
+sleeep 20
+
+ [root@ip-10-1-0-9 ~]# touch file.log ; sleep 10 ; ls -ltr
+total 24
+-rwxr--r-- 1 babu babu     0 Jul 10 15:17 file1.txt
+drwxrwxrwx 3 babu babu    20 Jul 12 02:13 ram
+-rw-r--r-- 1 root root    47 Jul 12 02:45 file2.txt
+-rw-r--r-- 1 root root   106 Jul 12 02:54 file4.txt
+-rw-r--r-- 1 babu ramesh  35 Jul 12 02:58 file.txt
+-rw-r--r-- 1 root root    34 Jul 12 03:08 file6.txt
+-rw-r--r-- 1 root root    17 Jul 12 03:09 file6.log
+-rw-r--r-- 1 root root   125 Jul 12 03:09 fil5.txt
+-rw-r--r-- 1 root root     0 Jul 12 03:15 file.log
+[root@ip-10-1-0-9 ~]# touc file.log ; sleep 10 ; ls -ltr
+-bash: touc: command not found
+total 24
+-rwxr--r-- 1 babu babu     0 Jul 10 15:17 file1.txt
+drwxrwxrwx 3 babu babu    20 Jul 12 02:13 ram
+-rw-r--r-- 1 root root    47 Jul 12 02:45 file2.txt
+-rw-r--r-- 1 root root   106 Jul 12 02:54 file4.txt
+-rw-r--r-- 1 babu ramesh  35 Jul 12 02:58 file.txt
+-rw-r--r-- 1 root root    34 Jul 12 03:08 file6.txt
+-rw-r--r-- 1 root root    17 Jul 12 03:09 file6.log
+-rw-r--r-- 1 root root   125 Jul 12 03:09 fil5.txt
+-rw-r--r-- 1 root root     0 Jul 12 03:15 file.log
+
+
+[root@ip-10-1-0-9 ~]# touc file.log && sleep 10 && ls -ltr
+-bash: touc: command not found
+[root@ip-10-1-0-9 ~]# touch file.log && sleep 10 && ls -ltr
+total 24
+-rwxr--r-- 1 babu babu     0 Jul 10 15:17 file1.txt
+drwxrwxrwx 3 babu babu    20 Jul 12 02:13 ram
+-rw-r--r-- 1 root root    47 Jul 12 02:45 file2.txt
+-rw-r--r-- 1 root root   106 Jul 12 02:54 file4.txt
+-rw-r--r-- 1 babu ramesh  35 Jul 12 02:58 file.txt
+-rw-r--r-- 1 root root    34 Jul 12 03:08 file6.txt
+-rw-r--r-- 1 root root    17 Jul 12 03:09 file6.log
+-rw-r--r-- 1 root root   125 Jul 12 03:09 fil5.txt
+-rw-r--r-- 1 root root     0 Jul 12 03:20 file.log
+[root@ip-10-1-0-9 ~]#
+
+Imp:
+
+  If you want to write multiple commands at the same line then we need to use below command separator.
+----- ; and &&
+
+; --- It will will be executing all the commands which we have given in sequence. It will not consider whether command is succefully executed or not.
+
+Even command failed it will allo you to execute rest of the commands in sequence.
+
+[root@ip-10-1-0-9 ~]# touc file.log ; sleep 10 ; ls -ltr
+-bash: touc: command not found
+total 24
+-rwxr--r-- 1 babu babu     0 Jul 10 15:17 file1.txt
+drwxrwxrwx 3 babu babu    20 Jul 12 02:13 ram
+-rw-r--r-- 1 root root    47 Jul 12 02:45 file2.txt
+-rw-r--r-- 1 root root   106 Jul 12 02:54 file4.txt
+-rw-r--r-- 1 babu ramesh  35 Jul 12 02:58 file.txt
+-rw-r--r-- 1 root root    34 Jul 12 03:08 file6.txt
+-rw-r--r-- 1 root root    17 Jul 12 03:09 file6.log
+-rw-r--r-- 1 root root   125 Jul 12 03:09 fil5.txt
+-rw-r--r-- 1 root root     0 Jul 12 03:15 file.log
+
+&& -- It will be executing the commands in given order if any command failed then it will terminate the process immediately.If command executing successfully then it will allow you to execute all rest of the commands.
+====================
+ sleep
+ chomod
+ chown
+ chgrp
+ tee
+ useradd
+ passwd
+ uniq
+ ==================
+ free:
+    It is used to find out how much memory allocated to your server and how much memory available and how much used
+
+[root@ip-10-1-0-9 ~]# clear
+[root@ip-10-1-0-9 ~]# free -m
+              total        used        free      shared  buff/cache   available
+Mem:            983          81         713           0         187         767
+Swap:             0           0           0
+[root@ip-10-1-0-9 ~]# free
+              total        used        free      shared  buff/cache   available
+Mem:        1006892       83552      731016         408      192324      789512
+Swap:             0           0           0
+[root@ip-10-1-0-9 ~]# free -m
+              total        used        free      shared  buff/cache   available
+Mem:            983          81         713           0         187         770
+Swap:             0           0           0
+[root@ip-10-1-0-9 ~]#
+======================
+ grep: (gloabl regular expression print,Globally search for a regular expression and print it)
+     it is used to search string or pattern in file and it will print all the lines which are having given string
+
+zzzzzzzzzz
+zzzzzzzzz
+     file -- 10000 --- ramesh --
+
+[root@ip-10-1-0-9 ~]# cat file4.txt
+welcome to production support jobs
+welcome to application support jobs
+welcome to DBA jobs
+hello DBA jobs
+Hello 
+[root@ip-10-1-0-9 ~]# grep "hello" file4.txt
+hello DBA jobs
+[root@ip-10-1-0-9 ~]# grep "Hello" file4.txt
+[root@ip-10-1-0-9 ~]# grep ^Cello" file4.txt
+[root@ip-10-1-0-9 ~]# grep -i "Hello" file4.txt
+hello DBA jobs
+[root@ip-10-1-0-9 ~]#echo "Hello" >> file4.txt
+
+[root@ip-10-1-0-9 ~]# cat file4.txt
+welcome to production support jobs
+welcome to application support jobs
+welcome to DBA jobs
+hello DBA jobs
+Hello welcome HELLO
+HEllo welcome
+[root@ip-10-1-0-9 ~]# grep hello file4.txt
+hello DBA jobs
+[root@ip-10-1-0-9 ~]# echo "This file has error" >> file4.txt
+[root@ip-10-1-0-9 ~]# echo "This file has Error" >> file4.txt
+[root@ip-10-1-0-9 ~]# grep error file4.txt
+This file has error
+[root@ip-10-1-0-9 ~]# grep -i error file4.txt
+This file has error
+This file has Error
+[root@ip-10-1-0-9 ~]#
+
+[root@ip-10-1-0-9 ~]# grep -c error file4.txt
+1
+[root@ip-10-1-0-9 ~]# grep -ci error file4.txt
+2
+[root@ip-10-1-0-9 ~]#
+[root@ip-10-1-0-9 ~]#
+
+-c  -- Count the word that occured number of times
+-i  -- ignore case -- string can be upper or lower
+
+
+[root@ip-10-1-0-9 ~]# grep -l error *
+file2.txt
+file4.txt
+grep: ram: Is a directory
+[root@ip-10-1-0-9 ~]# echo "Error" >> file2.txt
+[root@ip-10-1-0-9 ~]# grep -l error *
+file2.txt
+file4.txt
+grep: ram: Is a directory
+[root@ip-10-1-0-9 ~]# echo "Error" >> file7.txt
+[root@ip-10-1-0-9 ~]# grep -l error *
+file2.txt
+file4.txt
+grep: ram: Is a directory
+[root@ip-10-1-0-9 ~]# grep -li error *
+file2.txt
+file4.txt
+file7.txt
+grep: ram: Is a directory
+[root@ip-10-1-0-9 ~]#
+
+-l --  it will display the file names which are having given string
+-n --  It will print the line numbers which are having given string
+
+
+[root@ip-10-1-0-9 ~]# grep -n "hello" file4.txt
+4:hello DBA jobs
+[root@ip-10-1-0-9 ~]# grep -ni "hello" file4.txt
+4:hello DBA jobs
+5:Hello welcome HELLO
+6:HEllo welcome
+[root@ip-10-1-0-9 ~]#
+
+[root@ip-10-1-0-9 ~]# cat file4.txt
+welcome to production support jobs
+welcome to application support jobs
+welcome to DBA jobs
+hello DBA jobs
+Hello welcome HELLO
+HEllo welcome
+This file has error
+This file has Error
+[root@ip-10-1-0-9 ~]# grep welcome file4.txt
+welcome to production support jobs
+welcome to application support jobs
+welcome to DBA jobs
+Hello welcome HELLO
+HEllo welcome
+[root@ip-10-1-0-9 ~]# grep -v welcome file4.txt
+hello DBA jobs
+This file has error
+This file has Error
+[root@ip-10-1-0-9 ~]#
+
+-v -- verbose -- It will display the lines whicha are not having given string
+Note: When you use -c option it will get the count of lines whicha re having given string.If line has the string two times then grep will consider only first occurance.
+
+If you want the count of given string wherever it is there in file then we need to -o option.
+
+" egrep '^[fg]' /etc/passwd "  -- for grepping lines which starts with f&g
+
+" egrep '[fg]$' /etc/passwd "  -- for grepping lines which ends with f&g
+
+grep -f 1.txt 2.txt -- it will search for lines in 2.txt which matches with 1.txt
+
+[root@ip-10-1-0-9 ~]# grep welcome file4.txt
+welcome to production support jobs
+welcome to application support jobs
+welcome to DBA jobs
+Hello welcome HELLO
+HEllo welcome
+[root@ip-10-1-0-9 ~]# grep -v welcome file4.txt
+hello DBA jobs
+This file has error
+This file has Error
+[root@ip-10-1-0-9 ~]# ^C
+[root@ip-10-1-0-9 ~]# grep -ic hello file4.txt
+3
+[root@ip-10-1-0-9 ~]# grep -io hello file4.txt
+hello
+Hello
+HELLO
+HEllo
+[root@ip-10-1-0-9 ~]# grep -io hello file4.txt
+hello
+Hello
+HELLO
+HEllo
+[root@ip-10-1-0-9 ~]# grep -ioc hello file4.txt
+3
+[root@ip-10-1-0-9 ~]# grep -io hello file4.txt
+hello
+Hello
+HELLO
+HEllo
+[root@ip-10-1-0-9 ~]# grep -io hello file4.txt | wc -l
+4
+
+[root@ip-10-1-0-9 ~]# cat file4.txt
+Hello
+welcome to production support jobs
+welcome to application support jobs
+welcome to DBA jobs
+hello DBA jobs
+Hello welcome HELLO
+HEllo welcome
+This file has error
+This file has Error
+[root@ip-10-1-0-9 ~]# grep -io hello file4.txt | wc -l
+5
+[root@ip-10-1-0-9 ~]# grep -io hello file4.txt
+Hello
+hello
+Hello
+HELLO
+HEllo
+[root@ip-10-1-0-9 ~]#
+
+Note: If the file starts with .(.filename) then we call the file as hidden file
+
+. -- current directory(pwd)
+
+\. -- It will change the original behaviour of .-- It means dot as dot.
+
+^ -- starting of the line.
+$ -- ending of the line
+
+ls | grep "^1" -- it will give all files which are starting with "1"
+
+output:
+hari.sunkanaboina@IAL-22-02-IT-N065:~/project-helm/python-flask/opentelemetry-operator$ ls | grep ^1
+1.txt1
+1.txt10
+1.txt11
+1.txt12
+1.txt13
+1.txt14
+1.txt15
+1.txt16
+1.txt17
+1.txt18
+1.txt19
+1.txt2
+1.txt20
+1.txt3
+1.txt4
+1.txt5
+1.txt6
+1.txt7
+1.txt8
+1.txt9
+
+ls | grep "es$" -- it will print all the files which are ending with es
+
+output:
+
+hari.sunkanaboina@IAL-22-02-IT-N065:~/project-helm/python-flask/opentelemetry-operator$ ls -ltrh | grep "esc$"
+-rw-rw-r-- 1 hari.sunkanaboina hari.sunkanaboina    0 Feb 27 15:34 1.txt9esc
+-rw-rw-r-- 1 hari.sunkanaboina hari.sunkanaboina    0 Feb 27 15:34 1.txt8esc
+-rw-rw-r-- 1 hari.sunkanaboina hari.sunkanaboina    0 Feb 27 15:34 1.txt7esc
+-rw-rw-r-- 1 hari.sunkanaboina hari.sunkanaboina    0 Feb 27 15:34 1.txt6esc
+-rw-rw-r-- 1 hari.sunkanaboina hari.sunkanaboina    0 Feb 27 15:34 1.txt5esc
+-rw-rw-r-- 1 hari.sunkanaboina hari.sunkanaboina    0 Feb 27 15:34 1.txt4esc
+-rw-rw-r-- 1 hari.sunkanaboina hari.sunkanaboina    0 Feb 27 15:34 1.txt3esc
+-rw-rw-r-- 1 hari.sunkanaboina hari.sunkanaboina    0 Feb 27 15:34 1.txt2esc
+-rw-rw-r-- 1 hari.sunkanaboina hari.sunkanaboina    0 Feb 27 15:34 1.txt20esc
+-rw-rw-r-- 1 hari.sunkanaboina hari.sunkanaboina    0 Feb 27 15:34 1.txt1esc
+-rw-rw-r-- 1 hari.sunkanaboina hari.sunkanaboina    0 Feb 27 15:34 1.txt19esc
+-rw-rw-r-- 1 hari.sunkanaboina hari.sunkanaboina    0 Feb 27 15:34 1.txt18esc
+-rw-rw-r-- 1 hari.sunkanaboina hari.sunkanaboina    0 Feb 27 15:34 1.txt17esc
+-rw-rw-r-- 1 hari.sunkanaboina hari.sunkanaboina    0 Feb 27 15:34 1.txt16esc
+-rw-rw-r-- 1 hari.sunkanaboina hari.sunkanaboina    0 Feb 27 15:34 1.txt15esc
+-rw-rw-r-- 1 hari.sunkanaboina hari.sunkanaboina    0 Feb 27 15:34 1.txt14esc
+-rw-rw-r-- 1 hari.sunkanaboina hari.sunkanaboina    0 Feb 27 15:34 1.txt13esc
+-rw-rw-r-- 1 hari.sunkanaboina hari.sunkanaboina    0 Feb 27 15:34 1.txt12esc
+-rw-rw-r-- 1 hari.sunkanaboina hari.sunkanaboina    0 Feb 27 15:34 1.txt11esc
+-rw-rw-r-- 1 hari.sunkanaboina hari.sunkanaboina    0 Feb 27 15:34 1.txt10esc
+
+
+# if you want to search for multiple strings at a time below is the command
+
+grep "string1\|string2\|string3\|" filename.txt
+
+Using this command we can search multiple strings at a time.
+
+[root@ip-10-1-0-9 ~]# echo "Welcome to Unix class"  file.txt
+Welcome to Unix class file.txt
+[root@ip-10-1-0-9 ~]# echo "Welcome to Unix class" > file.txt
+[root@ip-10-1-0-9 ~]# echo "Welcome linux class" > file.txt
+[root@ip-10-1-0-9 ~]# echo "Welcome to Unix class" >> file.txt
+[root@ip-10-1-0-9 ~]#
+[root@ip-10-1-0-9 ~]# cat file.txt
+Welcome linux class
+Welcome to Unix class
+[root@ip-10-1-0-9 ~]# grep -e  "linux" -e "Unix" file.txt
+Welcome linux class
+Welcome to Unix class
+[root@ip-10-1-0-9 ~]#
+
+[root@ip-10-1-0-9 ~]# grep -i -B1 "unix" file.txt
+Welcome linux class
+Welcome to Unix class
+[root@ip-10-1-0-9 ~]#
+
+-B(before) -- It prints th matching string line and also prints the line before matching string line.
+
+[root@ip-10-1-0-9 ~]# grep -i -A1 "unix" file.txt
+Welcome to Unix class
+Welcome to production class
+[root@ip-10-1-0-9 ~]#
+
+-A(after) -- It prints the matching string line along with next immediate line as well.
+
+both
+[root@ip-10-1-0-9 ~]# clear
+[root@ip-10-1-0-9 ~]# cat file.txt
+Welcome linux class
+Welcome to Unix class
+Welcome to production class
+Welcome to application class
+bothboth
+both
+[root@ip-10-1-0-9 ~]# grep "both" file.txt
+bothboth
+both
+[root@ip-10-1-0-9 ~]# grep -w "both" file.txt
+both
+[root@ip-10-1-0-9 ~]#
+-w -- exact word
+
+[root@ip-10-1-0-9 ~]# grep -i -A1 -B1 "unix" file.txt
+Welcome linux class
+Welcome to Unix class
+Welcome to production class
+[root@ip-10-1-0-9 ~]#
+
+[root@ip-10-1-0-9 ~]# grep -i -C1 "unix" file.txt   # It will display before and after the lines of matching string line.
+Welcome linux class
+Welcome to Unix class
+Welcome to production class
+[root@ip-10-1-0-9 ~]#
+
+==================
+top: 
+    It is used to find the cpu utilization and process information dynamically(Keep on changing)
+
+[root@ip-10-1-0-9 ~]# top
+top - 01:53:22 up 1 day, 12:39,  1 user,  load average: 0.00, 0.00, 0.00
+Tasks:  86 total,   1 running,  49 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem :  1006892 total,   678676 free,   101732 used,   226484 buff/cache
+KiB Swap:        0 total,        0 free,        0 used.   766056 avail Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND
+15964 root      20   0  170896   4336   3788 R  0.7  0.4   0:00.02 top
+    1 root      20   0   43624   5436   3924 S  0.0  0.5   0:05.14 systemd
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.01 kthreadd
+    4 root       0 -20       0      0      0 I  0.0  0.0   0:00.00 kworker/0:0H
+    5 root      20   0       0      0      0 I  0.0  0.0   0:00.02 kworker/u30:0
+
+What is load average?
+ Load average will be calculated based on number of CPU's running on our server.
+
+load average: 0.00, 0.00, 0.00
+              1 minute, Every 5 minutes,Every 15 minutes
+
+How to find number of CPU's running on your machine?
+
+/proc/cpuinfo
+
+[root@ip-10-1-0-9 ~]# cat t /etc/cpuinfo
+
+cat: t: No such file or directory
+cat: /etc/cpuinfo: No such file or directory
+[root@ip-10-1-0-9 ~]#
+[root@ip-10-1-0-9 ~]# cat  /proc/cpuinfo
+processor       : 0
+vendor_id       : GenuineIntel
+cpu family      : 6
+model           : 63
+model name      : Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz
+stepping        : 2
+microcode       : 0x44
+cpu MHz         : 2394.597
+cache size      : 30720 KB
+physical id     : 0
+siblings        : 1
+core id         : 0
+cpu cores       : 1
+
+How to find memory information?
+
+/proc/meminfo
+
+[root@ip-10-1-0-9 ~]# cat  /proc/meminfo
+MemTotal:        1006892 kB
+MemFree:          672508 kB
+MemAvailable:     759980 kB
+Buffers:            2088 kB
+Cached:           191012 kB
+SwapCached:            0 kB
+Active:           154116 kB
+Inactive:          93364 kB
+================================
+
+uptime: It is used to find out since how long your server is running and up.
+
+[root@ip-10-1-0-9 ~]# uptime
+ 02:10:03 up 1 day, 12:56,  2 users,  load average: 0.00, 0.00, 0.00
+[root@ip-10-1-0-9 ~]#
+
+==============================
+last: it will display last login and logout information.
+
+[root@ip-10-1-0-9 ~]# last
+ec2-user pts/1        27.59.134.105    Thu Jul 15 02:00   still logged in
+ec2-user pts/0        27.59.134.105    Thu Jul 15 01:32   still logged in
+ec2-user pts/2        223.187.2.67     Tue Jul 13 13:51 - 16:36  (02:44)
+ec2-user pts/1        223.187.2.67     Tue Jul 13 13:25 - 15:55  (02:29)
+ec2-user pts/0        223.187.2.67     Tue Jul 13 13:14 - 15:36  (02:22)
+reboot   system boot  4.14.232-177.418 Tue Jul 13 13:14 - 02:12 (1+12:58)
+ec2-user pts/3        223.238.79.113   Mon Jul 12 03:05 - 05:35  (02:30)
+ec2-user pts/2        223.238.79.113   Mon Jul 12 02:53 - 05:12  (02:18)
+ec2-user pts/1        223.238.79.113   Mon Jul 12 02:05 - 04:58  (02:53)
+ec2-user pts/0        27.59.132.92     Mon Jul 12 01:56 - 04:09  (02:12)
+ec2-user pts/0        223.238.79.113   Sat Jul 10 14:13 - 17:35  (03:21)
+ec2-user pts/0        223.238.79.113   Sat Jul 10 13:59 - 14:09  (00:10)
+root     pts/0        223.238.79.113   Sat Jul 10 13:58 - 13:58  (00:00)
+reboot   system boot  4.14.232-177.418 Sat Jul 10 13:47 - 02:12 (4+12:25)
+
+wtmp begins Sat Jul 10 13:47:01 2021
+[root@ip-10-1-0-9 ~]#
+
+==============================
+
+id:
+   It is used to get userd,group id and group info of current user.
+[root@ip-10-1-0-9 ~]# id
+uid=0(root) gid=0(root) groups=0(root)
+[root@ip-10-1-0-9 ~]#
+
+==========================
+tr: 
+ It is used to transalting from upper case to lower case or lower to upper and also we can delete the characters.
+
+ cat file.txt | tr '[a-z]' '[A-Z']' > file1.log
+
+ cat file.txt | tr '[:lower:]' '[:upper:]' > file1.log
+
+ [root@ip-10-1-0-9 ~]# cat file.txt | tr '[:space]' '\t'
+W       l       om       linux  l
+W       l       om       to Unix        l
+W       l       om       to     rodu    tion    l
+W       l       om       to                     li              tion    l
+bothboth
+both
+[root@ip-10-1-0-9 ~]#
+
+[root@ip-10-1-0-9 ~]# cat file.txt | tr -d 'w'
+Welcome linux class
+Welcome to Unix class
+Welcome to production class
+Welcome to application class
+bothboth
+both
+[root@ip-10-1-0-9 ~]# echo "Welcome to linux"  | tr -d 't'  # It will delete the character
+Welcome o linux
+[root@ip-10-1-0-9 ~]# cat file.txt | tr -d 'W'
+elcome linux class
+elcome to Unix class
+elcome to production class
+elcome to application class
+bothboth
+both
+[root@ip-10-1-0-9 ~]#echo " welcome to linux 345" | tr '[]
+
+[root@ip-10-1-0-9 ~]# echo "Welcome to linux 345" | tr '[:digit:]' '\t'
+Welcome to linux
+[root@ip-10-1-0-9 ~]# echo "Welcome to linux 345" | tr '[:digit:]' 'y'
+Welcome to linux yyy
+[root@ip-10-1-0-9 ~]#
+
+Translate means replace character by  character or digit by digit 
+============
+
+top
+tr
+last
+uptime
+grep
+id
+===========
+ps: Process
+
+ what is process?
+    It is an activity which is running or instant running thing we can call it as process.
+
+It is used to find process information which are running on our server.
+
+If we run any program that will be running on your RAM. Whatever the program running on Ram that program become process and that process has uniq id that id we can call it as process id(PID).
+
+parent process(PPID(parent processID)) --- child process(PID process ID)
+ 
+[root@ip-10-1-0-9 ~]#
+[root@ip-10-1-0-9 ~]# ps -f
+UID        PID  PPID  C STIME TTY          TIME CMD
+root     16306 16281  0 02:38 pts/2    00:00:00 sudo -i
+root     16307 16306  0 02:38 pts/2    00:00:00 -bash
+root     16340 16307  0 02:41 pts/2    00:00:00 ps -f
+[root@ip-10-1-0-9 ~]#
+
+-f -- It will display full information about all the processes which are currently running.
+
+-e -- every information about all the processes whicha are running when we sttart our server.   
+
+[root@ip-10-1-0-9 ~]# ps -e
+  PID TTY          TIME CMD
+    1 ?        00:00:05 systemd
+    2 ?        00:00:00 kthreadd
+    4 ?        00:00:00 kworker/0:0H
+    5 ?        00:00:00 kworker/u30:0
+
+  PID TTY          TIME CMD
+15803 pts/0    00:00:00 sudo
+15804 pts/0    00:00:00 bash
+16026 pts/1    00:00:00 sudo
+16027 pts/1    00:00:00 bash
+16306 pts/2    00:00:00 sudo
+16307 pts/2    00:00:00 bash
+16378 pts/2    00:00:00 ps
+[root@ip-10-1-0-9 ~]# ps -eaf
+UID        PID  PPID  C STIME TTY          TIME CMD
+root         1     0  0 Jul13 ?        00:00:05 /usr/lib/systemd/systemd --switched-root --system --deserialize 21
+root         2     0  0 Jul13 ?        00:00:00 [kthreadd]
+root         4     2  0 Jul13 ?        00:00:00 [kworker/0:0H]
+root         5     2  0 Jul13 ?        00:00:00 [kworker/u30:0]
+root         6     2  0 Jul13 ?        00:00:00 [mm_percpu_wq]
+root         7     2  0 Jul13 ?        00:00:00 [ksoftirqd/0]
+root         8     2  0 Jul13 ?        00:00:00 [rcu_sched]
+root         9     2  0 Jul13 ?        00:00:00 [rcu_bh]
+
+[root@ip-10-1-0-9 ~]#
+[root@ip-10-1-0-9 ~]# ps -eaf | grep -i "pickup"
+postfix  15968  2895  0 01:55 ?        00:00:00 pickup -l -t unix -u
+root     16414 16307  0 02:52 pts/2    00:00:00 grep --color=auto -i pickup
+[root@ip-10-1-0-9 ~]# ps -eaf | grep -i "pickup" | grep -v grep
+postfix  15968  2895  0 01:55 ?        00:00:00 pickup -l -t unix -u
+[root@ip-10-1-0-9 ~]# '
+
+[root@ip-10-1-0-9 ~]# ps -f -u ec2-user
+UID        PID  PPID  C STIME TTY          TIME CMD
+ec2-user 15777 15759  0 01:32 ?        00:00:00 sshd: ec2-user@pts/0
+ec2-user 15778 15777  0 01:32 pts/0    00:00:00 -bash
+ec2-user 15999 15981  0 02:00 ?        00:00:00 sshd: ec2-user@pts/1
+ec2-user 16000 15999  0 02:00 pts/1    00:00:00 -bash
+ec2-user 16280 16262  0 02:37 ?        00:00:00 sshd: ec2-user@pts/2
+ec2-user 16281 16280  0 02:38 pts/2    00:00:00 -bash
+
+-u -- user -- Using this option we can find out the processes whicha are running by specific user.
+
+[root@ip-10-1-0-9 ~]# yum install httpd
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+amzn2-core                                                                                                      | 3.7 kB  00:00:00
+amzn2extra-docker                                                                                               | 3.0 kB  00:00:00
+Resolving Dependencies
+--> Running transaction check
+---> Package httpd.x86_64 0:2.4.48-2.amzn2 will be installed
+--> Processing Dependency: httpd-tools = 2.4.48-2.amzn2 for package: httpd-2.4.48-2.amzn2.x86_64
+--> Processing Dependency: httpd-filesystem = 2.4.48-2.amzn2 for package: httpd-2.4.48-2.amzn2.x86_64
+--> Processing Dependency: system-logos-httpd for package: httpd-2.4.48-2.amzn2.x86_64
+--> Processing Dependency: mod_http2 for package: httpd-2.4.48-2.amzn2.x86_64
+--> Processing Dependency: httpd-filesystem for package: httpd-2.4.48-2.amzn2.x86_64
+--> Processing Dependency: /etc/mime.types for package: httpd-2.4.48-2.amzn2.x86_64
+--> Processing Dependency: libaprutil-1.so.0()(64bit) for package: httpd-2.4.48-2.amzn2.x86_64
+--> Processing Dependency: libapr-1.so.0()(64bit) for package: httpd-2.4.48-2.amzn2.x86_64
+--> Running transaction check
+---> Package apr.x86_64 0:1.6.3-5.amzn2.0.2 will be installed
+---> Package apr-util.x86_64 0:1.6.1-5.amzn2.0.2 will be installed
+--> Processing Dependency: apr-util-bdb(x86-64) = 1.6.1-5.amzn2.0.2 for package: apr-util-1.6.1-5.amzn2.0.2.x86_64
+---> Package generic-logos-httpd.noarch 0:18.0.0-4.amzn2 will be installed
+---> Package httpd-filesystem.noarch 0:2.4.48-2.amzn2 will be installed
+---> Package httpd-tools.x86_64 0:2.4.48-2.amzn2 will be installed
+---> Package mailcap.noarch 0:2.1.41-2.amzn2 will be installed
+---> Package mod_http2.x86_64 0:1.15.19-1.amzn2.0.1 will be installed
+--> Running transaction check
+---> Package apr-util-bdb.x86_64 0:1.6.1-5.amzn2.0.2 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=======================================================================================================================================
+ Package                              Arch                    Version                                Repository                   Size
+=======================================================================================================================================
+Installing:
+ httpd                                x86_64                  2.4.48-2.amzn2                         amzn2-core                  1.3 M
+Installing for dependencies:
+ apr                                  x86_64                  1.6.3-5.amzn2.0.2                      amzn2-core                  118 k
+ apr-util                             x86_64                  1.6.1-5.amzn2.0.2                      amzn2-core                   99 k
+ apr-util-bdb                         x86_64                  1.6.1-5.amzn2.0.2                      amzn2-core                   19 k
+ generic-logos-httpd                  noarch                  18.0.0-4.amzn2                         amzn2-core                   19 k
+ httpd-filesystem                     noarch                  2.4.48-2.amzn2                         amzn2-core                   24 k
+ httpd-tools                          x86_64                  2.4.48-2.amzn2                         amzn2-core                   87 k
+ mailcap                              noarch                  2.1.41-2.amzn2                         amzn2-core                   31 k
+ mod_http2                            x86_64                  1.15.19-1.amzn2.0.1                    amzn2-core                  149 k
+
+Transaction Summary
+=======================================================================================================================================
+Install  1 Package (+8 Dependent packages)
+
+Total download size: 1.9 M
+Installed size: 5.1 M
+Is this ok [y/d/N]: yes
+Downloading packages:
+(1/9): apr-1.6.3-5.amzn2.0.2.x86_64.rpm                                                                         | 118 kB  00:00:00
+(2/9): apr-util-1.6.1-5.amzn2.0.2.x86_64.rpm                                                                    |  99 kB  00:00:00
+(3/9): apr-util-bdb-1.6.1-5.amzn2.0.2.x86_64.rpm                                                                |  19 kB  00:00:00
+(4/9): generic-logos-httpd-18.0.0-4.amzn2.noarch.rpm                                                            |  19 kB  00:00:00
+(5/9): httpd-filesystem-2.4.48-2.amzn2.noarch.rpm                                                               |  24 kB  00:00:00
+(6/9): httpd-tools-2.4.48-2.amzn2.x86_64.rpm                                                                    |  87 kB  00:00:00
+(7/9): mailcap-2.1.41-2.amzn2.noarch.rpm                                                                        |  31 kB  00:00:00
+(8/9): httpd-2.4.48-2.amzn2.x86_64.rpm                                                                          | 1.3 MB  00:00:00
+(9/9): mod_http2-1.15.19-1.amzn2.0.1.x86_64.rpm                                                                 | 149 kB  00:00:00
+---------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                  7.8 MB/s | 1.9 MB  00:00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : apr-1.6.3-5.amzn2.0.2.x86_64                                                                                        1/9
+  Installing : apr-util-bdb-1.6.1-5.amzn2.0.2.x86_64                                                                               2/9
+  Installing : apr-util-1.6.1-5.amzn2.0.2.x86_64                                                                                   3/9
+  Installing : httpd-tools-2.4.48-2.amzn2.x86_64                                                                                   4/9
+  Installing : generic-logos-httpd-18.0.0-4.amzn2.noarch                                                                           5/9
+  Installing : mailcap-2.1.41-2.amzn2.noarch                                                                                       6/9
+  Installing : httpd-filesystem-2.4.48-2.amzn2.noarch                                                                              7/9
+  Installing : mod_http2-1.15.19-1.amzn2.0.1.x86_64                                                                                8/9
+  Installing : httpd-2.4.48-2.amzn2.x86_64                                                                                         9/9
+  Verifying  : apr-util-1.6.1-5.amzn2.0.2.x86_64                                                                                   1/9
+  Verifying  : httpd-2.4.48-2.amzn2.x86_64                                                                                         2/9
+  Verifying  : apr-util-bdb-1.6.1-5.amzn2.0.2.x86_64                                                                               3/9
+  Verifying  : httpd-filesystem-2.4.48-2.amzn2.noarch                                                                              4/9
+  Verifying  : httpd-tools-2.4.48-2.amzn2.x86_64                                                                                   5/9
+  Verifying  : apr-1.6.3-5.amzn2.0.2.x86_64                                                                                        6/9
+  Verifying  : mailcap-2.1.41-2.amzn2.noarch                                                                                       7/9
+  Verifying  : generic-logos-httpd-18.0.0-4.amzn2.noarch                                                                           8/9
+  Verifying  : mod_http2-1.15.19-1.amzn2.0.1.x86_64                                                                                9/9
+
+Installed:
+  httpd.x86_64 0:2.4.48-2.amzn2
+
+Dependency Installed:
+  apr.x86_64 0:1.6.3-5.amzn2.0.2                 apr-util.x86_64 0:1.6.1-5.amzn2.0.2         apr-util-bdb.x86_64 0:1.6.1-5.amzn2.0.2
+  generic-logos-httpd.noarch 0:18.0.0-4.amzn2    httpd-filesystem.noarch 0:2.4.48-2.amzn2    httpd-tools.x86_64 0:2.4.48-2.amzn2
+  mailcap.noarch 0:2.1.41-2.amzn2                mod_http2.x86_64 0:1.15.19-1.amzn2.0.1
+
+Complete!
+[root@ip-10-1-0-9 ~]# systemctl httpd status
+Unknown operation 'httpd'.
+[root@ip-10-1-0-9 ~]# systemctl status httpd
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled; vendor preset: disabled)
+   Active: inactive (dead)
+     Docs: man:httpd.service(8)
+[root@ip-10-1-0-9 ~]# systemctl start httpd
+[root@ip-10-1-0-9 ~]# systemctl status httpd
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled; vendor preset: disabled)
+   Active: active (running) since Thu 2021-07-15 02:57:53 UTC; 3s ago
+     Docs: man:httpd.service(8)
+ Main PID: 16575 (httpd)
+   Status: "Processing requests..."
+   CGroup: /system.slice/httpd.service
+           ├─16575 /usr/sbin/httpd -DFOREGROUND
+           ├─16576 /usr/sbin/httpd -DFOREGROUND
+           ├─16577 /usr/sbin/httpd -DFOREGROUND
+           ├─16578 /usr/sbin/httpd -DFOREGROUND
+           ├─16579 /usr/sbin/httpd -DFOREGROUND
+           └─16580 /usr/sbin/httpd -DFOREGROUND
+
+Jul 15 02:57:53 ip-10-1-0-9.ap-southeast-1.compute.internal systemd[1]: Starting The Apache HTTP Server...
+Jul 15 02:57:53 ip-10-1-0-9.ap-southeast-1.compute.internal systemd[1]: Started The Apache HTTP Server.
+[root@ip-10-1-0-9 ~]# ps -eaf | grep -i httpd
+root     16575     1  0 02:57 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache   16576 16575  0 02:57 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache   16577 16575  0 02:57 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache   16578 16575  0 02:57 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache   16579 16575  0 02:57 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache   16580 16575  0 02:57 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+root     16626 16307  0 02:58 pts/2    00:00:00 grep --color=auto -i httpd
+[root@ip-10-1-0-9 ~]# kill -9 16575
+[root@ip-10-1-0-9 ~]# ps -eaf | grep -i httpd
+root     16634 16307  0 02:59 pts/2    00:00:00 grep --color=auto -i httpd
+[root@ip-10-1-0-9 ~]#
+[root@ip-10-1-0-9 ~]# ps -eaf | grep -i httpd | grep -v grep
+[root@ip-10-1-0-9 ~]# ps -eaf | grep -i httpd | grep -v grep
+[root@ip-10-1-0-9 ~]#
+=======================
+ps -aux --sort %cpu 
+[root@ip-10-1-0-9 ~]# ps -aux --sort %mem | tail -1
+root      3079  0.0  2.9 729116 29564 ?        Sl   Jul13   0:03 /usr/bin/ssm-agent-worker
+[root@ip-10-1-0-9 ~]#
+
+
+============
+Hardlink an softlink:
+
+Hard link:
+    1. We can create hard link on files not on directories.
+    [root@ip-10-1-0-9 ~]# ln ram ramesh
+    ln: ‘ram’: hard link not allowed for directory
+
+    2. When we create hard link both the files are having same inode numbers
+    [root@ip-10-1-0-9 ~]# ls -i file.txt file8.txt
+     12995372 file8.txt  12995372 file.txt
+
+    3. When we try to create hard link on existing files you will get below error
+    [root@ip-10-1-0-9 ~]# ln file.txt file7.txt
+    ln: failed to create hard link ‘file7.txt’: File exists
+    4. If you add the data in one file and the same data will be reflected in another file automatically.
+    [root@ip-10-1-0-9 ~]# cat file.txt
+Welcome linux class
+Welcome to Unix class
+Welcome to production class
+Welcome to application class
+bothboth
+both
+[root@ip-10-1-0-9 ~]# cat file8.txt
+Welcome linux class
+Welcome to Unix class
+Welcome to production class
+Welcome to application class
+bothboth
+both
+[root@ip-10-1-0-9 ~]# echo "linux is an Os" >> file8.txt
+[root@ip-10-1-0-9 ~]# cat file.txt
+Welcome linux class
+Welcome to Unix class
+Welcome to production class
+Welcome to application class
+bothboth
+both
+linux is an Os
+
+5 If you remove the data from one file and same data will be removed from another file as well.
+[root@ip-10-1-0-9 ~]# vi file8.txt
+
+[root@ip-10-1-0-9 ~]# cat file.txt
+Welcome linux class
+Welcome to Unix class
+Welcome to production class
+Welcome to application class
+both
+linux is an Os
+[root@ip-10-1-0-9 ~]#
+
+6. When you delete one file,the other file will be existed and usefull.
+  [root@ip-10-1-0-9 ~]# rm -rf file8.txt
+[root@ip-10-1-0-9 ~]# ls -ltr
+total 32
+-rwxr--r-- 1 babu babu     0 Jul 10 15:17 file1.txt
+drwxrwxrwx 3 babu babu    20 Jul 12 02:13 ram
+-rw-r--r-- 1 root root    34 Jul 12 03:08 file6.txt
+-rw-r--r-- 1 root root    17 Jul 12 03:09 file6.log
+-rw-r--r-- 1 root root   125 Jul 12 03:09 fil5.txt
+-rw-r--r-- 1 root root     0 Jul 12 03:20 file.log
+-rw-r--r-- 1 root root    12 Jul 13 13:42 file2.txt
+-rw-r--r-- 1 root root     6 Jul 13 13:43 file7.txt
+-rw-r--r-- 1 root root   186 Jul 13 14:08 file4.txt
+-rw-r--r-- 1 root root   113 Jul 15 02:21 file1.log
+-rw-r--r-- 1 babu ramesh 119 Jul 16 02:31 file.txt
+[root@ip-10-1-0-9 ~]# cat file.txt
+Welcome linux class
+Welcome to Unix class
+Welcome to production class
+Welcome to application class
+both
+linux is an Os
+
+7 It is kind mirror of the file.
+
+soft link:
+  1.When we create soft link both the files are having different inode numbers
+  [root@ip-10-1-0-9 ~]# ln -s file.txt file1.txt
+ln: failed to create symbolic link ‘file1.txt’: File exists
+[root@ip-10-1-0-9 ~]# ln -s file.txt file9.txt
+[root@ip-10-1-0-9 ~]# ls -i file.txt file9.txt
+12590319 file9.txt  12995372 file.txt
+  2. We can create soft link using ln -s sourcefile destinationfile(which is not existed)
+  3.When we create soft link the filetype will be l.
+   lrwxrwxrwx 1 root root     8 Jul 16 02:37 file9.txt -> file.txt
+  4. If you add the data in one file and the same data will be reflected in another file as well.
+  [root@ip-10-1-0-9 ~]# echo "good morning" >> file9.txt
+[root@ip-10-1-0-9 ~]# cat file.txt
+Welcome linux class
+Welcome to Unix class
+Welcome to production class
+Welcome to application class
+both
+linux is an Os
+good morning
+[root@ip-10-1-0-9 ~]#
+  5. Here if you delete one file the another file will not be usefull.
+  [root@ip-10-1-0-9 ~]# ls -ltr
+total 32
+-rwxr--r-- 1 babu babu     0 Jul 10 15:17 file1.txt
+drwxrwxrwx 3 babu babu    20 Jul 12 02:13 ram
+-rw-r--r-- 1 root root    34 Jul 12 03:08 file6.txt
+-rw-r--r-- 1 root root    17 Jul 12 03:09 file6.log
+-rw-r--r-- 1 root root   125 Jul 12 03:09 fil5.txt
+-rw-r--r-- 1 root root     0 Jul 12 03:20 file.log
+-rw-r--r-- 1 root root    12 Jul 13 13:42 file2.txt
+-rw-r--r-- 1 root root     6 Jul 13 13:43 file7.txt
+-rw-r--r-- 1 root root   186 Jul 13 14:08 file4.txt
+-rw-r--r-- 1 root root   113 Jul 15 02:21 file1.log
+lrwxrwxrwx 1 root root     8 Jul 16 02:37 file9.txt -> file.txt
+-rw-r--r-- 1 babu ramesh 132 Jul 16 02:41 file.txt
+[root@ip-10-1-0-9 ~]# rm -rf file.txt
+[root@ip-10-1-0-9 ~]#  ls -ltr
+total 28
+-rwxr--r-- 1 babu babu   0 Jul 10 15:17 file1.txt
+drwxrwxrwx 3 babu babu  20 Jul 12 02:13 ram
+-rw-r--r-- 1 root root  34 Jul 12 03:08 file6.txt
+-rw-r--r-- 1 root root  17 Jul 12 03:09 file6.log
+-rw-r--r-- 1 root root 125 Jul 12 03:09 fil5.txt
+-rw-r--r-- 1 root root   0 Jul 12 03:20 file.log
+-rw-r--r-- 1 root root  12 Jul 13 13:42 file2.txt
+-rw-r--r-- 1 root root   6 Jul 13 13:43 file7.txt
+-rw-r--r-- 1 root root 186 Jul 13 14:08 file4.txt
+-rw-r--r-- 1 root root 113 Jul 15 02:21 file1.log
+lrwxrwxrwx 1 root root   8 Jul 16 02:37 file9.txt -> file.txt
+[root@ip-10-1-0-9 ~]#
+[root@ip-10-1-0-9 ~]# cat file.txt
+cat: file.txt: No such file or directory
+[root@ip-10-1-0-9 ~]# cat file9.txt
+cat: file9.txt: No such file or directory
+[root@ip-10-1-0-9 ~]#
+
+6.It is also kind mirror
+7. If you remove the data from one file and same data will be removed from another file.
+
+=====================================
+df:(Disk file system): 
+  It is used to find out how much memory used and available in file system
+  [root@ip-10-1-0-9 ~]# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        482M     0  482M   0% /dev
+tmpfs           492M     0  492M   0% /dev/shm
+tmpfs           492M  444K  492M   1% /run
+tmpfs           492M     0  492M   0% /sys/fs/cgroup
+/dev/xvda1      8.0G  1.5G  6.6G  19% /
+tmpfs            99M     0   99M   0% /run/user/1000
+[root@ip-10-1-0-9 /]# df -T
+Filesystem     Type     1K-blocks    Used Available Use% Mounted on
+devtmpfs       devtmpfs    492676       0    492676   0% /dev
+tmpfs          tmpfs       503444       0    503444   0% /dev/shm
+tmpfs          tmpfs       503444     444    503000   1% /run
+tmpfs          tmpfs       503444       0    503444   0% /sys/fs/cgroup
+/dev/xvda1     xfs        8376300 1548460   6827840  19% /
+tmpfs          tmpfs       100692       0    100692   0% /run/user/1000
+[root@ip-10-1-0-9 /]#
+
+How to find out how much memory available in filesystem?
+
+df -h 
+ 
+=======================
+du:(Disk utilization)
+
+It is used to find out how much disk is utilized by each directory.
+
+[root@ip-10-1-0-9 ~]# ls
+fil5.txt  file10.txt  file1.log  file1.txt  file2.txt  file4.txt  file6.log  file6.txt  file7.txt  file9.txt  file.log  ram
+[root@ip-10-1-0-9 ~]# du -h
+4.0K    ./.ssh
+0       ./ram/ramesh
+0       ./ram
+60K     .
+[root@ip-10-1-0-9 ~]# 
+ [root@ip-10-1-0-9 ~]# du -ch  #It will print total size
+4.0K    ./.ssh
+0       ./ram/ramesh
+0       ./ram
+60K     .
+60K     total
+[root@ip-10-1-0-9 ~]#
+=========================
+File descriptors:
+        Standard input --- 0 --- keyboard
+        Standard ouput -- 1 -- Terminal
+        Standard Error -- 2 -- Terminal
+
+    cat file11.txt 2> f.txt  -- If file11.txt file doesn't exists then it will give an error and this error will be redirecting to f.txt
+
+application -- data generate -- output -- success or error -- File.log
+
+2>&1 == It will do redirecting standard error and standard successoutput to the same file.
+
+[root@ip-10-1-0-9 ~]# ls
+fil5.txt    file1.log  file2.txt  file6.log  file7.txt  file.log   f.txt
+file10.txt  file1.txt  file4.txt  file6.txt  file9.txt  file.logg  ram
+[root@ip-10-1-0-9 ~]# cat file.txt > file12.txt 2>&1
+[root@ip-10-1-0-9 ~]# cat file12.txt
+cat: file.txt: No such file or directory
+[root@ip-10-1-0-9 ~]# cat file6.txt > file12.txt 2>&1
+[root@ip-10-1-0-9 ~]# cat file12.txt
+Welcome to linux
+Welcome to linux
+[root@ip-10-1-0-9 ~]#
+=====================
+How to redirect std output and std error into same file?
+2>&1
+====================
+find:
+   It is used to find/search files or directories on path or current directory.
+
+    While searching files we can use different conditions like based on permissions,based on created time,modified time,accessed time,size,inode etc.
+
+[root@ip-10-1-0-9 ~]# ls
+fil5.txt    file12.txt  file1.txt  file4.txt  file6.txt  file9.txt  file.logg  ram
+file10.txt  file1.log   file2.txt  file6.log  file7.txt  file.log   f.txt
+[root@ip-10-1-0-9 ~]# find . -type f -name "*.log"
+./file6.log
+./file.log
+./file1.log
+[root@ip-10-1-0-9 ~]#
+
+* -- 0 or more characters
+
+*.log -- Need files end with .log. File can be .log,f.log,fi.log,fil.log
+
+[root@ip-10-1-0-9 ~]# find . -type f -name "*.txt"
+./file1.txt
+./file2.txt
+./file4.txt
+./fil5.txt
+./file6.txt
+./file7.txt
+./f.txt
+./file12.txt
+[root@ip-10-1-0-9 ~]#
+
+-type f -- It will search for only files
+-type d -- It iwll search for only directories
+-name - Name of the files or directories.
+.  -- current directory
+[root@ip-10-1-0-9 ~]# find . -type d -name "*" # It will display 
+.
+./.ssh
+./ram
+./ram/ramesh
+[root@ip-10-1-0-9 ~]#
+
+Note: If you don't give path or directory name where you want to search the files then it will give the files or directories from current directory itself
+
+[root@ip-10-1-0-9 ~]# find  -type d -name "*"
+.
+./.ssh
+./ram
+./ram/ramesh
+[root@ip-10-1-0-9 ~]# pwd
+/root
+[root@ip-10-1-0-9 ~]# cat  file
+cat: file: No such file or directory
+[root@ip-10-1-0-9 ~]#
+[root@ip-10-1-0-9 ~]#
+[root@ip-10-1-0-9 ~]# find /root -type d -name "*"
+/root
+/root/.ssh
+/root/ram
+/root/ram/ramesh
+[root@ip-10-1-0-9 ~]# find /etc -type d -name "*"
+/etc
+/etc/sysconfig
+/etc/sysconfig/console
+/etc/sysconfig/modules
+/etc/sysconfig/network-scripts
+/etc/dhcp
+/etc/dhcp/dhclient-exit-hooks.d
+/etc/dhcp/dhclient.d
+/etc/dracut.conf.d
+
+[root@ip-10-1-0-9 ~]# find /etc -type d -name "htt*"  it will display directories which starts with htt in /etc directory
+/etc/httpd
+[root@ip-10-1-0-9 ~]#
+
+[root@ip-10-1-0-9 ~]# ls
+fil5.txt    file12.txt  file1.txt  file4.txt  file6.txt  file9.txt  file.logg  F.txt
+file10.txt  file1.log   file2.txt  file6.log  file7.txt  file.log   f.txt      ram
+[root@ip-10-1-0-9 ~]# find . -type f -name "*.txt"
+./file1.txt
+./file2.txt
+./file4.txt
+./fil5.txt
+./file6.txt
+./file7.txt
+./f.txt
+./file12.txt
+./F.txt
+[root@ip-10-1-0-9 ~]# find . -type f -name "f.txt"
+./f.txt
+[root@ip-10-1-0-9 ~]#
+[root@ip-10-1-0-9 ~]# find . -type f -iname "f.txt"
+./f.txt
+./F.txt
+[root@ip-10-1-0-9 ~]#
+
+-iname -- It will ignore the case.It will display the file which name with small letters or capital letters
+
+[root@ip-10-1-0-9 ~]# find . -type f -perm 666 -name "*"
+[root@ip-10-1-0-9 ~]# chmod 666 f.txt
+[root@ip-10-1-0-9 ~]# find . -type f -perm 666 -name "*"
+./f.txt
+[root@ip-10-1-0-9 ~]# ls -ltr
+total 40
+-rwxr--r-- 1 babu babu   0 Jul 10 15:17 file1.txt
+drwxrwxrwx 3 babu babu  20 Jul 12 02:13 ram
+-rw-r--r-- 1 root root  34 Jul 12 03:08 file6.txt
+-rw-r--r-- 1 root root  17 Jul 12 03:09 file6.log
+-rw-r--r-- 1 root root 125 Jul 12 03:09 fil5.txt
+-rw-r--r-- 1 root root   0 Jul 12 03:20 file.log
+-rw-r--r-- 1 root root  12 Jul 13 13:42 file2.txt
+-rw-r--r-- 1 root root   6 Jul 13 13:43 file7.txt
+-rw-r--r-- 1 root root 186 Jul 13 14:08 file4.txt
+-rw-r--r-- 1 root root 113 Jul 15 02:21 file1.log
+lrwxrwxrwx 1 root root   8 Jul 16 02:37 file9.txt -> file.txt
+lrwxrwxrwx 1 root root   9 Jul 16 02:45 file10.txt -> file9.txt
+-rw-r--r-- 1 root root  30 Jul 16 03:06 file.logg
+-rw-rw-rw- 1 root root  43 Jul 16 03:09 f.txt
+-rw-r--r-- 1 root root  34 Jul 16 03:16 file12.txt
+-rw-r--r-- 1 root root   0 Jul 17 02:34 F.txt
+[root@ip-10-1-0-9 ~]# find .  -perm 777 -name "*"
+./ram
+./ram/ramesh
+./file9.txt
+./file10.txt
+[root@ip-10-1-0-9 ~]# find .  -type d -perm 777 -name "*"
+./ram
+./ram/ramesh
+[root@ip-10-1-0-9 ~]#
+
+-perm -- It will search files or directories which are having given permissions.
+
+[root@ip-10-1-0-9 ~]# find . -type f ! -perm 666 -name "*"
+./.bash_logout
+./.bash_profile
+./.bashrc
+./.cshrc
+./.tcshrc
+./.ssh/authorized_keys
+./.bash_history
+./file1.txt
+./file2.txt
+./file4.txt
+./fil5.txt
+./file6.txt
+./file6.log
+./file.log
+./file7.txt
+./file1.log
+./file.logg
+./file12.txt
+./F.txt
+[root@ip-10-1-0-9 ~]#
+
+! perm -- It will display other files which are not having given permissions.
+
+[root@ip-10-1-0-9 ~]# find . -type f -name "file??.txt"
+./file12.txt
+[root@ip-10-1-0-9 ~]# find . -type f -name "file?.txt"
+./file1.txt
+./file2.txt
+./file4.txt
+./file6.txt
+./file7.txt
+[root@ip-10-1-0-9 ~]#
+
+i want files which are having 666 permission and want change the permissions of those files
+
+files --- perm 666 -- change the permission to 644
+
+
+[root@ip-10-1-0-9 ~]# find  -type f -perm 666 -name "*"
+./f.txt
+[root@ip-10-1-0-9 ~]# find  -type f -perm 666 -name "*" | chmod 644
+chmod: missing operand after ‘644’
+Try 'chmod --help' for more information.
+[root@ip-10-1-0-9 ~]# find  -type f -perm 666 -name "*" | xargs chmod 644
+[root@ip-10-1-0-9 ~]# ls -ltr
+total 40
+-rwxr--r-- 1 babu babu   0 Jul 10 15:17 file1.txt
+drwxrwxrwx 3 babu babu  20 Jul 12 02:13 ram
+-rw-r--r-- 1 root root  34 Jul 12 03:08 file6.txt
+-rw-r--r-- 1 root root  17 Jul 12 03:09 file6.log
+-rw-r--r-- 1 root root 125 Jul 12 03:09 fil5.txt
+-rw-r--r-- 1 root root   0 Jul 12 03:20 file.log
+-rw-r--r-- 1 root root  12 Jul 13 13:42 file2.txt
+-rw-r--r-- 1 root root   6 Jul 13 13:43 file7.txt
+-rw-r--r-- 1 root root 186 Jul 13 14:08 file4.txt
+-rw-r--r-- 1 root root 113 Jul 15 02:21 file1.log
+lrwxrwxrwx 1 root root   8 Jul 16 02:37 file9.txt -> file.txt
+lrwxrwxrwx 1 root root   9 Jul 16 02:45 file10.txt -> file9.txt
+-rw-r--r-- 1 root root  30 Jul 16 03:06 file.logg
+-rw-r--r-- 1 root root  43 Jul 16 03:09 f.txt
+-rw-r--r-- 1 root root  34 Jul 16 03:16 file12.txt
+-rw-r--r-- 1 root root   0 Jul 17 02:34 F.txt
+[root@ip-10-1-0-9 ~]#
+
+xargs -- It will take the input from find command and it will arrange in order and it will give to command.
+
+[root@ip-10-1-0-9 ~]# find  -type f -perm 744 -name "*" | xargs rm -rf
+[root@ip-10-1-0-9 ~]# ls -ltr
+total 40
+drwxrwxrwx 3 babu babu  20 Jul 12 02:13 ram
+-rw-r--r-- 1 root root  34 Jul 12 03:08 file6.txt
+-rw-r--r-- 1 root root  17 Jul 12 03:09 file6.log
+-rw-r--r-- 1 root root 125 Jul 12 03:09 fil5.txt
+-rw-r--r-- 1 root root   0 Jul 12 03:20 file.log
+-rw-r--r-- 1 root root  12 Jul 13 13:42 file2.txt
+-rw-r--r-- 1 root root   6 Jul 13 13:43 file7.txt
+-rw-r--r-- 1 root root 186 Jul 13 14:08 file4.txt
+-rw-r--r-- 1 root root 113 Jul 15 02:21 file1.log
+lrwxrwxrwx 1 root root   8 Jul 16 02:37 file9.txt -> file.txt
+lrwxrwxrwx 1 root root   9 Jul 16 02:45 file10.txt -> file9.txt
+-rw-r--r-- 1 root root  30 Jul 16 03:06 file.logg
+-rw-r--r-- 1 root root  43 Jul 16 03:09 f.txt
+-rw-r--r-- 1 root root  34 Jul 16 03:16 file12.txt
+-rw-r--r-- 1 root root   0 Jul 17 02:34 F.txt
+[root@ip-10-1-0-9 ~]#
+
+[root@ip-10-1-0-9 ~]# find  -type f -name "*.log" -exec rm -rf {} \;
+[root@ip-10-1-0-9 ~]# ls -ltr
+total 32
+drwxrwxrwx 3 babu babu  20 Jul 12 02:13 ram
+-rw-r--r-- 1 root root  34 Jul 12 03:08 file6.txt
+-rw-r--r-- 1 root root 125 Jul 12 03:09 fil5.txt
+-rw-r--r-- 1 root root  12 Jul 13 13:42 file2.txt
+-rw-r--r-- 1 root root   6 Jul 13 13:43 file7.txt
+-rw-r--r-- 1 root root 186 Jul 13 14:08 file4.txt
+lrwxrwxrwx 1 root root   8 Jul 16 02:37 file9.txt -> file.txt
+lrwxrwxrwx 1 root root   9 Jul 16 02:45 file10.txt -> file9.txt
+-rw-r--r-- 1 root root  30 Jul 16 03:06 file.logg
+-rw-r--r-- 1 root root  43 Jul 16 03:09 f.txt
+-rw-r--r-- 1 root root  34 Jul 16 03:16 file12.txt
+-rw-r--r-- 1 root root   0 Jul 17 02:34 F.txt
+[root@ip-10-1-0-9 ~]#
+
+[root@ip-10-1-0-9 ~]# find  -type f -name "*" -empty
+./F.txt
+[root@ip-10-1-0-9 ~]#
+How to find empty files in particular directory?
+
+find  -type f -name "*" -empty
+
+[root@ip-10-1-0-9 ~]# find  -type d -user babu -name "*" # it will search for the files or directories which are having user as babu
+./ram
+./ram/ramesh
+
+[root@ip-10-1-0-9 ~]# find  -type d -group babu -name "*" # It will search for files or directories which are having group as babu
+./ram
+./ram/ramesh
+[root@ip-10-1-0-9 ~]#
+
+[root@ip-10-1-0-9 ~]# find  -type f -mtime +2 -name "*"
+./.bash_logout
+./.bash_profile
+./.bashrc
+./.cshrc
+./.tcshrc
+./.ssh/authorized_keys
+./file2.txt
+./file4.txt
+./fil5.txt
+./file6.txt
+./file7.txt
+[root@ip-10-1-0-9 ~]# touch class.txt
+[root@ip-10-1-0-9 ~]# find  -type f -mtime +2 -name "*"
+./.bash_logout
+./.bash_profile
+./.bashrc
+./.cshrc
+./.tcshrc
+./.ssh/authorized_keys
+./file2.txt
+./file4.txt
+./fil5.txt
+./file6.txt
+./file7.txt
+[root@ip-10-1-0-9 ~]# find  -type f -mtime -2 -name "*"
+./.bash_history
+./file.logg
+./f.txt
+./file12.txt
+./F.txt
+./class.txt
+[root@ip-10-1-0-9 ~]# find  -type f -mtime 2 -name "*"
+[root@ip-10-1-0-9 ~]#
+
+-mtime -- It will display the files based on modified time
+
++NUmberofDays -- It will display all the files which are more that given Numberof Days
++2 -- It will display all the files which are more than two days files.
+
+-NumberofDays -- It will display all the files which are less than given number of Days
+-2 -- It will display all the files which are less than given 2 days
+
+NumberofDays -- It will display all the files which are exact given number of Days
+
+2 -- It will display all the files which are exact 2 days
+
+-atime -- Accessed time -- +2,-2,2
+-ctime -- created time -- +2,-2,2
+[root@ip-10-1-0-9 ~]# find  -type f -mtime +2 -name "*" -mtime -4
+./file2.txt
+./file4.txt
+./file7.txt
+
+[root@ip-10-1-0-9 ~]# find  -type f -mmin -30 -name "*" # It will search for the files which are modified before 30 mints
+./class.txt
+[root@ip-10-1-0-9 ~]#
+
+-mmin === +days ,-days,days
+
+[root@ip-10-1-0-9 ~]# find  -type f -size 125c -name "*"  
+./fil5.txt
+[root@ip-10-1-0-9 ~]#
+
+
+-size -- c -- characters -- m--mb -- g --gb
+
+I want to find out the files which are having more than 20mb files and archive them?
+
+find . -type f -size 20m -name "*" | xargs tar -cvzf ramesh.tar
+
+===========================
+Absolute path and Relative:
+
+absolute Path: The path which starts from root.
+
+    /root/ram/ramesh
+
+Relative Path:
+
+    The path which starts from current directory.
+     ./ramesh
+=============================
+basename:
+
+    It is used to extract the file or directory from the path or it is used to extract the file or directory whichever existed after the last forward slash(/).
+
+[root@ip-10-1-0-9 ram]# basename /root/ram/ramesh/file.txt
+file.txt
+[root@ip-10-1-0-9 ram]# basename /root/ram/ramesh
+ramesh
+[root@ip-10-1-0-9 ram]#
+
+=============================
+dirname:
+    It is used to extract the path from given path or it will extract the path whichever existed before forward slash(/)
+
+[root@ip-10-1-0-9 ram]# dirname /root/ram/ramesh/file.txt
+/root/ram/ramesh
+[root@ip-10-1-0-9 ram]# dirname /root/ram/ramesh
+/root/ram
+[root@ip-10-1-0-9 ram]#
+
+=============================
+stat:
+
+     It is used to see the statistics of file or directory.
+
+     [root@ip-10-1-0-9 ramesh]# stat file.txt
+  File: ‘file.txt’
+  Size: 0               Blocks: 0          IO Block: 4096   regular empty file
+Device: ca01h/51713d    Inode: 12594698    Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-07-19 02:06:24.819720052 +0000
+Modify: 2021-07-19 02:06:24.819720052 +0000
+Change: 2021-07-19 02:06:24.819720052 +0000
+ Birth: -
+[root@ip-10-1-0-9 ramesh]# ^C
+[root@ip-10-1-0-9 ramesh]# cd ..
+[root@ip-10-1-0-9 ram]# stat ramesh/
+  File: ‘ramesh/’
+  Size: 22              Blocks: 0          IO Block: 4096   directory
+Device: ca01h/51713d    Inode: 12995390    Links: 2
+Access: (0777/drwxrwxrwx)  Uid: ( 1001/    babu)   Gid: ( 1001/    babu)
+Access: 2021-07-12 02:13:41.035798314 +0000
+Modify: 2021-07-19 02:06:24.819720052 +0000
+Change: 2021-07-19 02:06:24.819720052 +0000
+ Birth: -
+==========================
+
+sudo: super user do
+
+It allows user to run any command as root user or any other user. As per the security policy the user must be there in visudo file.
+
+[ec2-user@ip-10-1-0-9 ~]$ useradd rakesh
+-bash: /usr/sbin/useradd: Permission denied
+[ec2-user@ip-10-1-0-9 ~]$ sudo useradd rakesh
+[ec2-user@ip-10-1-0-9 ~]$
+
+==========================
+
+su: super user
+
+ It is used to switch from one user to another user during login.
+
+[ec2-user@ip-10-1-0-9 ~]$ sudo su -
+Last login: Sat Jul 10 13:58:34 UTC 2021 from 223.238.79.113 on pts/0
+[root@ip-10-1-0-9 ~]# su - rakesh
+[rakesh@ip-10-1-0-9 ~]$
+
+What root account?
+
+    If the user has root privileges then that user can do anything from the root.It means he can execute any command on the server.
+
+===========================
+How to run the command or program in the background?
+
+  We need to use & at end of the program so it will run in the bakground.
+
+Why we need to run the program in the backgroun?
+
+    If you don't run the job or program in the background then user must be wait until the program completed. If you run in background you don't need to wait.
+
+[rakesh@ip-10-1-0-9 ~]$ vi 1.sh
+                        sleep 50
+[rakesh@ip-10-1-0-9 ~]$ chmod +x 1.sh
+[rakesh@ip-10-1-0-9 ~]$ ./1.sh
+^C[rakesh@ip-10-1-0-9 ~]$ ./1.sh &
+[1] 23649
+[rakesh@ip-10-1-0-9 ~]$
+
+How to see the jobs which are running in the background?
+
+Usig jobs command
+
+^C[rakesh@ip-10-1-0-9 ~]$ jobs
+[1]+  Running                 ./1.sh &
+[rakesh@ip-10-1-0-9 ~]$ jobs
+[1]+  Running                 ./1.sh &
+[rakesh@ip-10-1-0-9 ~]$ jobs
+[1]+  Done                    ./1.sh
+[rakesh@ip-10-1-0-9 ~]$ ./1.sh&
+[1] 23982
+[rakesh@ip-10-1-0-9 ~]$ jobs
+[1]+  Running                 ./1.sh &
+[rakesh@ip-10-1-0-9 ~]$ sleep 30 &
+[2] 23999
+[rakesh@ip-10-1-0-9 ~]$ jobs
+[1]-  Running                 ./1.sh &
+[2]+  Running                 sleep 30 &
+[rakesh@ip-10-1-0-9 ~]$
+[1],[2] are job id's
+Each job has unique job id.
+
+How to get the jobs which are running in the background to foreground?
+
+Using fg command we can get the jobs into foreground
+
+[rakesh@ip-10-1-0-9 ~]$ ./1.sh&
+[1] 24116
+[rakesh@ip-10-1-0-9 ~]$ fg %1
+./1.sh
+
+job %jobId
+
+===================================
+
+echo:
+     It used to print whatever we have given to it.
+
+    ^C[rakesh@ip-10-1-0-9 ~]$ echo " Hello World"
+ Hello World
+[rakesh@ip-10-1-0-9 ~]$ a=10
+[rakesh@ip-10-1-0-9 ~]$ $a
+-bash: 10: command not found
+[rakesh@ip-10-1-0-9 ~]$ echo $a
+10
+[rakesh@ip-10-1-0-9 ~]$ echo 10
+10
+[rakesh@ip-10-1-0-9 ~]$
+ we have escaped charaters
+ \t,\n,\b
+
+[rakesh@ip-10-1-0-9 ~]$ echo " Hello welcome to linux"
+ Hello welcome to linux
+[rakesh@ip-10-1-0-9 ~]$ echo " Hello \nwelcome to linux"
+ Hello \nwelcome to linux
+[rakesh@ip-10-1-0-9 ~]$ echo -e " Hello \nwelcome to linux"
+ Hello
+welcome to linux
+[rakesh@ip-10-1-0-9 ~]$ echo -e " Hello \twelcome \tto \tlinux"
+ Hello  welcome         to      linux
+[rakesh@ip-10-1-0-9 ~]$
+
+\n  -- newline
+\t  -- tab
+\b  -- backslash or boundary
+
+-e -- it will enable original behaviuor of special escaped characters.
+-n -- It prevents to go for new line
+
+[rakesh@ip-10-1-0-9 ~]$ echo -n " Hello welcome to linux"
+ Hello welcome to linux[rakesh@ip-10-1-0-9 ~]$ echo " Hello welcome to linux"
+ Hello welcome to linux
+[rakesh@ip-10-1-0-9 ~]$
+
+[rakesh@ip-10-1-0-9 ~]$ echo *  # It will display all the files and directories
+1.sh
+[rakesh@ip-10-1-0-9 ~]$
+
+===========================================
+Runlevels:
+        It is kind of unix based modes for dedicated server OS which will run on it.
+
+        who -r 
+
+        [rakesh@ip-10-1-0-9 ~]$ who -r
+         run-level 5  2021-07-13 13:14
+[rakesh@ip-10-1-0-9 ~]$
+
+[rakesh@ip-10-1-0-9 ~]$ runlevel
+N 5
+[rakesh@ip-10-1-0-9 ~]$
+
+When we start our server there is a process which will start all the processes.If this process has not started then other processed will not run.
+
+   What is that process? init process -- process id of init is 1
+
+   we have different kinds of runlevels.
+
+   0  -- halt or shutdown
+   1  -- single user mode
+   2  -- multi user mode without networking
+   3  -- multi user mode with networking
+   4  -- reserved or for developers
+   5  -- multi user mode with networking and GUi.
+   6  -- Restart
+
+init 6  -- Which will restart ur server.
+
+init 0 -- Which will shutdown your server
+
+================
+sar: System activity report
+
+It will collect all the information and display all the system activities report.
+
+[root@ip-10-1-0-9 ~]# sar 5
+Linux 4.14.232-177.418.amzn2.x86_64 (ip-10-1-0-9.ap-southeast-1.compute.internal)       07/20/2021      _x86_64_        (1 CPU)
+
+02:14:33 AM     CPU     %user     %nice   %system   %iowait    %steal     %idle
+02:14:38 AM     all      0.40      0.00      0.40      0.00      0.20     99.00
+02:14:43 AM     all      0.40      0.00      0.00      0.00      0.00     99.60
+02:14:48 AM     all      0.60      0.00      0.00      0.00      0.00     99.40
+02:14:53 AM     all      0.20      0.00      0.20      0.00      0.00     99.60
+02:14:58 AM     all      0.40      0.00      0.00      0.00      0.00     99.60
+02:15:03 AM     all      0.20      0.00      0.20      0.00      0.20     99.40
+02:15:08 AM     all      0.00      0.00      0.00      0.00      0.00    100.00
+02:15:13 AM     all      0.00      0.00      0.00      0.00      0.00    100.00
+^C
+
+02:15:14 AM     all      0.00      0.00      0.00      0.00      0.00    100.00
+Average:        all      0.27      0.00      0.10      0.00      0.05     99.58
+[root@ip-10-1-0-9 ~]# sar 5 5
+Linux 4.14.232-177.418.amzn2.x86_64 (ip-10-1-0-9.ap-southeast-1.compute.internal)       07/20/2021      _x86_64_        (1 CPU)
+
+02:15:18 AM     CPU     %user     %nice   %system   %iowait    %steal     %idle
+02:15:23 AM     all      0.00      0.00      0.00      0.00      0.00    100.00
+02:15:28 AM     all      0.00      0.00      0.00      0.00      0.00    100.00
+02:15:33 AM     all      0.40      0.00      0.00      0.00      0.00     99.60
+02:15:38 AM     all      0.00      0.00      0.00      0.00      0.00    100.00
+02:15:43 AM     all      0.00      0.00      0.00      0.00      0.00    100.00
+Average:        all      0.08      0.00      0.00      0.00      0.00     99.92
+[root@ip-10-1-0-9 ~]#
+
+==============================
+watch: 
+    It will run the program repeatedly and also dislay the output of the program on the screen..If there any new data it will display the result otherwise it won't display.
+
+[root@ip-10-1-0-9 ~]# watch ls -ltr
+[root@ip-10-1-0-9 ~]# watch ps -eaf  # by default watch command will execute in 2 seconds.
+[root@ip-10-1-0-9 ~]# watch -n 1 ls -ltr  # It will run it every 1 second 
+[root@ip-10-1-0-9 ~]#
+
+============================
+
+kill command:
+
+Kill command is used to terminate or stop particular process
+
+     application --- running --- application not working as expected --- 
+
+     -9 -- forcible kill
+
+[root@ip-10-1-0-9 ~]# ps -eaf | grep -i httpd
+root     18126     1  0 02:27 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache   18127 18126  0 02:27 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache   18128 18126  0 02:27 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache   18129 18126  0 02:27 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache   18130 18126  0 02:27 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache   18131 18126  0 02:27 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+root     18184 17233  0 02:29 pts/0    00:00:00 grep --color=auto -i httpd
+[root@ip-10-1-0-9 ~]# kill -9 18126
+[root@ip-10-1-0-9 ~]# ps -eaf | grep -i httpd
+root     18198 17233  0 02:30 pts/0    00:00:00 grep --color=auto -i httpd
+[root@ip-10-1-0-9 ~]#
+==============================
+
+ping:
+
+   It is used to check whether the server is alive or not
+
+   C:\Users\Ramesh>ping 13.212.1.134
+
+Pinging 13.212.1.134 with 32 bytes of data:
+Reply from 13.212.1.134: bytes=32 time=242ms TTL=231
+Reply from 13.212.1.134: bytes=32 time=237ms TTL=231
+Reply from 13.212.1.134: bytes=32 time=231ms TTL=231
+Reply from 13.212.1.134: bytes=32 time=232ms TTL=231
+
+Ping statistics for 13.212.1.134:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 231ms, Maximum = 242ms, Average = 235ms
+
+C:\Users\Ramesh>ping google.com
+
+Pinging google.com [142.250.77.174] with 32 bytes of data:
+Reply from 142.250.77.174: bytes=32 time=16ms TTL=116
+Reply from 142.250.77.174: bytes=32 time=16ms TTL=116
+Reply from 142.250.77.174: bytes=32 time=16ms TTL=116
+Reply from 142.250.77.174: bytes=32 time=16ms TTL=116
+=====================
+netstat :
+        It is used to whether particular port is listening or or not an also it display about networks connection has been established or not
+
+        [root@ip-10-1-0-9 ~]# netstat -ntlp
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 0.0.0.0:111             0.0.0.0:*               LISTEN      2476/rpcbind
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      3052/sshd
+tcp        0      0 127.0.0.1:25            0.0.0.0:*               LISTEN      2885/master
+tcp6       0      0 :::111                  :::*                    LISTEN      2476/rpcbind
+tcp6       0      0 :::22                   :::*                    LISTEN      3052/sshd
+[root@ip-10-1-0-9 ~]# ^C
+[root@ip-10-1-0-9 ~]#
+
+
+[root@ip-10-1-0-9 ~]# netstat -a  # It will display all the information related to network
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State
+tcp        0      0 0.0.0.0:sunrpc          0.0.0.0:*               LISTEN
+tcp        0      0 0.0.0.0:ssh             0.0.0.0:*               LISTEN
+tcp        0      0 localhost:smtp          0.0.0.0:*               LISTEN
+tcp        0      0 ip-10-1-0-9.ap-sout:ssh 117.247.117.64:50741    ESTABLISHED
+tcp        0    244 ip-10-1-0-9.ap-sout:ssh 117.247.117.64:49968    ESTABLISHED
+tcp6       0      0 [::]:sunrpc             [::]:*                  LISTEN
+tcp6       0      0 [::]:ssh                [::]:*                  LISTEN
+udp        0      0 localhost:323           0.0.0.0:*
+udp        0      0 0.0.0.0:946             0.0.0.0:*
+udp        0      0 0.0.0.0:bootpc          0.0.0.0:*
+udp        0      0 0.0.0.0:sunrpc          0.0.0.0:*
+udp6       0      0 localhost6:323          [::]:*
+udp6       0      0 [::]:946                [::]:*
+udp6       0      0 ip-10-1-0:dhcpv6-client [::]:*
+udp6       0      0 [::]:sunrpc             [::]:*
+Active UNIX domain sockets (servers and established)
+Proto RefCnt Flags       Type       State         I-Node   Path
+unix  2      [ ACC ]     STREAM     LISTENING     16973    private/defer
+unix  2      [ ACC ]     STREAM     LISTENING     16976    private/trace
+unix  2      [ ACC ]     STREAM     LISTENING     16979    private/verify
+unix  2      [ ACC ]     STREAM     LISTENING     16985    private/proxymap
+unix  3      [ ]         DGRAM                    7682     /run/systemd/notify
+unix  2      [ ACC ]     STREAM     LISTENING     16988    pr
+
+=================
+
+ifconfig:
+
+     If you want to find out ip address and netmask values then we must use this command
+
+     [root@ip-10-1-0-9 ~]# ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 9001
+        inet 10.1.0.9  netmask 255.255.255.240  broadcast 10.1.0.15
+        inet6 fe80::43f:69ff:fea6:948  prefixlen 64  scopeid 0x20<link>
+        ether 06:3f:69:a6:09:48  txqueuelen 1000  (Ethernet)
+        RX packets 111747  bytes 11472993 (10.9 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 108305  bytes 15740760 (15.0 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+==================
+traceroute:
+
+It is used to see how network reached to the destination server.
+
+traceroute google.com
+
+tracerout application.com
+=========
+
+nslookup:
+
+    Using this command we can find out the dns server name and ip address.
+
+    If you know ip we can also find out dns server.
+
+    [root@ip-10-1-0-9 ~]# nslookup ip-10-1-0-9.ap-southeast-1.compute.internal
+Server:         10.1.0.2
+Address:        10.1.0.2#53
+
+** server can't find ip-10-1-0-9.ap-southeast-1.compute.internal: NXDOMAIN
+
+[root@ip-10-1-0-9 ~]# which resolv.conf
+/usr/bin/which: no resolv.conf in (/usr/local/sbin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin)
+[root@ip-10-1-0-9 ~]# locate resolv.conf
+/etc/resolv.conf
+/etc/cloud/templates/resolv.conf.tmpl
+/usr/share/man/man5/resolv.conf.5.gz
+/usr/share/man/overrides/man5/resolv.conf.5.gz
+[root@ip-10-1-0-9 ~]# cat /etc/resolv.conf
+options timeout:2 attempts:5
+; generated by /usr/sbin/dhclient-script
+search ap-southeast-1.compute.internal
+nameserver 10.1.0.2
+[root@ip-10-1-0-9 ~]#
+
+
+
+
+ls,find,grep,sed,awk,top,uptime,mv,cd,mkdir,tail -f,crontab,netstat,ps
+basename
+dirname
+
+=================================
+SED: Stream editor
+
+  It is used to manipulate and transform the data.It will take the input from file or pipe.
+
+
+101,Ramesh,Software,20000
+102,Raju,IT,24000
+103,Suresh,Governament,30000
+104,Syam,Manager,40000
+105,Rajesh,Lead,40000
+
+
+[root@ip-10-1-0-9 ~]# sed 'p' sefile.txt # It will make every line as duplicate if you dont use -n option
+101,Ramesh,Software,20000
+101,Ramesh,Software,20000
+102,Raju,IT,24000
+102,Raju,IT,24000
+103,Suresh,Governament,30000
+103,Suresh,Governament,30000
+104,Syam,Manager,40000
+104,Syam,Manager,40000
+105,Rajesh,Lead,4000
+105,Rajesh,Lead,4000
+[root@ip-10-1-0-9 ~]# sed -n 'p' sefile.txt
+101,Ramesh,Software,20000
+102,Raju,IT,24000
+103,Suresh,Governament,30000
+104,Syam,Manager,40000
+105,Rajesh,Lead,4000
+[root@ip-10-1-0-9 ~]#
+
+Note: Whenever you use p option then we must use -n option otherwise it will make every line as duplicate
+
+[root@ip-10-1-0-9 ~]# sed  -n '2 p' sefile.txt
+102,Raju,IT,24000
+[root@ip-10-1-0-9 ~]# sed  -n '1,3 p' sefile.txt
+101,Ramesh,Software,20000
+102,Raju,IT,24000
+103,Suresh,Governament,30000
+[root@ip-10-1-0-9 ~]# sed  -n '2,3 p' sefile.txt
+102,Raju,IT,24000
+103,Suresh,Governament,30000
+[root@ip-10-1-0-9 ~]# sed  -n '2,4 p' sefile.txt
+102,Raju,IT,24000
+103,Suresh,Governament,30000
+104,Syam,Manager,40000
+[root@ip-10-1-0-9 ~]# sed  -n '2,$ p' sefile.txt
+102,Raju,IT,24000
+103,Suresh,Governament,30000
+104,Syam,Manager,40000
+105,Rajesh,Lead,4000
+
+[root@ip-10-1-0-9 ~]# sed  -n '2,$ p' sefile.txt > myfile.txt
+[root@ip-10-1-0-9 ~]# cat myfile.txt
+102,Raju,IT,24000
+103,Suresh,Governament,30000
+104,Syam,Manager,40000
+105,Rajesh,Lead,4000
+[root@ip-10-1-0-9 ~]#
+
+1,3,5,7 --- Odd --- 1~2 === 1 1
+2,4,6,8 --- even --- 2~2
+
+3~2  --- 3 5 7
+
+[root@ip-10-1-0-9 ~]# sed -n '1~2 p' sefile.txt
+101,Ramesh,Software,20000
+103,Suresh,Governament,30000
+105,Rajesh,Lead,4000
+[root@ip-10-1-0-9 ~]# sed -n '2~2 p' sefile.txt
+102,Raju,IT,24000
+104,Syam,Manager,40000
+
+[root@ip-10-1-0-9 ~]# sed -n '/Raju/ p' sefile.txt
+102,Raju,IT,24000
+[root@ip-10-1-0-9 ~]# sed -n '/Raju/,4 p' sefile.txt
+102,Raju,IT,24000
+103,Suresh,Governament,30000
+104,Syam,Manager,40000
+[root@ip-10-1-0-9 ~]# sed -n '/Raju/,$ p' sefile.txt
+102,Raju,IT,24000
+103,Suresh,Governament,30000
+104,Syam,Manager,40000
+105,Rajesh,Lead,4000
+[root@ip-10-1-0-9 ~]# sed -n '/Raju/,/Syam/ p' sefile.txt
+102,Raju,IT,24000
+103,Suresh,Governament,30000
+104,Syam,Manager,40000
+[root@ip-10-1-0-9 ~]# sed -n '/Raju/,+2 p' sefile.txt  # It will the line which is having Raju and next n number of lines after matched string.
+102,Raju,IT,24000
+103,Suresh,Governament,30000
+104,Syam,Manager,40000
+[root@ip-10-1-0-9 ~]# sed -n '/Raju/,+1 p' sefile.txt
+102,Raju,IT,24000
+103,Suresh,Governament,30000
+[root@ip-10-1-0-9 ~]#
+
+[root@ip-10-1-0-9 ~]#
+
+
+[root@ip-10-1-0-9 ~]# sed '1 d' sefile.txt
+102,Raju,IT,24000
+103,Suresh,Governament,30000
+104,Syam,Manager,40000
+105,Rajesh,Lead,4000
+[root@ip-10-1-0-9 ~]# cat sefile.txt
+101,Ramesh,Software,20000
+102,Raju,IT,24000
+103,Suresh,Governament,30000
+104,Syam,Manager,40000
+105,Rajesh,Lead,4000
+
+
+Note: Whenever you use d option without using -i option then sed will not change the original file data.
+
+[root@ip-10-1-0-9 ~]# vi sefile.txt
+[root@ip-10-1-0-9 ~]# grep -v "^$" sefile.txt
+101,Ramesh,Software,20000
+102,Raju,IT,24000
+103,Suresh,Governament,30000
+104,Syam,Manager,40000
+105,Rajesh,Lead,4000
+[root@ip-10-1-0-9 ~]# cat sefile.txt
+101,Ramesh,Software,20000
+102,Raju,IT,24000
+
+103,Suresh,Governament,30000
+104,Syam,Manager,40000
+105,Rajesh,Lead,4000
+[root@ip-10-1-0-9 ~]# sed '/^$/ d' sefile.txt It willl delete empty lines but not from the file
+101,Ramesh,Software,20000
+102,Raju,IT,24000
+103,Suresh,Governament,30000
+104,Syam,Manager,40000
+105,Rajesh,Lead,4000
+[root@ip-10-1-0-9 ~]# sed -i '/^$/ d' sefile.txt # It will delete empty lines from the file parmenently
+[root@ip-10-1-0-9 ~]# cat sefile.txt
+101,Ramesh,Software,20000
+102,Raju,IT,24000
+103,Suresh,Governament,30000
+104,Syam,Manager,40000
+105,Rajesh,Lead,4000
+[root@ip-10-1-0-9 ~]#
+
+Task: Whatver options I have explained for p try with d as well.
+
+sed -n '/^$/ p' sefile.txt # it will print empty lines
+
+[root@ip-10-1-0-9 ~]# sed -n '2 w myfile3txt' sefile.txt # it will write 2nd line to myfile3txt from sefile.txt
+[root@ip-10-1-0-9 ~]# cat myfile3txt
+102,Raju,IT,24000
+[root@ip-10-1-0-9 ~]#
+
+Task: Try the options which we used for p.
+
+[root@ip-10-1-0-9 ~]# cat sefile.txt
+101,Ramesh,Software,20000
+102,Raju,IT,24000
+103,Suresh,Governament,30000
+104,Syam,Manager,40000
+105,Rajesh,Lead,4000
+[root@ip-10-1-0-9 ~]# sed 's/Raju/Lilly/' sefile.txt
+[root@ip-10-1-0-9 ~]# 000
+[root@ip-10-1-0-9 ~]# sed 's/Raju/Lilly/' sefile.txt
+101,Ramesh,Software,20000
+102,Lilly,IT,24000
+103,Suresh,Governament,30000
+104,Syam,Manager,40000
+105,Rajesh,Lead,4000
+106,Lilly,Manager,Raju,40000
+[root@ip-10-1-0-9 ~]#
+
+s-- Substitute
+
+Note: If the line contain multiple same strings and want to replace with other string it will replace in 1st occurence in every line. It will not replace the string in 2nd occurence if you don't use g option
+
+g -- global occurance -- wherever your string is there in file it will replace all the places
+
+[root@ip-10-1-0-9 ~]# sed 's/Raju/Lilly/g' sefile.txt
+101,Ramesh,Software,20000
+102,Lilly,IT,24000
+103,Suresh,Governament,30000
+104,Syam,Manager,40000
+105,Rajesh,Lead,4000
+106,Lilly,Manager,Lilly,40000
+[root@ip-10-1-0-9 ~]#
+
+[root@ip-10-1-0-9 ~]# sed 's/Raju/Lilly/2g' sefile.txt
+101,Ramesh,Software,20000
+102,Raju,IT,24000
+103,Suresh,Governament,30000
+104,Syam,Manager,40000
+105,Rajesh,Lead,4000
+106,Raju,Manager,Lilly,40000
+[root@ip-10-1-0-9 ~]#
+
+
+
+
+[root@ip-10-1-0-14 ~]# sed 's/ramesh/Rakesh/i' sefile.txt
+101,Rakesh,Software,20000
+102,Raju,IT,24000
+103,Suresh,Governament,30000
+104,Syam,Manager,40000
+105,Rajesh,Lead,40000
+[root@ip-10-1-0-14 ~]#
+
+
+i --- ignore case
+
+[root@ip-10-1-0-14 ~]# cat sefile.txt
+101,Ramesh,Software,20000
+102,Raju,IT,24000
+103,Suresh,Governament,30000
+104,Syam,Manager,40000
+105,Rajesh,Lead,40000
+[root@ip-10-1-0-14 ~]# sed 's/ramesh/rakesh/' -e 's/Suresh/Saesh/' sefile.txt
+sed: can't read s/ramesh/rakesh/: No such file or directory
+101,Ramesh,Software,20000
+102,Raju,IT,24000
+103,Saesh,Governament,30000
+104,Syam,Manager,40000
+105,Rajesh,Lead,40000
+[root@ip-10-1-0-14 ~]# sed 's/Ramesh/rakesh/' -e 's/Suresh/Saesh/' sefile.txt
+sed: can't read s/Ramesh/rakesh/: No such file or directory
+101,Ramesh,Software,20000
+102,Raju,IT,24000
+103,Saesh,Governament,30000
+104,Syam,Manager,40000
+105,Rajesh,Lead,40000
+[root@ip-10-1-0-14 ~]# sed -e 's/Ramesh/rakesh/' -e 's/Suresh/Saesh/' sefile.txt
+101,rakesh,Software,20000
+102,Raju,IT,24000
+103,Saesh,Governament,30000
+104,Syam,Manager,40000
+105,Rajesh,Lead,40000
+[root@ip-10-1-0-14 ~]#
+
+-e -- extended
+
+[root@ip-10-1-0-14 ~]# sed -n -e '1p' -e '3p' sefile.txt
+101,Ramesh,Software,20000
+103,Suresh,Governament,30000
+[root@ip-10-1-0-14 ~]#
+
+[root@ip-10-1-0-14 ~]# sed -n -e '1p';'2p' sefile.txt
+^C
+[root@ip-10-1-0-14 ~]# sed -n -e '1 p' ; '2 p' sefile.txt
+^C
+[root@ip-10-1-0-14 ~]# sed -n -e '1 p ; 2 p' sefile.txt
+101,Ramesh,Software,20000
+102,Raju,IT,24000
+[root@ip-10-1-0-14 ~]#
+
+[root@ip-10-1-0-14 ~]# cat > file.txt
+/etc/passwd
+^C
+[root@ip-10-1-0-14 ~]# ls -ltr /etc/passwd
+-rw-r--r-- 1 root root 1312 Jul 22 02:07 /etc/passwd
+[root@ip-10-1-0-14 ~]# sed 's/^/ls -ltr/' file.txt
+ls -ltr/etc/passwd
+[root@ip-10-1-0-14 ~]# sed 's/^/ls -ltr /' file.txt
+ls -ltr /etc/passwd
+[root@ip-10-1-0-14 ~]# sed 's/^/ls -ltr /e' file.txt
+-rw-r--r-- 1 root root 1312 Jul 22 02:07 /etc/passwd
+[root@ip-10-1-0-14 ~]#
+
+[root@ip-10-1-0-14 ~]# sed '{
+> s/Ramesh/Rakesh/
+> s/Raju/Lilly/
+> }' sefile.txt
+101,Rakesh,Software,20000
+102,Lilly,IT,24000
+103,Suresh,Governament,30000
+104,Syam,Manager,40000
+105,Rajesh,Lead,40000
+[root@ip-10-1-0-14 ~]#
+
+[root@ip-10-1-0-14 ~]# sed 's/^[0-9]/[&]/' sefile.txt
+[1]01,Ramesh,Software,20000
+[1]02,Raju,IT,24000
+[1]03,Suresh,Governament,30000
+[1]04,Syam,Manager,40000
+[1]05,Rajesh,Lead,40000
+[root@ip-10-1-0-14 ~]# sed 's/^[0-9][0-9]/[&]/' sefile.txt
+[10]1,Ramesh,Software,20000
+[10]2,Raju,IT,24000
+[10]3,Suresh,Governament,30000
+[10]4,Syam,Manager,40000
+[10]5,Rajesh,Lead,40000
+[root@ip-10-1-0-14 ~]# sed 's/^[0-9][0-9][0-9]/[&]/' sefile.txt
+[101],Ramesh,Software,20000
+[102],Raju,IT,24000
+[103],Suresh,Governament,30000
+[104],Syam,Manager,40000
+[105],Rajesh,Lead,40000
+
+[root@ip-10-1-0-14 ~]# sed 's/^*/[&]/' sefile.txt
+101,Ramesh,Software,20000
+102,Raju,IT,24000
+103,Suresh,Governament,30000
+104,Syam,Manager,40000
+105,Rajesh,Lead,40000
+[root@ip-10-1-0-14 ~]# sed 's/^.*/[&]/' sefile.txt
+[101,Ramesh,Software,20000]
+[102,Raju,IT,24000]
+[103,Suresh,Governament,30000]
+[104,Syam,Manager,40000]
+[105,Rajesh,Lead,40000]
+[root@ip-10-1-0-14 ~]#
+
+[root@ip-10-1-0-14 ~]# cat > myfile.txt
+1
+12
+1234
+12345
+123456
+1234567
+^C
+[root@ip-10-1-0-14 ~]# sed '/^[0-9]\{5\}/ p' myfile.txt
+1
+12
+1234
+12345
+12345
+123456
+123456
+1234567
+1234567
+[root@ip-10-1-0-14 ~]# sed '/^[0-9]\{5\}$/ p' myfile.txt
+1
+12
+1234
+12345
+12345
+123456
+1234567
+[root@ip-10-1-0-14 ~]# sed -n '/^[0-9]\{5\}$/ p' myfile.txt
+12345
+[root@ip-10-1-0-14 ~]#
+
+
+y/string1/string2/  in sed
+ y -- traslating
+
+u,U,l,L
+
+i  === sed '2 i\ 107,Cummins,sales'
+a
+c
+
+[root@ip-10-1-0-14 ~]# sed '2 i\ 107,Cummins,sales' sefile.txt # It will insert the line before the 2nd line
+101,Ramesh,Software,20000
+ 107,Cummins,sales
+102,Raju,IT,24000
+103,Suresh,Governament,30000
+104,Syam,Manager,40000
+105,Rajesh,Lead,40000
+[root@ip-10-1-0-14 ~]# sed '2 a\ 107,Cummins,sales' sefile.txt # It will append the line after the 2nd line
+101,Ramesh,Software,20000
+102,Raju,IT,24000
+ 107,Cummins,sales
+103,Suresh,Governament,30000
+104,Syam,Manager,40000
+105,Rajesh,Lead,40000
+[root@ip-10-1-0-14 ~]#
+
+[root@ip-10-1-0-14 ~]# sed '2 c\ 107,Cummins,sales' sefile.txt # It will replace the 2nd line with given line
+101,Ramesh,Software,20000
+ 107,Cummins,sales
+103,Suresh,Governament,30000
+104,Syam,Manager,40000
+105,Rajesh,Lead,40000
+[root@ip-10-1-0-14 ~]#
+
+========================
+AWK:
+
+     developed based c language
+     Aho Weighnberger kernighan  -- AWK
+
+It is very powerful language and We can manipulate and process the text data sequentially. 
+
+When the file lines with multiple fields then it will be very usefull to perform any action on the data.
+
+[root@ip-10-1-0-14 ~]# awk -F ":" '{print $1}' /etc/passwd
+root
+bin
+daemon
+adm
+lp
+sync
+shutdown
+
+[root@ip-10-1-0-14 ~]# awk -F "," '{print $1}' sefile.txt
+101
+102
+103
+104
+105
+[root@ip-10-1-0-14 ~]# awk -F "," '{print $1,$2}' sefile.txt
+101 Ramesh
+102 Raju
+103 Suresh
+104 Syam
+105 Rajesh
+[root@ip-10-1-0-14 ~]# awk -F "," '{print $1,$2,$3}' sefile.txt
+101 Ramesh Software
+102 Raju IT
+103 Suresh Governament
+104 Syam Manager
+105 Rajesh Lead
+[root@ip-10-1-0-14 ~]#
+
+
+[root@ip-10-1-0-14 ~]# awk -F "," '{print NF}' sefile.txt
+4
+4
+4
+4
+4
+[root@ip-10-1-0-14 ~]# cat sefile.txt
+101,Ramesh,Software,20000
+102,Raju,IT,24000
+103,Suresh,Governament,30000
+104,Syam,Manager,40000
+105,Rajesh,Lead,40000
+[root@ip-10-1-0-14 ~]# awk -F "," '{print $NF}' sefile.txt
+20000
+24000
+30000
+40000
+40000
+[root@ip-10-1-0-14 ~]# awk -F "," '{print $NF-1}' sefile.txt
+19999
+23999
+29999
+39999
+39999
+[root@ip-10-1-0-14 ~]# awk -F "," '{print $(NF-1)}' sefile.txt
+Software
+IT
+Governament
+Manager
+Lead
+
+[root@ip-10-1-0-14 ~]# awk -F "," '/Lead/ {print $1}' sefile.txt
+105
+[root@ip-10-1-0-14 ~]# awk -F "," '/Lead/ {print}' sefile.txt
+105,Rajesh,Lead,40000
+[root@ip-10-1-0-14 ~]# awk -F "," '{print}' sefile.txt
+101,Ramesh,Software,20000
+102,Raju,IT,24000
+103,Suresh,Governament,30000
+104,Syam,Manager,40000
+105,Rajesh,Lead,40000
+[root@ip-10-1-0-14 ~]#
+
+ [root@ip-10-1-0-14 ~]# awk -F "," '{print $1,':',$2,$3}' sefile.txt
+awk: cmd. line:1: {print $1,:,$2,$3}
+awk: cmd. line:1:           ^ syntax error
+[root@ip-10-1-0-14 ~]# awk -F "," '{print $1,":",$2,$3}' sefile.txt
+101 : Ramesh Software
+102 : Raju IT
+103 : Suresh Governament
+104 : Syam Manager
+105 : Rajesh Lead
+[root@ip-10-1-0-14 ~]# awk -F "," '{print $1,":",$2,":",$3}' sefile.txt
+101 : Ramesh : Software
+102 : Raju : IT
+103 : Suresh : Governament
+104 : Syam : Manager
+105 : Rajesh : Lead
+
+awk 'BEGIN{} {Action} END{}' filename
+
+[root@ip-10-1-0-14 ~]# ^C
+[root@ip-10-1-0-14 ~]# awk  'BEGIN{FS=","} {print $1,$2,$3}' sefile.txt
+101 Ramesh Software
+102 Raju IT
+103 Suresh Governament
+104 Syam Manager
+105 Rajesh Lead
+[root@ip-10-1-0-14 ~]# awk  'BEGIN{OFS="/"} {print $1,$2,$3}' sefile.txt
+101,Ramesh,Software,20000//
+102,Raju,IT,24000//
+103,Suresh,Governament,30000//
+104,Syam,Manager,40000//
+105,Rajesh,Lead,40000//
+[root@ip-10-1-0-14 ~]# awk -F "," 'BEGIN{OFS="/"} {print $1,$2,$3}' sefile.txt
+101/Ramesh/Software
+102/Raju/IT
+103/Suresh/Governament
+104/Syam/Manager
+105/Rajesh/Lead
+[root@ip-10-1-0-14 ~]# ^C
+[root@ip-10-1-0-14 ~]# echo "101/Ramesh/Software" | awk -F "/" '{print $2}'
+Ramesh
+
+
+FS or -F = Input field seperator
+OFS= Output field seperator
+RS == Record seperator
+ORS= Output Record sepearator
+
+[root@ip-10-1-0-14 ~]# awk -F "," 'BEGIN{RS="/"} {print $1,$2,$3}' sefile.txt
+101 Ramesh Software
+[root@ip-10-1-0-14 ~]# awk -F "," 'BEGIN{RS="\n"} {print $1,$2,$3}' sefile.txt
+101 Ramesh Software
+102 Raju IT
+103 Suresh Governament
+104 Syam Manager
+105 Rajesh Lead
+[root@ip-10-1-0-14 ~]# awk -F "," 'BEGIN{ORS="\t"} {print $1,$2,$3}' sefile.txt
+101 Ramesh Software     102 Raju IT     103 Suresh Governament  104 Syam Manager     105 Rajesh Lead  [root@ip-10-1-0-14 ~]#
+
+Search for AWK complete block examples -- BEGIN,ACTION BLOK and END block
+
+[root@ip-10-1-0-14 ~]# awk  'BEGIN{FS=","} {print NR,$1} END {NR}' sefile.txt
+1 101
+2 102
+3 103
+4 104
+5 105
+[root@ip-10-1-0-14 ~]# awk  'BEGIN{FS=","} {print NR,$1} END {print NR}' sefile.txt
+1 101
+2 102
+3 103
+4 104
+5 105
+5
+[root@ip-10-1-0-14 ~]# awk  'BEGIN{FS=","} {print NR,$1} END {print "Total No of recrd" NR}' sefile.txt
+1 101
+2 102
+3 103
+4 104
+5 105
+Total No of recrd5
+[root@ip-10-1-0-14 ~]# awk  'BEGIN{FS=","} {print NR,$1} END {print "Total No of recrd": NR}' sefile.txt
+awk: cmd. line:1: BEGIN{FS=","} {print NR,$1} END {print "Total No of recrd": NR}
+awk: cmd. line:1:                                                           ^ syntax error
+[root@ip-10-1-0-14 ~]# awk  'BEGIN{FS=","} {print NR,$1} END {print "Total No of recrd:" NR}' sefile.txt
+1 101
+2 102
+3 103
+4 104
+5 105
+Total No of recrd:5
+[root@ip-10-1-0-14 ~]#
+
+==================
+
+vi editor:
+
+If you want to create a file or open an existing file  and write data or delete the data from the file then vi editor will be useful.
+
+1 Insert mode  -- Data inserting
+2 command mode -- where you write commands
+3 execute mode -- where you execute commands
+
+vi fileName(if this file exists then it will open if not then it will create and open the file)
+
+When you open the file and press i then it will allow you to enter commands
+
+If you want to save the file then we must press esc+: then write w
+If you want to save the file and quit/exit from the file then press esc+: then  write wq
+
+
+If you don't want to save your changes in file then we use like press esc+: then write q!(forcebily quit)
+
+if you want to save the changes and quit forcibly then press esc+: and write wq! 
+
+esc and press h --Move the cursor one character left from the cursor point
+esc and press l --Move the cursor one character right from the cursor point
+esc and press j --Move the cursor down the line from the cursor point
+esc and press k --Move the cursor up the line from the cursor point
+
+esc and press o -- It will create new line below from where the cursor has pointed
+esc and shift+o -- It will create new line up from where the cursor has pointed
+
+esc and press u -- it will undo the changes.
+
+esc and press dd -- It will delete the line where the cursor is pointing.
+
+esc and press yy -- It will copy the line where the cursor is pointing
+
+esc and press p -- It will paste the line which you copied using above yy
+
+esc and press shift+a -- It will take you to the end of the line from starting of the line
+
+esc ad press shift+b -- It will take you to starting of the line from end  of the line
+
+esc and press shift+$ -- It will take you to the end of the line.
+
+
+esc and press shift+^ -- It will take you to the starting of the line.
+
+esc and shift+g -- It will take u to the end of the line of file.
+
+esc and press :/pattern  -- It will search the given pattern in that file and it will search from bottom to top.Once you find the string then press n
+
+101,Rakesh,Software,20000
+102,Raju,IT,24000
+103,Suresh,Governament,30000
+104,Syam,Manager,40000
+105,Rajesh,Lead,40000
+106,Ram,Lead,3000
+
+~
+~
+~
+
+:%s/Ramesh/Rakesh/
+
+ esc + dw -- it wll delete the word from cursor
+
+ esc and press :1j2 -- It will join 1st line with 2nd line
+
+ esc and press : ! ls -ltr -- It will execute the command from vi editor and press enter and it will take you back to the vi editor.
+
+ ssh
+ scp
+ ftp
+ sftp
+ sqlplus
+ ssh-keygen
+ tar
+ crontab
+ zip
+ zgrep
+ zombie process
+ Daemon Process
+ nice
+ at
+ batch
+
+=======================
+
+Shell Scripting:
+
+       Group of commands -- File and write some logics using loops,conditional statements
+
+    It is text file which is having group of commands with logic for the automation as per the requirement.
+
+Variables:
+        ex: a=10
+
+      This variable a will be strore in RAM and if you restart you session then this variable will not available.
+
+   user defined variables call it as local variables
+   predefined or system defined environment variables
+
+
+  using env command we can find out system defined environment variables
+   
+   If you want to find out the current shell name then we can use echo $SHELL
+    and if you want to switch from one shell to another shell then type shellName -- bash
+
+
+  KSH Korn shell
+  Bash  -- Born again shell
+  cShell --
+  zshell 
+  sh -- Bornshell
+
+  Unix ==== 10Mb
+
+  If you want to make your variables to available for child shell as well then we must use export
+
+ command.
+
+ [root@ip-10-1-0-14 ~]# echo $SHELL
+/bin/bash
+[root@ip-10-1-0-14 ~]# bash
+[root@ip-10-1-0-14 ~]# ps -f
+UID        PID  PPID  C STIME TTY          TIME CMD
+root     27839 27814  0 01:53 pts/0    00:00:00 sudo -i
+root     27840 27839  0 01:53 pts/0    00:00:00 -bash
+root     28094 27840  0 02:44 pts/0    00:00:00 bash
+root     28109 28094  0 02:44 pts/0    00:00:00 ps -f
+[root@ip-10-1-0-14 ~]# clear
+[root@ip-10-1-0-14 ~]# a=10
+[root@ip-10-1-0-14 ~]# echo $a
+10
+[root@ip-10-1-0-14 ~]# a=ramesh
+[root@ip-10-1-0-14 ~]# echo $a
+ramesh
+[root@ip-10-1-0-14 ~]# a='ramesh'
+[root@ip-10-1-0-14 ~]# echo $a
+ramesh
+[root@ip-10-1-0-14 ~]# ps -f
+UID        PID  PPID  C STIME TTY          TIME CMD
+root     27839 27814  0 01:53 pts/0    00:00:00 sudo -i
+root     27840 27839  0 01:53 pts/0    00:00:00 -bash
+root     28094 27840  0 02:44 pts/0    00:00:00 bash
+root     28116 28094  0 02:47 pts/0    00:00:00 ps -f
+[root@ip-10-1-0-14 ~]# exit
+exit
+[root@ip-10-1-0-14 ~]# echo $a
+10
+[root@ip-10-1-0-14 ~]# b=20
+[root@ip-10-1-0-14 ~]# echo $b
+20
+[root@ip-10-1-0-14 ~]# bash
+[root@ip-10-1-0-14 ~]# echo $b
+
+[root@ip-10-1-0-14 ~]# k='Rakesh'
+[root@ip-10-1-0-14 ~]# echo $k
+Rakesh
+[root@ip-10-1-0-14 ~]# exit
+exit
+[root@ip-10-1-0-14 ~]# echo $k
+
+[root@ip-10-1-0-14 ~]# ps -f
+UID        PID  PPID  C STIME TTY          TIME CMD
+root     27839 27814  0 01:53 pts/0    00:00:00 sudo -i
+root     27840 27839  0 01:53 pts/0    00:00:00 -bash
+root     28133 27840  0 02:49 pts/0    00:00:00 ps -f
+[root@ip-10-1-0-14 ~]# l='Ramesh'
+[root@ip-10-1-0-14 ~]# export l
+[root@ip-10-1-0-14 ~]#
+[root@ip-10-1-0-14 ~]# echo $l
+Ramesh
+[root@ip-10-1-0-14 ~]# bash
+[root@ip-10-1-0-14 ~]# ps -f
+UID        PID  PPID  C STIME TTY          TIME CMD
+root     27839 27814  0 01:53 pts/0    00:00:00 sudo -i
+root     27840 27839  0 01:53 pts/0    00:00:00 -bash
+root     28135 27840  0 02:49 pts/0    00:00:00 bash
+root     28157 28135  0 02:50 pts/0    00:00:00 ps -f
+[root@ip-10-1-0-14 ~]# echo $l
+Ramesh
+[root@ip-10-1-0-14 ~]#
+
+
+[root@ip-10-1-0-14 ~]# export b='Welome'
+[root@ip-10-1-0-14 ~]# echo $b
+Welome
+[root@ip-10-1-0-14 ~]# bash
+[root@ip-10-1-0-14 ~]# echo $b
+Welome
+[root@ip-10-1-0-14 ~]#
+
+Note: If you export the variables from parent those variables will be avialable to chile shell.If you try export the variables from child to parent it won't work.
+
+
+=======================
+How to comment a line in linux?
+
+Using # we can comment the line
+
+=================
+#!/bin/bash  -- Shebang statement or hashbang statement
+
+Whenever we execute any script the shell check whether this statement is existed or not.If it is not existed it will be executed in default shell. It is also call it as shell executable location.
+
+What is the first line in shell scripting?
+=========================
+
+HOw to execute shell scripting?
+
+./Scriptname.sh
+sh scriptname.sh
+path/script.sh
+
+=========================
+[root@ip-10-1-0-14 ~]# vi se.sh
+[root@ip-10-1-0-14 ~]# vi se.sh
+a=10
+b='Ramesh'
+echo " Hello $a an $b"
+
+[root@ip-10-1-0-14 ~]# ./se.sh
+-bash: ./se.sh: Permission denied
+[root@ip-10-1-0-14 ~]# ls -ltr
+total 20
+-rw-r--r-- 1 root root  12 Jul 22 02:23 file.txt
+-rw-r--r-- 1 root root  31 Jul 22 02:40 myfile.txt
+-rw-r--r-- 1 root root  61 Jul 23 03:03 sefile1.txt
+-rw-r--r-- 1 root root 137 Jul 24 02:37 sefile.txt
+-rw-r--r-- 1 root root  40 Jul 27 02:24 se.sh
+[root@ip-10-1-0-14 ~]# chmod +x se.sh
+[root@ip-10-1-0-14 ~]# ./se.sh
+ Hello 10 an Ramesh
+[root@ip-10-1-0-14 ~]# ps -f
+UID        PID  PPID  C STIME TTY          TIME CMD
+root     19083 19058  0 02:12 pts/0    00:00:00 sudo -i
+root     19084 19083  0 02:12 pts/0    00:00:00 -bash
+root     23223 19084  0 02:25 pts/0    00:00:00 ps -f
+[root@ip-10-1-0-14 ~]# echo $a
+
+[root@ip-10-1-0-14 ~]# echo $b
+
+[root@ip-10-1-0-14 ~]# . se.sh
+ Hello 10 an Ramesh
+[root@ip-10-1-0-14 ~]# echo $a
+10
+[root@ip-10-1-0-14 ~]# echo $b
+Ramesh
+[root@ip-10-1-0-14 ~]# vi se1.sh
+[root@ip-10-1-0-14 ~]# chmod +x se1.sh
+[root@ip-10-1-0-14 ~]# ./se1.sh
+ Hello 10 an Ramesh
+10
+[root@ip-10-1-0-14 ~]# vi se1.sh
+#!/bin/bash
+. se.sh
+echo $a
+echo $b
+[root@ip-10-1-0-14 ~]# ./se1.sh
+ Hello 10 an Ramesh
+10
+Ramesh
+[root@ip-10-1-0-14 ~]#
+==========================
+eval (evaluate):
+
+First it will perform all shell substitutions and then it execute in the command line and it return the exit status of the that command.
+
+[root@ip-10-1-0-14 ~]# a=10
+[root@ip-10-1-0-14 ~]# b='$a'
+[root@ip-10-1-0-14 ~]# echo $b
+$a
+[root@ip-10-1-0-14 ~]# eval echo $b
+10
+[root@ip-10-1-0-14 ~]# echo $?
+0
+[root@ip-10-1-0-14 ~]# lklk
+-bash: lklk: command not found
+[root@ip-10-1-0-14 ~]# echo $?
+127
+[root@ip-10-1-0-14 ~]# ls
+file.txt  myfile.txt  se1.sh  sefile1.txt  sefile.txt  se.sh
+[root@ip-10-1-0-14 ~]# echo $?
+0
+[root@ip-10-1-0-14 ~]#
+
+Note: echo $? it will hold the status of last executed command.If command executed successfully then it will return 0 otherwise it will return other than 0.
+
+echo
+
+a=$1
+b=$2
+
+echo $a and $b
+
+./fi.sh 10 20
+
+
+[root@ip-10-1-0-14 ~]# echo "Hello" : echo "Welcome"
+Hello : echo Welcome
+[root@ip-10-1-0-14 ~]# echo "Hello" ; echo "Welcome"
+Hello
+Welcome
+[root@ip-10-1-0-14 ~]# echo "Hello" \; echo "Welcome"
+Hello ; echo Welcome
+[root@ip-10-1-0-14 ~]# echo "U earn $20000"
+U earn 0000
+[root@ip-10-1-0-14 ~]# echo "U earn \$20000"
+U earn $20000
+
+[root@ip-10-1-0-14 ~]# vi fi.sh
+[root@ip-10-1-0-14 ~]# chmod +x fi.sh
+[root@ip-10-1-0-14 ~]# ./fi.sh
+and
+[root@ip-10-1-0-14 ~]# ./fi.sh  10 20
+10 and 20
+[root@ip-10-1-0-14 ~]#
+
+#!/bin/bash
+a=$1
+b=$2
+
+add=`expr $a + $b `
+echo "$add"
+echo "$0"
+~
+
+[root@ip-10-1-0-14 ~]# vi art.sh
+[root@ip-10-1-0-14 ~]# chmod +x art.sh
+[root@ip-10-1-0-14 ~]# ./art.sh
+expr: syntax error
+
+./art.sh
+[root@ip-10-1-0-14 ~]# ./art.sh 10 20
+30
+./art.sh
+
+[root@ip-10-1-0-14 ~]# vi art.sh
+[root@ip-10-1-0-14 ~]# ./art.sh 10 20
+#!/bin/bash -vx
+a=$1
++ a=10
+b=$2
++ b=20
+
+add=`expr $a + $b `
+expr $a + $b
+++ expr 10 + 20
++ add=30
+echo "$add"
++ echo 30
+30
+echo "$0"
++ echo ./art.sh
+./art.sh
+
+How to debug your shell script?
+
+set -vx
+
+-v _- it will print the command before executing it
+-x  -- It will print the result line by line
+
+
+[root@ip-10-1-0-14 ~]# vi art.sh
+[root@ip-10-1-0-14 ~]# ./art.sh 10 20
+#!/bin/bash -v
+a=$1
+b=$2
+
+add=`expr $a + $b `
+expr $a + $b
+echo "$add"
+30
+echo "$0"
+./art.sh
+[root@ip-10-1-0-14 ~]# vi art.sh
+[root@ip-10-1-0-14 ~]# ./art.sh 10 20
+#!/bin/bash -vx
+a=$1
++ a=10
+b=$2
++ b=20
+
+add=`expr $a + $b `
+expr $a + $b
+++ expr 10 + 20
++ add=30
+echo "$add"
++ echo 30
+30
+echo "$0"
++ echo ./art.sh
+./art.sh
+
+==========
+Command line arguments:
+
+$0  -- Scriptname
+$1  -- First argument
+$2  -- 2nd argument
+ .. $9th argument
+$? -- It will holds the status of last executed command
+$# -- Total number of arguments we are passing
+$! -- Last background Process Id
+$* -- It will display all the arguments
+$@ -- It will display all the arguments in single quote
+$- -- Current shell settings
+
+
+
+
+#!/bin/bash -vx
+a=$1
+b=$2
+
+add=`expr $a + $b `
+echo $?
+echo $#
+echo "$add"
+echo "$0"
+
+
+
+
+[root@ip-10-1-0-14 ~]# vi art.sh
+[root@ip-10-1-0-14 ~]# ./art.sh 10 20
+#!/bin/bash -vx
+a=$1
++ a=10
+b=$2
++ b=20
+
+add=`expr $a + $b `
+expr $a + $b
+++ expr 10 + 20
++ add=30
+echo $?
++ echo 0
+0
+echo $#
++ echo 2
+2
+echo "$add"
++ echo 30
+30
+echo "$0"
++ echo ./art.sh
+./art.sh
+
+
+#!/bin/bash -vx
+a=$1
+b=$2
+
+add=`expr $a + $b `
+echo $?
+echo $#
+echo $!
+echo $*
+echo $-
+echo "$add"
+echo "$0"
+~
+
+[root@ip-10-1-0-14 ~]# ./art.sh 10 20
+#!/bin/bash -vx
+a=$1
++ a=10
+b=$2
++ b=20
+
+add=`expr $a + $b `
+expr $a + $b
+++ expr 10 + 20
++ add=30
+echo $?
++ echo 0
+0
+echo $#
++ echo 2
+2
+echo $!
++ echo
+
+echo $*
++ echo 10 20
+10 20
+echo $-
++ echo hvxB
+hvxB
+echo "$add"
++ echo 30
+30
+echo "$0"
++ echo ./art.sh
+./art.sh
+
+==================
+
+[root@ip-10-1-0-14 ~]# vi file.sh
+
+#!/bin/bash
+a=$1
+b=$2
+
+if [ $# -ne 2 ]
+then
+   echo " Please provide  2 arguments where the program expecting"
+   exit 1
+fi
+c=`expr $a + $b`
+
+echo "$c"
+~
+
+Note: exit 1 will terminate the program.It will exit from the program
+
+[root@ip-10-1-0-14 ~]# chmod +x file.sh
+[root@ip-10-1-0-14 ~]# ./file.sh
+expr: syntax error
+
+[root@ip-10-1-0-14 ~]# ./file.sh 10 20
+30
+[root@ip-10-1-0-14 ~]# ./file.sh 10 20 30
+30
+[root@ip-10-1-0-14 ~]# ./file.sh 10
+expr: syntax error
+
+[root@ip-10-1-0-14 ~]# vi file.sh
+[root@ip-10-1-0-14 ~]# ./file.sh 10
+ Please provide  2 arguments where the program expecting
+[root@ip-10-1-0-14 ~]# vi file.sh
+[root@ip-10-1-0-14 ~]# ./file.sh 10
+ Please provide  2 arguments where the program expecting
+expr: syntax error
+
+[root@ip-10-1-0-14 ~]# vi file.sh
+[root@ip-10-1-0-14 ~]# ./file.sh 10
+ Please provide  2 arguments where the program expecting
+[root@ip-10-1-0-14 ~]#
+
+==================
+
+#!/bin/bash
+#a=$1
+#b=$2
+
+echo -n "Please enter a value"
+read a
+echo -n "Pleas enter b value"
+read b
+
+<<myfil
+if [ $# -ne 2 ]
+then
+   echo " Please provide  2 arguments where the program expecting"
+   exit 1
+fi
+myfil
+c=`expr $a + $b`
+
+echo "$c"
+~
+
+[root@ip-10-1-0-14 ~]# ./file.sh
+Please enter a value10
+Pleas enter b value10
+20
+
+#!/bin/bash
+#a=$1
+#b=$2
+
+#echo -n "Please enter a value"
+read -p "Please enter a vaue:" a
+#echo -n "Pleas enter b value"
+read -p "Please enter b value:" b
+
+<<myfil
+if [ $# -ne 2 ]
+then
+   echo " Please provide  2 arguments where the program expecting"
+   exit 1
+fi
+myfil
+c=`expr $a + $b`
+
+echo "$c"
+
+=================
+
+#!/bin/bash
+#a=$1
+#b=$2
+
+#echo -n "Please enter a value"
+read -p "Please enter username:" username
+#echo -n "Pleas enter b value"
+read -s -p "Please enter password:" password
+
+<<myfil
+if [ $# -ne 2 ]
+then
+   echo " Please provide  2 arguments where the program expecting"
+   exit 1
+fi
+myfil
+#c=`expr $a + $b`
+
+echo "$username and $password"
+
+-s == silent mode
+-p -- prompt
+
+
+
+myfile.sh
+#!/bin/bash
+username='ramesh'
+
+
+#!/bin/bash
+. myfile.sh
+echo $username
+
+=============
+
+Array:
+      fruits=(banana mango apple orange)
+
+  #!/bin/bash
+#username='ramesh'
+fruits=(lemon banana mango apple orange)
+echo "${fruits[*]}"
+echo "${#fruits[@]}"
+echo "${fruits[2]}"
+
+conditional statements:
+
+   if 
+   if else
+string comparision
+number comparision
+
+
+[root@ip-10-1-0-14 ~]# str1='rakesh'
+[root@ip-10-1-0-14 ~]# echo $str1
+rakesh
+[root@ip-10-1-0-14 ~]# str2='rakesh'
+[root@ip-10-1-0-14 ~]# test $str1 = $str2
+[root@ip-10-1-0-14 ~]# echo $?
+0
+
+[root@ip-10-1-0-14 ~]# test $str1 != $str2
+[root@ip-10-1-0-14 ~]# echo $?
+1
+[root@ip-10-1-0-14 ~]#
+
+
+-z string  ---- It returns true if string size is zero
+
+#!/bin/bash
+name='ramesh'
+if [ -z $name]
+then
+  echo "size is zero"
+fi
+echo "String is not zero size"
+
+
+-n string --- It return true If string size is greater than zero
+
+#!/bin/bash
+name='ramesh'
+
+if [ -n $name ]
+then
+  echo "size is not zero"
+fi
+
+#echo "String is not zero size"
+
+str1=str2 -- If both the strings are equal then it will retrun true
+
+str1!=str2  -- If both strins are not equal then it will return true
+
+Number comparision:
+
+-eq  -- equal --- num1 eqal to num2  == number1 -eq number2
+-ne  -- not equal --
+-gt  -- greater than
+-ge -- greater than or equal 
+-lt -- less than
+-le -- less than or equal
+
+If condition:
+
+   It will perform the action based on the condition.If condition true then it will perform the given action otherwise it will not perform the given action.
+
+#!/bin/bash
+name='ramesh'
+
+if [ -n $name ]
+then
+  echo "size is not zero"
+fi
+
+
+#!/bin/bash
+a=$1
+
+if [ $a -eq 10 ]
+then
+  echo "$a is equal to 10"
+fi
+
+echo "$a is not equal to 10"
+
+a=10
+b=20
+  
+#Check whether they are equal
+if [ $a == $b ]
+then
+    echo "a is equal to b"
+fi
+  
+#Check whether they are not equal
+if [ $a != $b ]
+then
+    echo "a is not equal to b"
+fi
+===============
+
+if else fi
+
+#!/bin/bash
+a=10
+b=20
+
+#Check whether they are equal
+if [ $a == $b ]
+then
+    echo "a is equal to b"
+else
+#Check whether they are n
+    echo "a is not equal to b"
+fi
+~
+
+
+if elif else fi
+
+#!/bin/bash
+a=10
+b=20
+
+#Check whether they are equal
+if [ $a == $b ]
+then
+    echo "a is equal to b"
+elif [ $a -gt $b ]
+then
+  echo "$a is greater than $b"
+elif [ $a -lt $b ]
+then
+  echo "$a less than $b"
+else
+#Check whether they are n
+    echo "a is not equal to b"
+fi
+~
+============================
+case statement or switch statement:
+
+#!/bin/bash
+CARS=$1
+
+#Pass the variable in string
+case "$CARS" in
+    #case 1
+    "mercedes") echo "Headquarters - Affalterbach, Germany" ;;
+
+    #case 2
+    "audi") echo "Headquarters - Ingolstadt, Germany" ;;
+
+    #case 3
+    "bmw") echo "Headquarters - Chennai, Tamil Nadu, India" ;;
+esac
+
+=====================
+
+While loop: 
+
+   If know how many iterations should be done then we use while loop.
+
+   while <condition>
+   do
+     action
+   done
+
+This while statement will be executed untill the condition become false. If condition is false then it will exit from the loop.
+
+
+a=0
+# -lt is less than operator
+  
+#Iterate the loop until a less than 10
+while [ $a -lt 10 ]
+do 
+    # Print the values
+    echo $a
+      
+    # increment the value
+    a=`expr $a + 1`
+done
+
+
+How to read the file data from file using while loop?
+
+For loop:
+
+If you don't how many iterations it should be done then we use for loop.It will take all the values and it will pass value by value
+
+#!/bin/bash
+for a in 1 2 3 4 5 6 7 8 9 10
+do
+    # if a is equal to 5 break the loop
+    if [ $a == 5 ]
+    then
+        break
+    fi
+    # Print the value
+    echo "Iteration no $a"
+done
+~
+~
+
+SSH: Secure Shell
+
+If you want to connect remote server from current server and execute commands from your server int remote server
+
+When you connect remote server without having public then remote server will not accept your request to connect that particular.
+
+For that,First you need to generate public and private key and then copy your public key into remote server.
+
+How to generate public and private key?
+
+using ssh-keygen
+
+it will generate keys in .ssh directory in current user home directory
+
+[root@ip-10-1-0-10 .ssh]# ssh-copy-id ec2-user@10.1.0.13
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/root/.ssh/id_rsa.pub"
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+[root@ip-10-1-0-10 .ssh]# ssh-copy-id ec2-user@10.1.0.13
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/root/.ssh/id_rsa.pub"
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+[root@ip-10-1-0-10 .ssh]# ssh-copy-id ec2-user@10.1.0.13
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/root/.ssh/id_rsa.pub"
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+[root@ip-10-1-0-10 .ssh]# ssh-copy-id ec2-user@10.1.0.13
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/root/.ssh/id_rsa.pub"
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+ec2-user@10.1.0.13's password:
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh 'ec2-user@10.1.0.13'"
+and check to make sure that only the key(s) you wanted were added.
+
+[root@ip-10-1-0-10 .ssh]# ssh ec2-user@10.1.0.13
+Last login: Mon Aug  2 02:25:15 2021 from 59.96.184.88
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+[ec2-user@ip-10-1-0-13 ~]$ exit
+logout
+Connection to 10.1.0.13 closed.
+[root@ip-10-1-0-10 .ssh]#
+
+
+Issue:
+
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/root/.ssh/id_rsa.pub"
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+
+Resolution:
+   On remote server: Goto /etc/ssh/sshd_config file then change PasswordAuthentication as Yes
+
+   Before this you need to generate the password of the user remote server in r which u want to connnecct from current server
+
+
+sftp: Secure file transfer protocol 
+
+When you transfer the file from one server to another server using sftp that file data travelled in encrypted.
+
+     How to connect remote server and pull or push the files from/to that server.
+
+     [root@ip-10-1-0-10 ~]# sftp ec2-user@10.1.0.13
+Connected to 10.1.0.13.
+sftp> cd /tmp
+sftp> lcd /tmp
+sftp> get *
+Fetching /tmp/file.txt to file.txt
+Fetching /tmp/systemd-private-263d3ba5ca174c03a229bfc96e14022c-chronyd.service-GlEEWy/ to systemd-private-263d3ba5ca174c03a229bfc96e14022c-chronyd.service-GlEEWy
+Cannot download non-regular file: /tmp/systemd-private-263d3ba5ca174c03a229bfc96e14022c-chronyd.service-GlEEWy/
+sftp> get file.txt
+Fetching /tmp/file.txt to file.txt
+sftp> exit
+[root@ip-10-1-0-10 ~]# cd /tmp
+[root@ip-10-1-0-10 tmp]# ls
+file.txt  systemd-private-1d86c0105bb14cfca4a970aceb74a56c-chronyd.service-RL7GFV
+[root@ip-10-1-0-10 tmp]# touch class{1..5).txt
+-bash: syntax error near unexpected token `)'
+[root@ip-10-1-0-10 tmp]# touch class{1..5}.txt
+[root@ip-10-1-0-10 tmp]# ls
+class1.txt  class4.txt  systemd-private-1d86c0105bb14cfca4a970aceb74a56c-chronyd.service-RL7GFV
+class2.txt  class5.txt
+class3.txt  file.txt
+[root@ip-10-1-0-10 tmp]# sftp ec2-user@10.1.0.13
+Connected to 10.1.0.13.
+sftp> cd /tmp
+sftp> lcd /tmp
+sftp> mput *
+Uploading class1.txt to /tmp/class1.txt
+class1.txt                                                             100%    0     0.0KB/s   00:00
+Uploading class2.txt to /tmp/class2.txt
+class2.txt                                                             100%    0     0.0KB/s   00:00
+Uploading class3.txt to /tmp/class3.txt
+class3.txt                                                             100%    0     0.0KB/s   00:00
+Uploading class4.txt to /tmp/class4.txt
+class4.txt                                                             100%    0     0.0KB/s   00:00
+Uploading class5.txt to /tmp/class5.txt
+class5.txt                                                             100%    0     0.0KB/s   00:00
+Uploading file.txt to /tmp/file.txt
+remote open("/tmp/file.txt"): Permission denied
+Uploading systemd-private-1d86c0105bb14cfca4a970aceb74a56c-chronyd.service-RL7GFV/ to /tmp/systemd-private-1d86c0105bb14cfca4a970aceb74a56c-chronyd.service-RL7GFV
+systemd-private-1d86c0105bb14cfca4a970aceb74a56c-chronyd.service-RL7GFV/ is not a regular file
+sftp>
+
+sftp> mget *
+mget *
+Fetching /tmp/class1.txt to class1.txt
+Fetching /tmp/class2.txt to class2.txt
+Fetching /tmp/class3.txt to class3.txt
+Fetching /tmp/class4.txt to class4.txt
+Fetching /tmp/class5.txt to class5.txt
+Fetching /tmp/file.txt to file.txt
+Fetching /tmp/file1.log to file1.log
+Fetching /tmp/file2.log to file2.log
+Fetching /tmp/file3.log to file3.log
+Fetching /tmp/file4.log to file4.log
+Fetching /tmp/file5.log to file5.log
+Fetching /tmp/systemd-private-263d3ba5ca174c03a229bfc96e14022c-chronyd.service-GlEEWy/ to systemd-private-263d3ba5ca174c03a229bfc96e14022c-chronyd.service-GlEEWy
+Cannot download non-regular file: /tmp/systemd-private-263d3ba5ca174c03a229bfc96e14022c-chronyd.service-GlEEWy/
+sftp>
+
+ftp: File transfer protocol
+
+It will not encrypt your file and it will ask the password you try to ftp to remote server
+=============
+scp: Secure copy
+
+If you want to copy file from one server to another server in secure manner then we use scp command.
+
+[root@ip-10-1-0-10 tmp]# scp lin.log ec2-use@10.1.0.13:/tmp
+ec2-use@10.1.0.13's password:
+Permission denied, please try again.
+ec2-use@10.1.0.13's password:
+[root@ip-10-1-0-10 tmp]# scp lin.log ec2-user@10.1.0.13:/tmp
+lin.log                                                                100%    0     0.0KB/s   00:00
+[root@ip-10-1-0-10 tmp]# scp ec2-user@10.1.0.13:/tmp/linde.csv /tmp
+linde.csv                                                              100%    0     0.0KB/s   00:00
+[root@ip-10-1-0-10 tmp]# ls
+class1.txt  file1.log  file.txt
+class2.txt  file2.log  linde.csv
+class3.txt  file3.log  lin.log
+class4.txt  file4.log  systemd-private-1d86c0105bb14cfca4a970aceb74a56c-chronyd.service-RL7GFV
+class5.txt  file5.log
+[root@ip-10-1-0-10 tmp]#
+
+=========
+
+Functions in shell scripting:
+    
+  Function is a reusabl concept. 
+
+  1. Program can be divided into smaller parts and to make it to easy to read and execute the program.
+  2  We can use same function code anywhere in the program you don't need to write same function again and again.Once u write the proram you can use any many times
+
+  3. It will reduce duplication of code and improve the quality of the code.
+
+
+  hello(){
+   echo "Welcome to linux"
+  }
+
+hello
+
+#!/bin/bash
+
+# Calling one function from another
+number_one () {
+   echo "This is the first function speaking..."
+   number_two
+}
+
+number_two () {
+   echo "This is now the second function speaking..."
+}
+
+# Calling function one.
+number_one
+
+===============
+ wget: Web get
+
+    This is used to download softwares from internet
+
+    wget  https://mirrors.estointernet.in/apache/tomcat/tomcat-8/v8.5.69/bin/apache-tomcat-8.5.69.zip
+
+unzip: unzip file.zip
+
+===========
+
+How to archive the files?
+
+ tar: tape archive
+
+  it is used to archive and extract the files from archive files.
+
+  [root@ip-10-1-0-10 ~]# tar -cvzf ramesh.tar *.sh
+cas.sh
+fr.sh
+fun1.sh
+fun.sh
+ifels.sh
+whil.sh
+[root@ip-10-1-0-10 ~]# ls
+apache                apache-tomcat-8.5.69.zip  fr.sh    fun.sh    ramesh.tar  :wq
+apache-tomcat-8.5.69  cas.sh                    fun1.sh  ifels.sh  whil.sh
+[root@ip-10-1-0-10 ~]# rm -rf *.sh
+[root@ip-10-1-0-10 ~]# ls
+apache  apache-tomcat-8.5.69  apache-tomcat-8.5.69.zip  ramesh.tar  :wq
+[root@ip-10-1-0-10 ~]# tar -tvzf ramesh.tar
+-rwxr-xr-x root/root       306 2021-07-31 14:34 cas.sh
+-rwxr-xr-x root/root       188 2021-07-31 15:06 fr.sh
+-rwxr-xr-x root/root       239 2021-08-04 02:32 fun1.sh
+-rwxr-xr-x root/root       114 2021-08-04 02:27 fun.sh
+-rwxr-xr-x root/root       272 2021-07-31 14:29 ifels.sh
+-rwxr-xr-x root/root       204 2021-07-31 14:53 whil.sh
+[root@ip-10-1-0-10 ~]#
+
+[root@ip-10-1-0-10 ~]# tar -xvzf ramesh.tar
+cas.sh
+fr.sh
+fun1.sh
+fun.sh
+ifels.sh
+whil.sh
+[root@ip-10-1-0-10 ~]# ls
+apache                apache-tomcat-8.5.69.zip  fr.sh    fun.sh    ramesh.tar  :wq
+apache-tomcat-8.5.69  cas.sh                    fun1.sh  ifels.sh  whil.sh
+[root@ip-10-1-0-10 ~]#
+
+
+-c -- create
+-t -- It will show the archived files
+-x -- it will extract the files
+-v -- verbose
+-f -- fully
+-z -- zipping
+
+=================================
+
+zombie process:
+
+   Parent and child process are communicating together and child has bee terminated without sending any signal to parent process and parent process will keep on sending signal for child which is terminated. Because of this memory will be lose and server parformance will be degraded. This process we can call it as Zombie process.
+
+   Using top command we can findout the zombie processes.
+
+================================
+
+Daemon process:
+     
+     Daemon means which is running in the background. Daemon will do monitring of memory,iostat,backround processes and other system redsources etc.
+
+===============
+
+Orphan process:
+
+      When parent terminated without child then that process we can call it as orphan. Child become orphan process.
+==============
+
+
+===============================================================================================================================================
+
+How to make Partitions,format,create directory and mount
+
+
+lsblk  -- list the block devices ( disks that are available for partitioning) or we can use sudo fdisk -l
+once we found disk like /dev/sda1
+
+we can use 2 commands for partitioning one 1 fdisk and another is parted(for disk sizes in TBs)
+
+using fdisk:
+
+sudo fdisk /dev/sda1 
+it will prompt to enter a command then enter n: for creating a new partition
+after that it will prompt two options one is p and e : p means primary partion this is for directly using to store the data and it is ideal for holding data of operating system and e means extended partition
+
+after selecting the type of partition it will prompt partition number if you are doing first partition select 1(default), if you are doing nth time select n as number.
+in the next prompt it will ask you to select sectors, nothing but small storage units by default it will be 2048 and we have to enter the last secotr ( select the size of the partition) then it will be created new partition
+
+after creating partitions we have to format it with filesystems like ext4 and xfs
+sudo mkfs.xfs /dev/sda
+after that create a directory like /mnt/docker 
+sudo mount /dev/sda1 /mnt/docker  --- (sudo mount <partion> <mount directory>
+df -h --verify the mount point
+## Linux important topics for interview ##
+
+====================================================================================================================================================================
+
+Networking commands and  their flgs
+Debugging commands example sar
+How to fetch useful data from a log file using grep awk and sed etc.
+Linux file system.
+Linux boot process and init directory.
+Partition in linux and how to make partitions.
+Mount and unmount process.
+Network file system in linux.
+Linux user creation, user and directory permissions.
+SSH and how tunneling works in ssh. 
+What is nice value in linux.
+What is load average.
+Boot process in linux
+LVM (logical volume manager), backups and resizing
+
+
+### Important commands ##
+
+1. ls - The most frequently used command in Linux to list directories
+2. pwd - Print working directory command in Linux
+3. cd - Linux command to navigate through directories
+4. mkdir - Command used to create directories in Linux
+5. mv - Move or rename files in Linux
+6. cp - Similar usage as mv but for copying files in Linux
+7. rm - Delete files or directories
+8. touch - Create blank/empty files
+9. ln - Create symbolic links (shortcuts) to other files
+10. clear - Clear the terminal display
+11. cat - Display file contents on the terminal
+12. echo - Print any text that follows the command
+13. less - Linux command to display paged outputs in the terminal
+14. man - Access manual pages for all Linux commands
+15. uname - Linux command to get basic information about the OS
+16. whoami - Get the active username
+17. tar - Command to extract and compress files in linux
+18. tar -cvf aws.tar aws/
+19. tar -xvf
+20. grep - Search for a string within an output
+21. head - Return the specified number of lines from the top
+22. tail - Return the specified number of lines from the bottom
+23. diff - Find the difference between two files
+24. cmp - Allows you to check if two files are identical
+25. comm - Combines the functionality of diff and cmp
+26. sort - Linux command to sort the content of a file while outputting
+27. export - Export environment variables in Linux
+28. zip - Zip files in Linux
+29. unzip - Unzip files in Linux
+30. ssh - Secure Shell command in Linux
+31. service - Linux command to start and stop services
+32. ps - Display active processes
+33. kill and killall - Kill active processes by process ID or name
+34. df - Display disk filesystem information
+35. mount - Mount file systems in Linux
+36. chmod - Command to change file permissions
+37. chown - Command for granting ownership of files or folders
+38. ifconfig - Display network interfaces and IP addresses
+39. traceroute - Trace all the network hops to reach the destination
+40. wget - Direct download files from the internet
+41. ufw - Firewall command
+42. iptables - Base firewall for all other firewall utilities to interface with
+43. apt, pacman, yum, rpm - Package managers depending on the distribution
+44. sudo - Command to escalate privileges in Linux
+45. cal - View a command-line calendar
+46. alias - Create custom shortcuts for your regularly used commands
+47. dd - Majorly used for creating bootable USB sticks
+48. whereis - Locate the binary, source, and manual pages for a command
+49. whatis - Find what a command is used for
+50. top - View active processes live with their system usage
+51. useradd and usermod - Add a new user or change existing user data
+52. passwd - Create or update passwords for existing users
+
+
+
